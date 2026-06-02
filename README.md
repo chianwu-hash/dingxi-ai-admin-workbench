@@ -8,14 +8,29 @@
 2. 學方法：理解每個流程如何拆解。
 3. 拿流程包：下載模板、假資料與檢查清單，回去照著做。
 
-## 第一版 MVP
+## 目前內容
 
-第一版先完成 4 個低風險、容易成功的流程包：
+目前包含 12 個流程包與對應網站單元頁：
 
 1. `obsidian-confirmation-flow-pack`
 2. `document-to-markdown-flow-pack`
 3. `admin-case-routing-template-pack`
 4. `google-calendar-safe-ops-pack`
+5. `windows-chinese-encoding-safety-pack`
+6. `ai-admin-presentation-flow-pack`
+7. `admin-brand-image-flow-pack`
+8. `gmail-label-cleanup-flow-pack`
+9. `cdp-safety-foundation-pack`
+10. `browser-session-foundation-pack`
+11. `browser-ai-workflow-pack`
+12. `voice-input-workflow-pack`
+
+## 專案交接
+
+後續維護前請先閱讀：
+
+- [HANDOFF.md](HANDOFF.md)
+- [AGENTS.md](AGENTS.md)
 
 ## 重要原則
 
@@ -76,6 +91,7 @@ AI行政工作臺教學網站/
 
 ## 目前入口
 
+- [教學網站首頁](site/index.html)
 - [MVP 製作檢查清單](site-plan/mvp-build-checklist.md)
 - [流程包下載中心草案](site-plan/download-center.md)
 - [流程包總覽](flow-packs/README.md)
