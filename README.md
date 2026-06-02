@@ -2,7 +2,11 @@
 
 這個工作區用來製作「AI 行政工作臺」教學網站與流程包。
 
-核心目標不是公開原始工作 repo，而是把常見行政工作整理成可教、可複製、可檢查的流程包，讓使用者可以：
+核心目標不是公開原始工作 repo，也不是讓使用者一次理解 12 個流程包。
+
+目前第一目標是先讓使用者完成「中文 Windows 編碼安全」這個底層安全設定，再引導使用者學會「AI 行政簡報流程」。簡報是行政現場最熟悉、最容易看到成果的入口；學會這個工作流之後，再把文件整理、品牌圖像、人工確認、安全檢查與自動化延伸接上來。
+
+整體教學模式仍維持：
 
 1. 看成果：知道 AI 行政工作臺能做到什麼。
 2. 學方法：理解每個流程如何拆解。
@@ -10,20 +14,20 @@
 
 ## 目前內容
 
-目前包含 12 個流程包與對應網站單元頁：
+目前包含 12 個流程包與對應網站單元頁。建議學習順序如下：
 
-1. `obsidian-confirmation-flow-pack`
-2. `document-to-markdown-flow-pack`
-3. `admin-case-routing-template-pack`
-4. `google-calendar-safe-ops-pack`
-5. `windows-chinese-encoding-safety-pack`
-6. `ai-admin-presentation-flow-pack`
-7. `admin-brand-image-flow-pack`
-8. `gmail-label-cleanup-flow-pack`
-9. `cdp-safety-foundation-pack`
-10. `browser-session-foundation-pack`
-11. `browser-ai-workflow-pack`
-12. `voice-input-workflow-pack`
+1. `windows-chinese-encoding-safety-pack`
+2. `ai-admin-presentation-flow-pack`
+3. `document-to-markdown-flow-pack`
+4. `admin-brand-image-flow-pack`
+5. `obsidian-confirmation-flow-pack`
+6. `voice-input-workflow-pack`
+7. `admin-case-routing-template-pack`
+8. `google-calendar-safe-ops-pack`
+9. `gmail-label-cleanup-flow-pack`
+10. `cdp-safety-foundation-pack`
+11. `browser-session-foundation-pack`
+12. `browser-ai-workflow-pack`
 
 ## 專案交接
 

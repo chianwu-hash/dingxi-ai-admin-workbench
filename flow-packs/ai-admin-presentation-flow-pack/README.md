@@ -16,12 +16,14 @@
 - 一份投影片大綱
 - 一組圖片生成提示詞
 - 一份 review checklist
+- 一份可回寫成 SOP 的提示詞模板
 
 ## 最快開始方式
 
 1. 複製 `02-template/brief-template.md`。
 2. 依 brief 產生 `slide-outline-template.md`。
 3. 對每頁產生 image prompt，再用 review checklist 檢查。
+4. 簡報完成後，使用 `02-template/sop-retrospective-prompt.md` 把這次流程整理成下次可重複的小 SOP。
 
 ## 分享方式
 

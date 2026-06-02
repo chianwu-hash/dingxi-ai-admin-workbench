@@ -121,10 +121,18 @@ h1 {
   font-size: clamp(42px, 7vw, 82px);
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .hero p {
   max-width: 700px;
   margin: 24px 0 0;
   font-size: clamp(18px, 2vw, 23px);
+}
+
+.hero h1 {
+  max-width: 900px;
 }
 
 .hero-actions,
@@ -277,6 +285,7 @@ h1 {
 
 .media {
   width: 100%;
+  margin: 0;
   overflow: hidden;
   border-radius: 8px;
   border: 1px solid var(--line);
@@ -343,6 +352,12 @@ h1 {
   background: #fff;
 }
 
+.pack-row.featured-pack {
+  border-color: rgba(185, 137, 38, 0.72);
+  background: #fff8e8;
+  box-shadow: 0 8px 24px rgba(185, 137, 38, 0.14);
+}
+
 .pack-row h3,
 .pack-row p {
   margin: 0;
@@ -353,9 +368,84 @@ h1 {
 }
 
 .note {
+  margin-top: 24px;
   padding: 18px;
   border-left: 5px solid var(--gold);
   background: #fff8e8;
+}
+
+.lesson-note {
+  color: var(--muted);
+}
+
+.section-head.stacked {
+  display: block;
+  margin-bottom: 18px;
+}
+
+.section-head.stacked p {
+  margin-top: 14px;
+}
+
+.timeline.compact {
+  gap: 0;
+}
+
+.prompt-box {
+  padding: 22px;
+  border: 1px solid rgba(36, 91, 69, 0.25);
+  border-radius: 8px;
+  background: #153126;
+  color: #f7f5ec;
+  box-shadow: var(--shadow);
+}
+
+.prompt-title {
+  margin: 0;
+  color: #f4d58a;
+  font-weight: 800;
+}
+
+.prompt-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.copy-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 7px 12px;
+  border: 1px solid rgba(244, 213, 138, 0.7);
+  border-radius: 8px;
+  background: rgba(244, 213, 138, 0.14);
+  color: #f7f5ec;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.copy-button:hover,
+.copy-button:focus-visible {
+  background: rgba(244, 213, 138, 0.24);
+  outline: none;
+}
+
+.prompt-box pre {
+  margin: 0;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+.prompt-box code {
+  font-family: "Cascadia Mono", "Consolas", monospace;
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 .footer {
@@ -402,6 +492,11 @@ h1 {
 
   .hero {
     min-height: 680px;
+  }
+
+  .prompt-header {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
 

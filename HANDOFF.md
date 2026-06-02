@@ -6,6 +6,8 @@ Last updated: 2026-06-02
 
 This project is now the standalone public repository for the Dingxi AI Admin Workbench teaching site and flow packs.
 
+Current instructional priority: guide users into the project through `windows-chinese-encoding-safety-pack` first as the lowest-level Windows Chinese safety setup, then move into `ai-admin-presentation-flow-pack` as the first visible outcome workflow. Presentation work remains the most familiar outcome entry point for the intended audience, while the other flow packs should be framed as support or extension flows instead of 12 equal starting points.
+
 - Local project: `C:\Users\user\projects\dingxi-ai-admin-workbench`
 - GitHub repo: `https://github.com/chianwu-hash/dingxi-ai-admin-workbench`
 - Production site: `https://dingxi-ai-admin-workbench.vercel.app`
@@ -216,6 +218,41 @@ This is a Windows + Chinese/CJK project. When using PowerShell:
 - Do not paste terminal-mojibake back into source files.
 - Prefer direct file inspection, browser rendering, screenshots, and structured parser output for validation.
 
+## Current Working Notes
+
+Updated on 2026-06-02 in the current local working tree. These changes are not committed yet.
+
+Instructional direction changed from "show 12 flow packs equally" to "start with the Chinese Windows encoding safety pack as the lowest-level setup, then move into the AI admin presentation workflow as the first visible outcome."
+
+Files already updated for that direction:
+
+- `site/index.html`: homepage now leads with "先避開中文亂碼，再做一份簡報" and sends users first to the Chinese Windows encoding safety unit, then the presentation workflow.
+- `site/roadmap.html`: learning roadmap now starts with `windows-chinese-encoding-safety-pack`, then `ai-admin-presentation-flow-pack`, then document-to-markdown, brand image, confirmation checklist, voice input, and later advanced workflows.
+- `site/packs.html`: flow pack download center now highlights Chinese Windows encoding safety as the first pack and the presentation workflow as the second-stage outcome pack.
+- `site/modules/admin-presentation.html`: presentation module page now explains why this is the entry workflow and shows brief, material preparation, outline generation, and review/export as the learning steps.
+- `site/modules/windows-encoding.html`: encoding module now has a plain-language explanation, an AI-facing install prompt, and a copy button.
+- `site/styles.css`: added featured-pack styling, fixed `figure.media` mobile overflow, and adjusted hero title wrapping.
+- `site/copy-prompts.js`: new shared one-click copy behavior for prompt boxes.
+- `site-plan/web-writing-sop.md`: new web writing SOP requiring a copy button for every prompt offered to users.
+- `README.md` and `flow-packs/README.md`: updated recommended learning order to start with the Chinese Windows encoding safety pack.
+- `site-plan/ai-workflow-core-concepts.md`: new draft document explaining three plain-language AI workflow concepts:
+  1. AI is an assistant, not the responsible person.
+  2. After getting a result, ask AI to write the process into a small SOP.
+  3. If the result is unstable, revise the SOP/prompt to be clearer and harder.
+
+Validation already run after these edits:
+
+- Site local links: `SITE_LINKS_OK`
+- Official Dingxi brand files absent: `NO_OFFICIAL_BRAND_FILES`
+- Flow pack JSON templates parse: `FLOW_PACK_JSON_OK`
+- CDP visual checks using the shared Chrome CDP instance at `127.0.0.1:9222`, following the local CDP policy. Checked desktop homepage, roadmap, packs, plus mobile homepage/packs. Homepage mobile horizontal overflow was found and fixed.
+
+Recommended next conversation focus:
+
+1. Keep the learning route as: encoding safety first, presentation workflow second.
+2. Decide how to turn `site-plan/ai-workflow-core-concepts.md` into a user-facing site section without making it feel like technical documentation.
+3. Consider adding a new module/page tentatively titled "把你的行政工作教給 AI" after the presentation workflow.
+
 ## Current Open Decisions
 
 These are the next human decisions before a polished public launch:
@@ -235,4 +272,3 @@ High-value follow-ups:
 3. Add module screenshots or short demo videos.
 4. Add a `site/modules/index.html` page if direct module browsing becomes important.
 5. Add lightweight link/safety check scripts so checks are one command instead of pasted PowerShell snippets.
-
