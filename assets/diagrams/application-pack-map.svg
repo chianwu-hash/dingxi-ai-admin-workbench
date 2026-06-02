@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 360" role="img" aria-labelledby="title desc">
+  <title id="title">第二批應用流程包示意圖</title>
+  <desc id="desc">呈現 AI 行政簡報、品牌圖像、Gmail 整理與中文編碼安全四個流程包如何組成可教學的應用層。</desc>
+  <rect width="1120" height="360" fill="#fbfaf5"/>
+  <rect x="38" y="36" width="1044" height="288" rx="18" fill="#ffffff" stroke="#d9dfd5"/>
+  <text x="70" y="82" fill="#20231f" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif" font-size="30" font-weight="800">第二批應用：把成果變成可照做的流程</text>
+  <text x="70" y="116" fill="#5a635b" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif" font-size="18">每個應用包都要拆成 brief、模板、假資料、檢查清單與安全界線。</text>
+  <g font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+    <rect x="70" y="158" width="220" height="102" rx="12" fill="#e8f0e6" stroke="#245b45"/>
+    <text x="92" y="194" fill="#245b45" font-size="22" font-weight="800">AI 行政簡報</text>
+    <text x="92" y="226" fill="#5a635b" font-size="16">brief -> 大綱 -> 圖像</text>
+    <text x="92" y="250" fill="#5a635b" font-size="16">review -> 匯出展示</text>
+    <rect x="330" y="158" width="220" height="102" rx="12" fill="#fff8e8" stroke="#b98926"/>
+    <text x="352" y="194" fill="#6c4710" font-size="22" font-weight="800">品牌行政圖像</text>
+    <text x="352" y="226" fill="#5a635b" font-size="16">校徽 overlay</text>
+    <text x="352" y="250" fill="#5a635b" font-size="16">placeholder 公開版</text>
+    <rect x="590" y="158" width="220" height="102" rx="12" fill="#edf4fb" stroke="#356f9f"/>
+    <text x="612" y="194" fill="#235579" font-size="22" font-weight="800">Gmail 整理</text>
+    <text x="612" y="226" fill="#5a635b" font-size="16">規則 -> dry-run</text>
+    <text x="612" y="250" fill="#5a635b" font-size="16">人工確認 -> 標籤</text>
+    <rect x="850" y="158" width="200" height="102" rx="12" fill="#f8ece9" stroke="#b84535"/>
+    <text x="872" y="194" fill="#8f3427" font-size="22" font-weight="800">中文編碼</text>
+    <text x="872" y="226" fill="#5a635b" font-size="16">UTF-8 檔案為準</text>
+    <text x="872" y="250" fill="#5a635b" font-size="16">終端顯示需驗證</text>
+  </g>
+  <path d="M290 209 H330 M550 209 H590 M810 209 H850" stroke="#9aa89b" stroke-width="3" stroke-dasharray="8 8"/>
+  <text x="70" y="300" fill="#245b45" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif" font-size="18" font-weight="800">分享重點：不要只給成品，必須給流程包，讓使用者回到學校環境也能重做。</text>
+</svg>

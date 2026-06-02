@@ -1,0 +1,12 @@
+{
+  "label": "待確認整理",
+  "rules": [
+    {
+      "name": "demo-newsletter",
+      "category": "newsletter",
+      "from": "newsletter@example.invalid",
+      "subjectIncludes": ["範例電子報"],
+      "action": "apply_label_only"
+    }
+  ]
+}

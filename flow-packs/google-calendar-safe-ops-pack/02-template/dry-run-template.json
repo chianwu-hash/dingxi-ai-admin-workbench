@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-05-30T00:00:00+08:00",
+  "purpose": "教學示範 dry-run",
+  "calendar": {
+    "displayName": "範例日曆",
+    "calendarId": "demo-calendar@example.invalid"
+  },
+  "operations": [
+    {
+      "action": "insert",
+      "calendarId": "demo-calendar@example.invalid",
+      "source": "sample-events.json",
+      "event": {
+        "summary": "範例場地借用",
+        "start": "2026-07-10T14:00:00+08:00",
+        "end": "2026-07-10T16:00:00+08:00"
+      },
+      "conflictNotes": "未檢出衝突；此為假資料。"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="640" viewBox="0 0 1400 640" role="img" aria-labelledby="title desc">
+  <title id="title">Workflow action placeholder banner</title>
+  <desc id="desc">Public template placeholder showing a safe AI workflow.</desc>
+  <rect width="1400" height="640" fill="#fbfaf5"/>
+  <path d="M0 520 C250 440 420 590 700 500 C980 410 1120 500 1400 430 L1400 640 L0 640Z" fill="#e8f0e6"/>
+  <g transform="translate(120 110)">
+    <rect width="1160" height="350" rx="26" fill="#ffffff" stroke="#d9dfd5" stroke-width="4"/>
+    <g font-family="Arial, sans-serif" font-weight="700" font-size="28" fill="#245b45">
+      <text x="90" y="92">Draft</text>
+      <text x="390" y="92">Dry-run</text>
+      <text x="710" y="92">Review</text>
+      <text x="970" y="92">Apply</text>
+    </g>
+    <g fill="#f4ead2" stroke="#b98926" stroke-width="6">
+      <circle cx="125" cy="205" r="58"/>
+      <circle cx="435" cy="205" r="58"/>
+      <circle cx="755" cy="205" r="58"/>
+      <circle cx="1005" cy="205" r="58"/>
+    </g>
+    <g stroke="#39785d" stroke-width="12" fill="none" stroke-linecap="round">
+      <path d="M195 205 H360"/>
+      <path d="M505 205 H680"/>
+      <path d="M825 205 H930"/>
+    </g>
+    <g fill="#245b45">
+      <path d="M355 178 395 205 355 232Z"/>
+      <path d="M675 178 715 205 675 232Z"/>
+      <path d="M925 178 965 205 925 232Z"/>
+    </g>
+  </g>
+</svg>

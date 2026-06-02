@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 360" role="img" aria-labelledby="title desc">
+  <title id="title">技術底座與延伸應用示意圖</title>
+  <desc id="desc">呈現 CDP 安全底座、Browser session、Browser AI workflow 與 Typeless 語音輸入的安全層次。</desc>
+  <rect width="1120" height="360" fill="#fbfaf5"/>
+  <rect x="38" y="36" width="1044" height="288" rx="18" fill="#ffffff" stroke="#d9dfd5"/>
+  <text x="70" y="82" fill="#20231f" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif" font-size="30" font-weight="800">技術底座與延伸應用：先安全，再自動化</text>
+  <text x="70" y="116" fill="#5a635b" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif" font-size="18">所有瀏覽器與語音流程都要能檢查、能停止、能回到人工確認。</text>
+  <g font-family="Microsoft JhengHei, Noto Sans TC, sans-serif">
+    <rect x="92" y="224" width="936" height="54" rx="12" fill="#e8f0e6" stroke="#245b45"/>
+    <text x="124" y="258" fill="#245b45" font-size="22" font-weight="800">CDP 安全底座</text>
+    <text x="350" y="258" fill="#5a635b" font-size="17">shared launcher、固定 profile、polling 節流、截圖節流</text>
+    <rect x="150" y="158" width="280" height="54" rx="12" fill="#fff8e8" stroke="#b98926"/>
+    <text x="176" y="192" fill="#6c4710" font-size="21" font-weight="800">Browser session 基礎</text>
+    <rect x="470" y="158" width="280" height="54" rx="12" fill="#edf4fb" stroke="#356f9f"/>
+    <text x="496" y="192" fill="#235579" font-size="21" font-weight="800">Browser AI workflow</text>
+    <rect x="790" y="158" width="180" height="54" rx="12" fill="#f8ece9" stroke="#b84535"/>
+    <text x="816" y="192" fill="#8f3427" font-size="21" font-weight="800">Typeless</text>
+  </g>
+  <path d="M290 224 V212 M610 224 V212 M880 224 V212" stroke="#9aa89b" stroke-width="3"/>
+  <text x="150" y="138" fill="#5a635b" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif" font-size="16">登入狀態不可公開</text>
+  <text x="470" y="138" fill="#5a635b" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif" font-size="16">prompt、截圖、JSON log</text>
+  <text x="790" y="138" fill="#5a635b" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif" font-size="16">口述初稿需校對</text>
+  <text x="70" y="306" fill="#245b45" font-family="Microsoft JhengHei, Noto Sans TC, sans-serif" font-size="18" font-weight="800">分享重點：公開流程包只放方法與假資料；session、cookie、真實操作紀錄留在本機或校內環境。</text>
+</svg>

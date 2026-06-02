@@ -1,0 +1,12 @@
+{
+  "label": "待確認整理",
+  "candidateThreads": 1,
+  "threads": [
+    {
+      "threadId": "demo-thread-001",
+      "from": "newsletter@example.invalid",
+      "subject": "範例電子報：本週活動",
+      "plannedAction": "apply_label_only"
+    }
+  ]
+}

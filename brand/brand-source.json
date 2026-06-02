@@ -1,0 +1,25 @@
+{
+  "name": "Dingxi Elementary internal brand source",
+  "scope": "dingxi-internal-network-only",
+  "source_type": "windows_unc_folder",
+  "source_root_unc": "\\\\10.235.72.5\\0-1學校共用資料--行政資料區\\00學校徽圖、校歌、校旗、獎狀",
+  "local_target": "assets/brand/",
+  "usage": "Use this source only when running inside Dingxi Elementary School's internal network.",
+  "public_repo_policy": {
+    "include_official_brand_files": false,
+    "include_internal_path": true,
+    "fallback": "Use placeholder assets if the internal network path is unavailable."
+  },
+  "expected_outputs": {
+    "crest": "assets/brand/dingxi-crest.png",
+    "mascots": "assets/brand/four-mascots-reference.png",
+    "hero_banner": "assets/brand/admin-workbench-banner.webp",
+    "action_banner": "assets/brand/admin-action-banner.webp"
+  },
+  "instructions_for_ai_assistant": [
+    "If the UNC path is reachable, inspect the folder and use the authorized Dingxi school crest or approved brand assets.",
+    "Copy selected assets into local_target using the expected output filenames.",
+    "If the UNC path is not reachable, keep placeholder assets and do not generate, imitate, redraw, or trace the official school crest.",
+    "Do not commit copied official brand image files to a public repository unless the user explicitly confirms that the target is school-internal only."
+  ]
+}

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">AI admin workbench placeholder banner</title>
+  <desc id="desc">Public template placeholder banner for AI administrative workbench teaching website.</desc>
+  <rect width="1600" height="900" fill="#e8f0e6"/>
+  <rect x="0" y="0" width="1600" height="900" fill="#245b45" opacity="0.08"/>
+  <g transform="translate(220 120)" opacity="0.42">
+    <rect x="0" y="0" width="1160" height="600" rx="28" fill="#ffffff" stroke="#d9dfd5" stroke-width="4"/>
+    <rect x="70" y="70" width="360" height="34" rx="8" fill="#245b45"/>
+    <rect x="70" y="134" width="650" height="24" rx="8" fill="#d9dfd5"/>
+    <rect x="70" y="198" width="1020" height="280" rx="16" fill="#f7f4e9" stroke="#d9dfd5" stroke-width="3"/>
+    <g fill="#ffffff" stroke="#39785d" stroke-width="3">
+      <rect x="110" y="245" width="230" height="90" rx="12"/>
+      <rect x="390" y="245" width="230" height="90" rx="12"/>
+      <rect x="670" y="245" width="230" height="90" rx="12"/>
+      <rect x="940" y="245" width="140" height="90" rx="12"/>
+      <rect x="110" y="375" width="480" height="80" rx="12"/>
+      <rect x="640" y="375" width="440" height="80" rx="12"/>
+    </g>
+    <circle cx="1010" cy="112" r="52" fill="#f4ead2" stroke="#b98926" stroke-width="8"/>
+  </g>
+</svg>

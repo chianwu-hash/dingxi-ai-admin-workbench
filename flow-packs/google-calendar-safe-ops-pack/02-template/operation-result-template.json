@@ -1,0 +1,22 @@
+{
+  "completedAt": "2026-05-30T00:00:00+08:00",
+  "purpose": "教學示範 operation result",
+  "calendar": {
+    "displayName": "範例日曆",
+    "calendarId": "demo-calendar@example.invalid"
+  },
+  "backupPath": "backups/demo-before-operation.json",
+  "dryRunPath": "dry-runs/demo-dry-run.json",
+  "results": [
+    {
+      "action": "insert",
+      "status": "success",
+      "eventId": "demo-event-id",
+      "summary": "範例場地借用",
+      "start": "2026-07-10T14:00:00+08:00",
+      "end": "2026-07-10T16:00:00+08:00",
+      "htmlLink": "https://calendar.google.com/calendar/event?eid=demo"
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,13 @@
+{
+  "summary": "範例場地借用",
+  "location": "範例場地",
+  "description": "此為假資料，用於教學示範。",
+  "start": {
+    "dateTime": "2026-07-10T14:00:00+08:00",
+    "timeZone": "Asia/Taipei"
+  },
+  "end": {
+    "dateTime": "2026-07-10T16:00:00+08:00",
+    "timeZone": "Asia/Taipei"
+  }
+}

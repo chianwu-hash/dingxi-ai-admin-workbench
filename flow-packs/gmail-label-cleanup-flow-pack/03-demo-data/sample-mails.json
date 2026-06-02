@@ -1,0 +1,16 @@
+[
+  {
+    "threadId": "demo-thread-001",
+    "from": "newsletter@example.invalid",
+    "subject": "範例電子報：本週活動",
+    "date": "2026-06-01",
+    "matchedRule": "demo-newsletter"
+  },
+  {
+    "threadId": "demo-thread-002",
+    "from": "notice@example.invalid",
+    "subject": "範例通知：研習提醒",
+    "date": "2026-06-02",
+    "matchedRule": null
+  }
+]
