@@ -12,29 +12,71 @@
     <nav class="nav" aria-label="主導覽"><a href="../index.html">首頁</a><a href="../roadmap.html">學習路線</a><a href="../packs.html">流程包</a><a href="../safety.html">安全守則</a></nav>
   </header>
   <main>
-    <section class="page-title"><div class="wrap"><p class="eyebrow">Module 2</p><h1>文件轉 Markdown</h1><p>把 PDF、Word、PPT 轉成 AI 可讀的乾淨文字，再做摘要、分類或改寫。</p></div></section>
+    <section class="page-title">
+      <div class="wrap">
+        <p class="eyebrow">Module 2</p>
+        <h1>文件轉 Markdown</h1>
+        <p>這是把文件變成 AI 看得懂的乾淨文字用的流程。</p>
+      </div>
+    </section>
     <section class="section">
       <div class="wrap split">
         <div>
-          <h2>為什麼要先轉文字？</h2>
-          <p>AI 處理行政文件時，最怕輸入不乾淨。Markdown 讓標題、清單、表格與段落更容易被穩定理解。</p>
-          <div class="actions"><a class="button" href="../../flow-packs/document-to-markdown-flow-pack/README.md">下載流程包</a><a class="button ghost" href="../../flow-packs/document-to-markdown-flow-pack/02-template/command-cheatsheet.md">指令速查</a></div>
+          <h2>給人看的簡要說明</h2>
+          <p>如果你手上有 PDF、Word、簡報、表格或研習資料，先不要急著整份丟給 AI 摘要。</p>
+          <p>比較穩的做法，是先請 AI 幫你把文件整理成乾淨文字，再檢查有沒有漏字、亂碼、表格跑掉或頁首頁尾混進正文。</p>
+          <p>你只需要準備文件位置，複製下方提示詞，貼給正在協助你的 AI 助手。</p>
         </div>
         <div class="card">
-          <h3>最小流程</h3>
-          <p>取得文件 -> 轉成 Markdown -> 檢查標題、表格、亂碼、漏字 -> 交給 AI 摘要或整理。</p>
+          <h3>最小用途</h3>
+          <p>把文件交給 AI 前，先變成乾淨、可檢查、可再利用的文字版本。後面要做摘要、會議紀錄、簡報 brief 或公告草稿，都會更穩。</p>
         </div>
       </div>
     </section>
     <section class="section alt">
+      <div class="wrap section-head stacked">
+        <h2>給 AI 助手看的轉換提示詞</h2>
+        <p>以下內容是給 AI 助手看的，你不需要先懂工具名稱；把它整段貼給 AI，再補上你要處理的檔案位置即可。</p>
+      </div>
+      <div class="wrap prompt-box">
+        <div class="prompt-header"><p class="prompt-title">複製這段給 AI</p><button class="copy-button" type="button" data-copy-prompt>複製</button></div>
+        <pre><code>請協助我把文件轉成 AI 看得懂的乾淨 Markdown 或純文字，並完成轉換品質檢查。
+
+我要處理的文件或資料夾位置是：
+（請在這裡貼上檔案路徑、資料夾路徑，或先請我提供）
+
+如果你有本機操作或安裝權限，請代我檢查並完成必要安裝；如果你沒有權限，請用我看得懂的步驟帶我完成，不要只丟技術文件連結給我。
+
+請依照以下方式處理：
+1. 先判斷文件類型，例如 PDF、Word、PowerPoint、Excel、HTML、CSV 或圖片型掃描檔。
+2. 先確認文件是否可能含有個資、未公開資料或不適合上傳到外部服務的內容；如果有風險，請先提醒我，並優先採用本機處理方式。
+3. 請先檢查這台電腦是否已經可以使用 doc2md-toolkit 或 doc2md 指令。若尚未安裝，請從 https://github.com/chianwu-hash/doc2md-toolkit 取得並安裝，或用我看得懂的步驟帶我完成。一般文件使用 MarkItDown，中文 PDF、直行教材或一字一行抽文字問題使用 pdf2txt。
+4. 將文件轉成 Markdown 或純文字，輸出到與原檔可對照的位置，並保留清楚的檔名。
+5. 不要預設安裝或使用重型 OCR 工具。如果遇到 10 頁以內的掃描 PDF、圖片型文件或沒有文字層的 PDF，可以先轉成逐頁圖片，再用小量 OCR 或 AI 視覺讀取救援。
+6. 如果掃描或圖片型文件超過 10 頁，或版面包含複雜表格、公式、多欄內容，請不要硬做；請明確標記為需要正式 OCR 或人工確認。
+7. 轉換後請檢查：標題與段落是否完整、表格是否可讀、中文是否亂碼、是否大量一字一行、是否漏頁、頁碼或頁首頁尾是否干擾正文、重要附件或附表是否漏掉。
+8. 如果檢查不通過，請先嘗試修正或重轉；仍無法修正時，請列出問題與我需要人工確認的地方。
+9. 最後請提供一小段結果摘要，包含輸出檔位置、轉換品質、待確認事項，以及下一步可以請 AI 做的摘要、待辦整理或公告草稿。</code></pre>
+      </div>
+    </section>
+    <section class="section">
       <div class="wrap grid three">
-        <article class="card"><h3>可跟做</h3><p>使用假會議資料練習，不需要真實公文。</p></article>
-        <article class="card"><h3>可檢查</h3><p>流程包提供品質檢查清單，避免轉換後漏字或亂碼。</p></article>
-        <article class="card"><h3>可延伸</h3><p>可用於會議資料、研習講義、公告草稿與表格整理。</p></article>
+        <article class="card"><h3>轉之前</h3><p>先確認文件能不能交給 AI 處理。真實公文、學生或家長資料、未公開資料，要先去識別化或留在本機。</p></article>
+        <article class="card"><h3>轉之後</h3><p>不要只看有沒有產出檔案，還要檢查標題、表格、中文、漏頁與頁首頁尾。</p></article>
+        <article class="card"><h3>再利用</h3><p>乾淨文字可以接著做摘要、待辦事項、會議紀錄、簡報 brief 或公告草稿。</p></article>
+      </div>
+      <div class="wrap note">
+        <strong>大量 OCR 的進階解法：</strong>如果文件頁數很多、掃描品質複雜，或本機工具抽不出乾淨文字，而且文件沒有個資、機密或未公開內容，可以考慮改走 NotebookLM 這類雲端閱讀理解路線。做法是由使用者自行登入、確認資料可以上傳、加入來源，再請 NotebookLM 依來源整理成 Markdown、摘要或章節大綱。這不是本機預設流程；只適合已確認可上傳的資料。
+      </div>
+      <div class="wrap note">
+        <strong>未來自動化備註：</strong>若日後開發 NotebookLM CDP-assisted route，腳本只應在使用者已登入、已上傳來源、並明確同意後，協助貼提示詞、等待回覆、擷取 Markdown 與產生待確認清單。不要自動登入、不要自行選取敏感文件、不要保存 cookies、profile 或 session。
+      </div>
+      <div class="wrap note">
+        <strong>進階備查：</strong>一般使用者先複製上面的提示詞即可。AI 助手或維護者需要完整材料時，再查看 <a href="https://github.com/chianwu-hash/dingxi-ai-admin-workbench/tree/main/flow-packs/document-to-markdown-flow-pack">流程包資料夾</a>、<a href="https://github.com/chianwu-hash/dingxi-ai-admin-workbench/blob/main/flow-packs/document-to-markdown-flow-pack/01-workflow.md">完整流程</a>、<a href="https://github.com/chianwu-hash/dingxi-ai-admin-workbench/blob/main/flow-packs/document-to-markdown-flow-pack/04-checklist.md">品質檢查清單</a> 與 <a href="https://github.com/chianwu-hash/dingxi-ai-admin-workbench/blob/main/flow-packs/document-to-markdown-flow-pack/05-safety-notes.md">安全注意事項</a>。
       </div>
     </section>
   </main>
+  <script src="../copy-prompts.js"></script>
   <footer class="footer"><div class="wrap"><span>文件轉 Markdown</span><a href="../roadmap.html">回學習路線</a></div></footer>
 </body>
 </html>
-

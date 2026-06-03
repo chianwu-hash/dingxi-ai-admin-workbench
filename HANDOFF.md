@@ -1,12 +1,14 @@
 # Dingxi AI Admin Workbench Handoff
 
-Last updated: 2026-06-02
+Last updated: 2026-06-03
 
 ## Project Status
 
 This project is now the standalone public repository for the Dingxi AI Admin Workbench teaching site and flow packs.
 
 Current instructional priority: guide users into the project through `windows-chinese-encoding-safety-pack` first as the lowest-level Windows Chinese safety setup, then move into `ai-admin-presentation-flow-pack` as the first visible outcome workflow. Presentation work remains the most familiar outcome entry point for the intended audience, while the other flow packs should be framed as support or extension flows instead of 12 equal starting points.
+
+Current development focus: Unit 1 (`windows-chinese-encoding-safety-pack`) and Unit 2 (`document-to-markdown-flow-pack`) have both been developed into reusable patterns. Unit 1 is the safety/setup pattern; Unit 2 is the support-flow pattern for turning raw materials into AI-readable text before a visible outcome workflow.
 
 - Local project: `C:\Users\user\projects\dingxi-ai-admin-workbench`
 - GitHub repo: `https://github.com/chianwu-hash/dingxi-ai-admin-workbench`
@@ -220,7 +222,7 @@ This is a Windows + Chinese/CJK project. When using PowerShell:
 
 ## Current Working Notes
 
-Updated on 2026-06-02 in the current local working tree. These changes are not committed yet.
+Updated on 2026-06-03 in the current local working tree. Some changes were committed and pushed as `5888698 Prioritize encoding safety in learning route`; later refinements are still uncommitted.
 
 Instructional direction changed from "show 12 flow packs equally" to "start with the Chinese Windows encoding safety pack as the lowest-level setup, then move into the AI admin presentation workflow as the first visible outcome."
 
@@ -231,27 +233,61 @@ Files already updated for that direction:
 - `site/packs.html`: flow pack download center now highlights Chinese Windows encoding safety as the first pack and the presentation workflow as the second-stage outcome pack.
 - `site/modules/admin-presentation.html`: presentation module page now explains why this is the entry workflow and shows brief, material preparation, outline generation, and review/export as the learning steps.
 - `site/modules/windows-encoding.html`: encoding module now has a plain-language explanation, an AI-facing install prompt, and a copy button.
+- `site/modules/windows-encoding.html`: later refined so the main user action is copying the prompt; flow-pack/repo links are only low-priority advanced references.
+- `site/modules/doc2md.html`: document-to-Markdown module now follows the same user/AI split. The page explains the minimal use in plain language, makes the copyable AI prompt the main action, includes the required tool-install fallback sentence, and links flow-pack materials only as GitHub advanced references.
+- `site/modules/doc2md.html`: later refined so the AI prompt checks whether doc2md-toolkit or the `doc2md` command is available on the user's machine, then installs from GitHub if needed. General documents use MarkItDown, Chinese/vertical PDFs use pdf2txt, and heavy OCR tools are not installed or used by default. Do not put fixed local paths like `D:\projects\doc2md-toolkit` in public copyable prompts.
+- `site/modules/doc2md.html`: later added a small-OCR exception. For scanned/image-only files up to 10 pages, AI may convert pages to images and use small-batch OCR or AI vision as a rescue path; over 10 pages or complex layouts should be marked as needing formal OCR or human confirmation.
+- `site/modules/doc2md.html`: later added NotebookLM as an advanced cloud reading-comprehension route for large or complex documents that are safe to upload. It is not the local default path and should stay in the note section below the main prompt, not inside the copyable conversion prompt. Future CDP-assisted NotebookLM automation should only paste prompts, wait for responses, extract Markdown, and write confirmation checklists after the user has logged in, uploaded sources, and explicitly approved the action.
+- `site/packs.html`: the document-to-Markdown row now sends users to the module page first, not directly to the flow-pack folder.
 - `site/styles.css`: added featured-pack styling, fixed `figure.media` mobile overflow, and adjusted hero title wrapping.
 - `site/copy-prompts.js`: new shared one-click copy behavior for prompt boxes.
-- `site-plan/web-writing-sop.md`: new web writing SOP requiring a copy button for every prompt offered to users.
+- `site-plan/web-writing-sop.md`: new web writing SOP requiring a copy button for every prompt offered to users; it also records that tool-install prompts need the standard "AI installs if it has permission, otherwise guides the user" sentence, and that site pages must not link directly to local `.md` files.
+- `site-plan/web-writing-sop.md`: later extended with tool-type flow page rules, including document conversion warnings about sensitive data, scanned PDFs, OCR, tables, Chinese encoding, and quality checks after conversion.
 - `README.md` and `flow-packs/README.md`: updated recommended learning order to start with the Chinese Windows encoding safety pack.
+- `flow-packs/document-to-markdown-flow-pack/README.md`: reframed so the website prompt is the general-user entry, while the flow-pack is AI/maintainer reference material.
 - `site-plan/ai-workflow-core-concepts.md`: new draft document explaining three plain-language AI workflow concepts:
   1. AI is an assistant, not the responsible person.
   2. After getting a result, ask AI to write the process into a small SOP.
   3. If the result is unstable, revise the SOP/prompt to be clearer and harder.
+- `site-plan/windows-chinese-encoding-research-notes.md`: research notes from local tests, web search, and Claude CLI discussion.
+- `site-plan/unit-01-windows-encoding-development-log.md`: development log for the first completed unit, including reusable rules for future units.
+- `site-plan/unit-02-document-to-markdown-development-log.md`: development log for the second completed unit, including the minimal-use decision and support-flow page pattern.
+- `D:\projects\doc2md-toolkit`: MinerU was removed from the toolkit repo. The CLI now supports only `auto`, `markitdown`, and `pdf2txt`; scanned/image-only files should be marked as needing OCR or human confirmation rather than pushed through a heavy default path.
+- `D:\projects\doc2md-toolkit`: README and SKILL now record the 10-page small-OCR rescue rule while keeping heavy OCR out of the core CLI.
+- `flow-packs/document-to-markdown-flow-pack/05-safety-notes.md`: now records NotebookLM upload boundaries and CDP-assisted automation guardrails.
+
+Important UX decisions from Unit 1:
+
+- The website module page is the user-facing entry.
+- The prompt is the main action.
+- Flow-pack materials are advanced references for AI/maintainers, not the main user path.
+- Do not link site pages directly to local `.md` files; use HTML pages for users or GitHub `tree/blob` links for materials.
+- Any prompt that needs a missing tool must include this standard sentence:
+
+```text
+如果你有本機操作或安裝權限，請代我檢查並完成必要安裝；如果你沒有權限，請用我看得懂的步驟帶我完成，不要只丟技術文件連結給我。
+```
 
 Validation already run after these edits:
 
 - Site local links: `SITE_LINKS_OK`
+- Prompt copy rules: `PROMPT_COPY_OK`
+- No local Markdown links in site HTML: `NO_LOCAL_MD_LINKS`
 - Official Dingxi brand files absent: `NO_OFFICIAL_BRAND_FILES`
 - Flow pack JSON templates parse: `FLOW_PACK_JSON_OK`
-- CDP visual checks using the shared Chrome CDP instance at `127.0.0.1:9222`, following the local CDP policy. Checked desktop homepage, roadmap, packs, plus mobile homepage/packs. Homepage mobile horizontal overflow was found and fixed.
+- In-app Browser visual check for `http://127.0.0.1:4174/site/modules/doc2md.html`: title and main sentence render, one prompt box and one copy button are present, `copy-prompts.js` is loaded, GitHub advanced links are used, no horizontal overflow was detected, and clicking the copy button placed the prompt text on the clipboard.
+- Earlier CDP visual checks using the shared Chrome CDP instance at `127.0.0.1:9222`, following the local CDP policy, checked desktop homepage, roadmap, packs, plus mobile homepage/packs. Homepage mobile horizontal overflow was found and fixed.
 
 Recommended next conversation focus:
 
-1. Keep the learning route as: encoding safety first, presentation workflow second.
-2. Decide how to turn `site-plan/ai-workflow-core-concepts.md` into a user-facing site section without making it feel like technical documentation.
-3. Consider adding a new module/page tentatively titled "把你的行政工作教給 AI" after the presentation workflow.
+1. Continue with Unit 3 or another near-term support flow, using `site-plan/unit-01-windows-encoding-development-log.md` and `site-plan/unit-02-document-to-markdown-development-log.md` as reference patterns.
+2. For each new unit, first decide the general user's minimal purpose, then move tool names and command details into AI-facing prompts or advanced references.
+3. Consider making the public README friendlier for outside users now that the first two reusable unit patterns exist.
+
+Current local caveat:
+
+- `.codex-http-4174.err` is an untracked local HTTP server log and should not be committed.
+- Before committing the next batch, rerun site link checks, prompt-copy checks, official brand file checks, and flow-pack JSON parsing.
 
 ## Current Open Decisions
 

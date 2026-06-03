@@ -1,9 +1,15 @@
 (function () {
   function copyText(text) {
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      return navigator.clipboard.writeText(text);
+      return navigator.clipboard.writeText(text).catch(function () {
+        return copyTextWithTextarea(text);
+      });
     }
 
+    return copyTextWithTextarea(text);
+  }
+
+  function copyTextWithTextarea(text) {
     var textarea = document.createElement("textarea");
     textarea.value = text;
     textarea.setAttribute("readonly", "");
