@@ -45,17 +45,13 @@
 Repo:
 https://github.com/chianwu-hash/windows-powershell-encoding-skill
 
-請先確認我的環境是否已安裝 PowerShell 7.x（pwsh）。如果尚未安裝，請先判斷你是否有本機操作或安裝權限：如果你有本機操作或安裝權限，請代我檢查並完成必要安裝；如果你沒有權限，請用我看得懂的步驟帶我完成，不要只丟技術文件連結給我。不要使用 Windows PowerShell 5.1 作為中文 AI 工作流的主要執行環境。
+如果你有本機操作或安裝權限，請代我檢查並完成必要安裝；如果你沒有權限，請用我看得懂的步驟帶我完成，不要只丟技術文件連結給我。
+
+請依照這個 repo 內的 README、SKILL.md 與診斷腳本說明執行。若 repo 規則和你原本習慣不同，請以 repo 規則為準。
 
 如果你支援安裝 Codex skill，請從上方 repo 安裝 windows-powershell-encoding-skill。安裝後請提醒我重新開啟 Codex 對話，讓新版 skill 生效。
 
-安裝或套用後，請遵守以下規則：
-1. 處理中文/CJK 檔案時，讀寫都要明確使用 UTF-8。
-2. 不要把終端機顯示的中文當成唯一正確來源。
-3. 如果看到亂碼、???、�，請停止，不要把那些文字複製回文件或提示詞。
-4. 請用 UTF-8 檔案、git diff、瀏覽器畫面、結構化資料或 byte-level 檢查來驗證中文內容。
-5. 請優先使用 pwsh 7.x；Windows PowerShell 5.1 只當作舊版相容環境。
-6. 若需要診斷，請執行 skill 中的 diagnose-powershell-encoding.ps1。</code></pre>
+完成後，請用簡短清單回報你已完成哪些檢查、是否需要我手動安裝任何工具，以及接下來我處理中文檔案時要注意的第一步。</code></pre>
       </div>
       <div class="wrap note">
         <strong>進階備查：</strong>一般使用者只需要複製上面的提示詞。維護者或 AI 助手需要完整規則時，再查看 <a href="https://github.com/chianwu-hash/windows-powershell-encoding-skill">安全包 repo</a> 或 <a href="https://github.com/chianwu-hash/dingxi-ai-admin-workbench/tree/main/flow-packs/windows-chinese-encoding-safety-pack">流程包材料</a>。

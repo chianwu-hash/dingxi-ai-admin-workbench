@@ -43,6 +43,8 @@ Last updated: 2026-06-03
 
    `site/modules/windows-encoding.html` 移除主要的流程包下載按鈕，保留低調的進階備查連結。主要 CTA 是提示詞區塊的「複製」鈕。
 
+   後續再精簡提示詞：網站提示詞不重抄 UTF-8、終端顯示、pwsh 等完整規則，只要求 AI 安裝或套用 `windows-powershell-encoding-skill`，並以 repo 內 README / SKILL.md / 診斷腳本為準。這樣 repo 規則更新時，網站提示詞不會變成舊版規則。
+
 6. 修正 Markdown 連結問題。
 
    網站不再直接連到本機 `.md`。原因是 raw Markdown 不是網站頁面，而且本機 HTTP server 可能沒有正確給 UTF-8 charset，導致瀏覽器中文亂碼。站內需要連材料時，改連 GitHub `tree/main/...` 或 `blob/main/...`。
@@ -72,6 +74,7 @@ Last updated: 2026-06-03
 
 - 給人看的說明要白話，先講用途，不先講工具名。
 - 給 AI 的提示詞可以有技術細節。
+- 若技術細節已經在 repo 或 skill 裡，提示詞只指向 repo 並要求以 repo 規則為準，不重複抄規則。
 - 提示詞一律有「複製」鈕。
 - 安裝或工具檢查類提示詞一律加入工具缺失標準句。
 - 網站 HTML 不直接連本機 `.md`。
