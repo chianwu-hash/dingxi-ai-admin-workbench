@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>行政案件類型路由｜AI 行政工作臺</title>
+  <title>我的 AI 行政工作台｜AI 行政工作臺</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -12,20 +12,75 @@
     <nav class="nav" aria-label="主導覽"><a href="../index.html">首頁</a><a href="../roadmap.html">學習路線</a><a href="../packs.html">流程包</a><a href="../safety.html">安全守則</a></nav>
   </header>
   <main>
-    <section class="page-title"><div class="wrap"><p class="eyebrow">Module 3</p><h1>行政案件類型路由</h1><p>AI 行政工作臺不能只有一個萬用 prompt。先分類案件，再套用對應規則。</p></div></section>
-    <section class="section">
-      <div class="wrap">
-        <div class="section-head"><h2>路由表讓 AI 不亂套格式</h2><p>每個案件類型都要有判斷線索、必讀規則、禁止誤用、預設輸出與人工確認條件。</p></div>
-        <div class="grid three">
-          <article class="card"><h3>分類</h3><p>先判斷是場地借用、會議紀錄、活動通知、行事曆操作或一般行政。</p></article>
-          <article class="card"><h3>規則</h3><p>每類案件讀自己的規則，不把所有任務混成同一格式。</p></article>
-          <article class="card"><h3>確認</h3><p>個資、正式紀錄、主管相關或資料不足時，等待人工確認。</p></article>
-        </div>
-        <div class="actions"><a class="button" href="https://github.com/chianwu-hash/dingxi-ai-admin-workbench/tree/main/flow-packs/admin-case-routing-template-pack">下載流程包</a><a class="button ghost" href="https://github.com/chianwu-hash/dingxi-ai-admin-workbench/blob/main/flow-packs/admin-case-routing-template-pack/02-template/case-routing-table-template.md">路由表模板</a></div>
+    <section class="page-title"><div class="wrap"><p class="eyebrow">Unit 3</p><h1>我的 AI 行政工作台</h1><p>這一單元不是教一個工具，而是教承辦人判斷：哪些行政工作適合讓 AI 先整理、人再確認。</p></div></section>
+    <section class="section"><div class="wrap split">
+      <div><h2>先判斷工作能不能放進 AI 工作台</h2><p>適合 AI 的工作不只是一再重複的工作，也包含資料量大、格式明確、結果可以先檢查的批次任務。重點是讓 AI 做整理與草稿，人保留判斷、確認與正式執行。</p><div class="actions"><a class="button" href="#judge-prompt">複製判斷提示詞</a><a class="button ghost" href="google-calendar.html">看行事曆進階流程</a></div></div>
+      <figure class="media"><img src="../../assets/brand/placeholder-hero-banner.svg" alt="AI 行政工作台示意"></figure>
+    </div></section>
+    <section class="section alt" id="judge-prompt"><div class="wrap section-head stacked">
+      <h2>給 AI 助手看的判斷提示詞</h2>
+      <p>把你手上的行政工作先描述給 AI。請它不要直接做完，而是先判斷這件事適合哪一種處理方式。</p>
+    </div>
+    <div class="wrap prompt-box">
+      <div class="prompt-header"><p class="prompt-title">複製這段給 AI</p><button class="copy-button" type="button" data-copy-prompt>複製</button></div>
+      <pre><code>請幫我判斷下面這件行政工作，適不適合放進我的 AI 行政工作台。
+
+請先不要直接幫我做完，而是先幫我分析：
+- 這件工作是否重複出現
+- 是否有固定流程
+- 是否需要整理複雜資料
+- 是否雖然不重複，但屬於資料量大、格式明確、結果可以檢查的批次工作
+- 需要哪些輸入資料
+- AI 可以協助哪些部分
+- 人一定要確認哪些部分
+- 輸出格式應該長什麼樣子
+- 有哪些資料安全、個資或行政責任風險
+- 適合整理成下次可重複的小 SOP，還是適合先產出可檢查的檔案、表格或 dry-run
+
+請用行政承辦人看得懂的白話回答。
+如果不適合交給 AI，請直接說明原因，並建議只讓 AI 協助哪一小段。
+
+我要判斷的行政工作是：
+（請在這裡貼上你的工作描述）</code></pre>
+    </div></section>
+    <section class="section"><div class="wrap">
+      <div class="section-head">
+        <h2>兩種很適合放進工作台的任務</h2>
+        <p>先不用追求自動化。能整理、能預覽、能確認，就已經是好的 AI 行政工作台起點。</p>
       </div>
-    </section>
+      <div class="grid two">
+        <article class="card"><span class="tag">例行</span><h3>用去年資料籌辦今年活動</h3><p>例如兒童朝會頒獎、校內競賽、運動會或畢業典禮。AI 從往年企劃書、流程表、分工表中找出固定架構，再列出今年要確認的項目。</p></article>
+        <article class="card"><span class="tag">批次</span><h3>整理校務日期到 Google 行事曆</h3><p>這不一定每週重複，但資料量大、欄位明確。初階可產生 .ics 匯入檔；進階才走 API、備份、dry-run 與人工確認。</p></article>
+      </div>
+    </div></section>
+    <section class="section alt"><div class="wrap">
+      <div class="section-head">
+        <h2>主案例：用去年的資料，整理今年的活動工作台</h2>
+        <p>AI 最適合接手的，不是你還沒想清楚的工作，而是你已經有往年資料、固定流程、每年都要重做一次的工作。</p>
+      </div>
+      <div class="timeline compact">
+        <article class="step"><div class="step-num">1</div><div><h3>找到往年資料</h3><p>企劃書、流程表、分工表、名單格式、設備需求、檢討紀錄，都可以先收在一起。</p></div></article>
+        <article class="step"><div class="step-num">2</div><div><h3>轉成 AI 可讀文字</h3><p>如果是 PDF、Word 或舊簡報，先接文件轉 Markdown 單元，整理成乾淨文字。</p></div></article>
+        <article class="step"><div class="step-num">3</div><div><h3>請 AI 找出固定架構</h3><p>先整理去年怎麼做、哪些項目每年固定、哪些項目今年一定要更新。</p></div></article>
+        <article class="step"><div class="step-num">4</div><div><h3>人補上今年條件</h3><p>日期、場地、人員、預算、名單、簽核規定，這些都要由承辦人或主管確認。</p></div></article>
+        <article class="step"><div class="step-num">5</div><div><h3>產出草稿與 SOP</h3><p>AI 可以整理今年企劃草稿、活動流程、工作分工，活動後再回寫成下次可用的 SOP。</p></div></article>
+      </div>
+    </div></section>
+    <section class="section"><div class="wrap">
+      <div class="section-head">
+        <h2>判斷原則</h2>
+        <p>不是問 AI 能不能做，而是問這件事能不能變成 AI 可整理、人可確認、輸出可檢查的任務。</p>
+      </div>
+      <div class="grid four">
+        <article class="card"><h3>有資料</h3><p>手上有舊文件、表格、來文、照片說明、日期清單或其他可整理材料。</p></article>
+        <article class="card"><h3>有格式</h3><p>輸出可以是清單、表格、草稿、.ics、CSV、dry-run 或檢查表。</p></article>
+        <article class="card"><h3>能檢查</h3><p>人可以檢查日期、名單、金額、格式、缺資料與是否適合執行。</p></article>
+        <article class="card"><h3>不放行</h3><p>AI 不直接公告、送簽、寄信、寫入系統或替人做正式決定。</p></article>
+      </div>
+      <div class="actions"><a class="button ghost" href="https://github.com/chianwu-hash/dingxi-ai-admin-workbench/tree/main/flow-packs/admin-case-routing-template-pack">進階：查看原路由流程包</a></div>
+    </div></section>
   </main>
-  <footer class="footer"><div class="wrap"><span>行政案件類型路由</span><a href="../roadmap.html">回學習路線</a></div></footer>
+  <script src="../copy-prompts.js"></script>
+  <footer class="footer"><div class="wrap"><span>我的 AI 行政工作台</span><a href="../roadmap.html">回學習路線</a></div></footer>
 </body>
 </html>
-

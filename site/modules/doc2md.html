@@ -36,25 +36,22 @@
     <section class="section alt">
       <div class="wrap section-head stacked">
         <h2>給 AI 助手看的轉換提示詞</h2>
-        <p>以下內容是給 AI 助手看的，你不需要先懂工具名稱；把它整段貼給 AI，再補上你要處理的檔案位置即可。</p>
+        <p>以下內容是給 AI 助手看的，你不需要先懂工具名稱；把它整段貼給 AI，請 AI 先把工具安裝或套用好。</p>
       </div>
       <div class="wrap prompt-box">
         <div class="prompt-header"><p class="prompt-title">複製這段給 AI</p><button class="copy-button" type="button" data-copy-prompt>複製</button></div>
-        <pre><code>請協助我安裝或使用 doc2md-toolkit，把文件轉成 AI 看得懂的乾淨 Markdown 或純文字，並完成轉換品質檢查。
+        <pre><code>請幫我安裝並使用 doc2md-toolkit。
 
 Repo:
 https://github.com/chianwu-hash/doc2md-toolkit
-
-我要處理的文件或資料夾位置是：
-（請在這裡貼上檔案路徑、資料夾路徑，或先請我提供）
 
 如果你有本機操作或安裝權限，請代我檢查並完成必要安裝；如果你沒有權限，請用我看得懂的步驟帶我完成，不要只丟技術文件連結給我。
 
 請依照這個 repo 內的 README、SKILL.md、workflow 與 checklist 執行。若 repo 規則和你原本習慣不同，請以 repo 規則為準。
 
-請先確認文件是否可能含有個資、機密或未公開資料；如果有風險，請先提醒我，並優先採用本機處理方式。
+如果你支援安裝 Codex skill，請從上方 repo 安裝 doc2md-toolkit。安裝後請提醒我重新開啟 Codex 對話，讓新版 skill 生效。
 
-完成後，請用簡短清單回報：輸出檔位置、轉換品質、需要人工確認的地方，以及下一步可以請 AI 做的摘要、待辦整理或公告草稿。</code></pre>
+完成後，請用簡短清單回報你已完成哪些檢查、是否需要我手動安裝任何工具，以及之後我要轉文件時該怎麼把檔案交給你。</code></pre>
       </div>
     </section>
     <section class="section">
@@ -62,6 +59,9 @@ https://github.com/chianwu-hash/doc2md-toolkit
         <article class="card"><h3>轉之前</h3><p>先確認文件能不能交給 AI 處理。真實公文、學生或家長資料、未公開資料，要先去識別化或留在本機。</p></article>
         <article class="card"><h3>轉之後</h3><p>不要只看有沒有產出檔案，還要檢查標題、表格、中文、漏頁與頁首頁尾。</p></article>
         <article class="card"><h3>再利用</h3><p>乾淨文字可以接著做摘要、待辦事項、會議紀錄、簡報 brief 或公告草稿。</p></article>
+      </div>
+      <div class="wrap note">
+        <strong>安裝後怎麼用：</strong>之後只要把文件路徑、資料夾路徑或你要處理的檔案交給 AI，AI 會依照 doc2md-toolkit 的規則判斷要轉成 Markdown、純文字、小量 OCR 救援，或標記為需要人工確認。
       </div>
       <div class="wrap note">
         <strong>大量 OCR 的進階解法：</strong>如果文件頁數很多、掃描品質複雜，或本機工具抽不出乾淨文字，而且文件沒有個資、機密或未公開內容，可以考慮改走 NotebookLM 這類雲端閱讀理解路線。做法是由使用者自行登入、確認資料可以上傳、加入來源，再請 NotebookLM 依來源整理成 Markdown、摘要或章節大綱。這不是本機預設流程；只適合已確認可上傳的資料。

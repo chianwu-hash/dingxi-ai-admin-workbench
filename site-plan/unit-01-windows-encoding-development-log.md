@@ -45,6 +45,8 @@ Last updated: 2026-06-03
 
    後續再精簡提示詞：網站提示詞不重抄 UTF-8、終端顯示、pwsh 等完整規則，只要求 AI 安裝或套用 `windows-powershell-encoding-skill`，並以 repo 內 README / SKILL.md / 診斷腳本為準。這樣 repo 規則更新時，網站提示詞不會變成舊版規則。
 
+   再後續把第一、二單元整合到首頁的一段「基礎工具安裝提示詞」：一次列出 `windows-powershell-encoding-skill` 與 `doc2md-toolkit`，讓剛進站的使用者先把 AI 助手裝備好。單元頁保留單一工具提示詞作為備用入口。
+
 6. 修正 Markdown 連結問題。
 
    網站不再直接連到本機 `.md`。原因是 raw Markdown 不是網站頁面，而且本機 HTTP server 可能沒有正確給 UTF-8 charset，導致瀏覽器中文亂碼。站內需要連材料時，改連 GitHub `tree/main/...` 或 `blob/main/...`。

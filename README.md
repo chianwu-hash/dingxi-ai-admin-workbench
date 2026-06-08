@@ -4,7 +4,7 @@
 
 核心目標不是公開原始工作 repo，也不是讓使用者一次理解 12 個流程包。
 
-目前第一目標是先讓使用者完成「中文 Windows 編碼安全」這個底層安全設定，再引導使用者學會「AI 行政簡報流程」。簡報是行政現場最熟悉、最容易看到成果的入口；學會這個工作流之後，再把文件整理、品牌圖像、人工確認、安全檢查與自動化延伸接上來。
+目前第一目標是先讓使用者完成「安裝 Codex」這個第 0 單元，再做「中文 Windows 編碼安全」與「文件轉 Markdown」這兩個底層準備，接著建立「我的 AI 行政工作台」。簡報仍是重要成果型工作流，但會放在前面幾個底層能力之後。
 
 整體教學模式仍維持：
 
@@ -16,13 +16,14 @@
 
 目前包含 12 個流程包與對應網站單元頁。建議學習順序如下：
 
+0. 安裝 Codex（網站第 0 單元，不是流程包）
 1. `windows-chinese-encoding-safety-pack`
-2. `ai-admin-presentation-flow-pack`
-3. `document-to-markdown-flow-pack`
-4. `admin-brand-image-flow-pack`
-5. `obsidian-confirmation-flow-pack`
-6. `voice-input-workflow-pack`
-7. `admin-case-routing-template-pack`
+2. `document-to-markdown-flow-pack`
+3. `admin-case-routing-template-pack`（網站顯示為「我的 AI 行政工作台」）
+4. `ai-admin-presentation-flow-pack`
+5. `admin-brand-image-flow-pack`
+6. `obsidian-confirmation-flow-pack`
+7. `voice-input-workflow-pack`
 8. `google-calendar-safe-ops-pack`
 9. `gmail-label-cleanup-flow-pack`
 10. `cdp-safety-foundation-pack`

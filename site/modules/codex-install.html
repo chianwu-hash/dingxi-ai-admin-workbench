@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>安裝 Codex｜AI 行政工作臺</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="../index.html"><img src="../../assets/brand/placeholder-school-crest.svg" alt="頂溪國小校徽"><span>頂溪國小<br>AI 行政工作臺</span></a><nav class="nav"><a href="../index.html">首頁</a><a href="../roadmap.html">學習路線</a><a href="../packs.html">流程包</a><a href="../safety.html">安全守則</a></nav></header>
+  <main>
+    <section class="page-title"><div class="wrap"><p class="eyebrow">Unit 0</p><h1>先安裝 Codex</h1><p>這是進入 AI 行政工作臺前的第 0 單元：先讓承辦人有一個可以操作本機檔案、讀流程包、協助檢查結果的 AI 工作環境。</p></div></section>
+    <section class="section"><div class="wrap split">
+      <div><h2>最小用途：先有一個可以一起工作的 AI 助手</h2><p>一般承辦人不用一開始就理解 CLI、API、MCP 或 sandbox。第 0 單元只要完成三件事：安裝 Codex、登入帳號、確認能打開專案或本機資料夾。後面的中文安全、文件轉文字、行事曆與工作台任務，才有地方可以執行。</p><div class="actions"><a class="button" href="https://developers.openai.com/codex/app/windows">看官方 Windows 安裝說明</a><a class="button ghost" href="https://developers.openai.com/codex/quickstart">看官方 Quickstart</a></div></div>
+      <figure class="media"><img src="../../assets/brand/placeholder-action-banner.svg" alt="AI 行政工作臺操作環境示意"></figure>
+    </div></section>
+    <section class="section alt"><div class="wrap section-head stacked">
+      <h2>給自己或資訊同仁看的安裝提示詞</h2>
+      <p>如果你還沒有 Codex，可以把這段貼給 ChatGPT、資訊同仁，或任何協助你安裝的人。安裝方式仍以 OpenAI 官方文件為準。</p>
+    </div>
+    <div class="wrap prompt-box">
+      <div class="prompt-header"><p class="prompt-title">複製這段安裝請求</p><button class="copy-button" type="button" data-copy-prompt>複製</button></div>
+      <pre><code>請協助我在 Windows 電腦上安裝並開始使用 OpenAI Codex。
+
+目標：
+- 安裝 Codex app，讓我可以用 AI 協助處理本機專案與行政資料。
+- 完成登入。
+- 確認我可以開啟本機資料夾或專案。
+- 確認之後可以繼續進行「中文 Windows 編碼安全」與「文件轉 Markdown」單元。
+
+請優先參考 OpenAI 官方文件：
+https://developers.openai.com/codex/app/windows
+https://developers.openai.com/codex/quickstart
+https://developers.openai.com/codex/auth
+
+如果可以使用 Microsoft Store，請引導我從 Microsoft Store 安裝 Codex。
+如果需要用命令列，請依官方文件使用：
+winget install Codex -s msstore
+
+如果你有本機操作或安裝權限，請代我檢查並完成必要安裝；如果你沒有權限，請用我看得懂的步驟帶我完成，不要只丟技術文件連結給我。
+
+安裝完成後，請幫我確認：
+1. Codex 是否可以開啟。
+2. 是否已登入 ChatGPT 帳號或 API key。
+3. 是否可以開啟一個本機資料夾。
+4. 是否需要另外安裝 Git、Node.js 或 Python。
+5. 接下來我應該進入哪一個教學單元。</code></pre>
+    </div></section>
+    <section class="section"><div class="wrap">
+      <div class="section-head">
+        <h2>第 0 單元只檢查這些</h2>
+        <p>不要在這一步把所有工具都裝完。先確認 Codex 能開、能登入、能讀本機資料夾，再往下走。</p>
+      </div>
+      <div class="grid four">
+        <article class="card"><span class="tag">1</span><h3>安裝</h3><p>Windows 使用者優先走 Codex app。可用 Microsoft Store，或依官方文件用 winget 安裝。</p></article>
+        <article class="card"><span class="tag">2</span><h3>登入</h3><p>使用 ChatGPT 帳號登入是最直覺的路徑；API key 也可用，但資料政策與功能可用性會不同。</p></article>
+        <article class="card"><span class="tag">3</span><h3>開資料夾</h3><p>能打開本機專案或教學資料夾，後面才能讓 AI 讀流程包、改網站或整理文件。</p></article>
+        <article class="card"><span class="tag">4</span><h3>先保守</h3><p>先使用預設權限與人工確認。會改動資料或寫入系統的流程，之後再學 dry-run 與備份。</p></article>
+      </div>
+    </div></section>
+    <section class="section alt"><div class="wrap">
+      <div class="section-head">
+        <h2>安裝後接哪裡</h2>
+        <p>Codex 是入口，不是成果。安裝完成後，才開始真正建立 AI 行政工作臺的底層安全與資料處理能力。</p>
+      </div>
+      <div class="grid three">
+        <article class="card"><h3>第 1 單元：中文安全</h3><p>先讓 AI 避開 Windows 中文亂碼，避免後面處理文件時把中文弄壞。</p><div class="actions"><a class="button ghost" href="windows-encoding.html">進入單元</a></div></article>
+        <article class="card"><h3>第 2 單元：文件轉文字</h3><p>把 PDF、Word、舊簡報或資料夾整理成 AI 看得懂的乾淨文字。</p><div class="actions"><a class="button ghost" href="doc2md.html">進入單元</a></div></article>
+        <article class="card"><h3>第 3 單元：我的 AI 行政工作台</h3><p>判斷哪些行政工作適合交給 AI 先整理、人再確認。</p><div class="actions"><a class="button ghost" href="case-routing.html">進入單元</a></div></article>
+      </div>
+    </div></section>
+  </main>
+  <script src="../copy-prompts.js"></script>
+  <footer class="footer"><div class="wrap"><span>安裝 Codex</span><a href="../roadmap.html">回學習路線</a></div></footer>
+</body>
+</html>

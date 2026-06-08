@@ -6,9 +6,9 @@ Last updated: 2026-06-03
 
 This project is now the standalone public repository for the Dingxi AI Admin Workbench teaching site and flow packs.
 
-Current instructional priority: guide users into the project through `windows-chinese-encoding-safety-pack` first as the lowest-level Windows Chinese safety setup, then move into `ai-admin-presentation-flow-pack` as the first visible outcome workflow. Presentation work remains the most familiar outcome entry point for the intended audience, while the other flow packs should be framed as support or extension flows instead of 12 equal starting points.
+Current instructional priority: guide users into the project through a new Unit 0, `site/modules/codex-install.html`, so they first install Codex and can work with local folders. After that, move through `windows-chinese-encoding-safety-pack`, `document-to-markdown-flow-pack`, and the renamed website-facing Unit 3, "我的 AI 行政工作台". Presentation work remains an important visible outcome workflow, but it now follows the setup, text-preparation, and workbench-decision units.
 
-Current development focus: Unit 1 (`windows-chinese-encoding-safety-pack`) and Unit 2 (`document-to-markdown-flow-pack`) have both been developed into reusable patterns. Unit 1 is the safety/setup pattern; Unit 2 is the support-flow pattern for turning raw materials into AI-readable text before a visible outcome workflow.
+Current development focus: Unit 0 (`codex-install.html`), Unit 1 (`windows-chinese-encoding-safety-pack`), Unit 2 (`document-to-markdown-flow-pack`), Unit 3 (`admin-case-routing-template-pack` shown as "我的 AI 行政工作台"), and Unit 4 (`ai-admin-presentation-flow-pack`) have been developed into reusable patterns. Unit 0 is the entry/setup pattern; Unit 1 is the safety/setup pattern; Unit 2 is the support-flow pattern for turning raw materials into AI-readable text; Unit 3 is the workbench-decision pattern for deciding what tasks belong in an AI admin workbench; Unit 4 is the outcome-workflow pattern for producing a visible administrative deliverable without treating it as an installable tool.
 
 - Local project: `C:\Users\user\projects\dingxi-ai-admin-workbench`
 - GitHub repo: `https://github.com/chianwu-hash/dingxi-ai-admin-workbench`
@@ -228,15 +228,26 @@ Instructional direction changed from "show 12 flow packs equally" to "start with
 
 Files already updated for that direction:
 
+- `site/modules/codex-install.html`: new Unit 0 page. It points users to official OpenAI Codex Windows, Quickstart, and Auth docs, provides a copyable install request, and keeps the user-facing goal to installing Codex, logging in, opening a local folder, and moving to Unit 1.
+- `site/roadmap.html`: learning roadmap now starts with Unit 0 install Codex, then Chinese Windows encoding safety, document-to-Markdown, "我的 AI 行政工作台", and AI admin presentation.
+- `site/modules/case-routing.html`: reframed from "行政案件類型路由" to "我的 AI 行政工作台", with a copyable suitability prompt and two examples: recurring school activity planning from last year's files, and Google Calendar `.ics` / API batch calendar work.
+- `site-plan/unit-00-codex-install-development-log.md`: new development log for Unit 0, including official Codex documentation basis and page-writing boundaries.
 - `site/index.html`: homepage now leads with "先避開中文亂碼，再做一份簡報" and sends users first to the Chinese Windows encoding safety unit, then the presentation workflow.
+- `site/index.html`: later reframed to lead with installing Codex first, then Chinese safety, document-to-Markdown, and the AI admin workbench.
+- `site/index.html`: later added a homepage-level integrated install prompt for foundational repo tools. It currently installs/applies `windows-powershell-encoding-skill` and `doc2md-toolkit` in one copyable prompt; future install-only repo tools should be added there first.
 - `site/roadmap.html`: learning roadmap now starts with `windows-chinese-encoding-safety-pack`, then `ai-admin-presentation-flow-pack`, then document-to-markdown, brand image, confirmation checklist, voice input, and later advanced workflows.
 - `site/packs.html`: flow pack download center now highlights Chinese Windows encoding safety as the first pack and the presentation workflow as the second-stage outcome pack.
 - `site/modules/admin-presentation.html`: presentation module page now explains why this is the entry workflow and shows brief, material preparation, outline generation, and review/export as the learning steps.
+- `site/modules/admin-presentation.html`: later reframed as an outcome-workflow page. Its main action is now a copyable prompt that asks AI to use the GitHub flow-pack materials and follow repo rules, while the flow-pack links are advanced references.
+- `site/packs.html`: the AI admin presentation row now sends users to the module page first, not directly to the flow-pack folder.
+- `flow-packs/ai-admin-presentation-flow-pack/02-template/presentation-outline-prompt.md`: added because the intended maintenance checklist referenced this material but it was missing from the repo.
+- `flow-packs/ai-admin-presentation-flow-pack/README.md`, `01-workflow.md`, `02-template/brief-template.md`, `04-checklist.md`, and `05-safety-notes.md`: expanded to support the outcome-workflow page pattern, with clearer brief fields, human/AI responsibility split, fixed overlay guidance, safety checks, and SOP retrospective reminders.
+- `site-plan/unit-04-admin-presentation-development-log.md`: development log for the fourth unit and reusable outcome-workflow page pattern.
 - `site/modules/windows-encoding.html`: encoding module now has a plain-language explanation, an AI-facing install prompt, and a copy button.
 - `site/modules/windows-encoding.html`: later refined so the main user action is copying the prompt; flow-pack/repo links are only low-priority advanced references.
 - `site/modules/windows-encoding.html`: later simplified the prompt so it asks AI to install/apply the repo and follow README/SKILL.md/diagnostic scripts, instead of duplicating the full encoding rules in the website prompt.
 - `site/modules/doc2md.html`: document-to-Markdown module now follows the same user/AI split. The page explains the minimal use in plain language, makes the copyable AI prompt the main action, includes the required tool-install fallback sentence, and links flow-pack materials only as GitHub advanced references.
-- `site/modules/doc2md.html`: later simplified the prompt so it asks AI to install/use doc2md-toolkit and follow README/SKILL.md/workflow/checklist, instead of duplicating the full engine/OCR/checklist rules in the website prompt.
+- `site/modules/doc2md.html`: later simplified the prompt so it asks AI to install/use doc2md-toolkit and follow README/SKILL.md/workflow/checklist, instead of duplicating the full engine/OCR/checklist rules in the website prompt. The prompt no longer asks AI to convert a file immediately; actual conversion happens in the next user step after the skill/repo is installed.
 - `site/modules/doc2md.html`: later refined so the AI prompt checks whether doc2md-toolkit or the `doc2md` command is available on the user's machine, then installs from GitHub if needed. General documents use MarkItDown, Chinese/vertical PDFs use pdf2txt, and heavy OCR tools are not installed or used by default. Do not put fixed local paths like `D:\projects\doc2md-toolkit` in public copyable prompts.
 - `site/modules/doc2md.html`: later added a small-OCR exception. For scanned/image-only files up to 10 pages, AI may convert pages to images and use small-batch OCR or AI vision as a rescue path; over 10 pages or complex layouts should be marked as needing formal OCR or human confirmation.
 - `site/modules/doc2md.html`: later added NotebookLM as an advanced cloud reading-comprehension route for large or complex documents that are safe to upload. It is not the local default path and should stay in the note section below the main prompt, not inside the copyable conversion prompt. Future CDP-assisted NotebookLM automation should only paste prompts, wait for responses, extract Markdown, and write confirmation checklists after the user has logged in, uploaded sources, and explicitly approved the action.
@@ -245,6 +256,7 @@ Files already updated for that direction:
 - `site/copy-prompts.js`: new shared one-click copy behavior for prompt boxes.
 - `site-plan/web-writing-sop.md`: new web writing SOP requiring a copy button for every prompt offered to users; it also records that tool-install prompts need the standard "AI installs if it has permission, otherwise guides the user" sentence, and that site pages must not link directly to local `.md` files.
 - `site-plan/web-writing-sop.md`: later extended with tool-type flow page rules, including document conversion warnings about sensitive data, scanned PDFs, OCR, tables, Chinese encoding, and quality checks after conversion.
+- `site-plan/web-writing-sop.md`: later extended with outcome-workflow page rules. Outcome pages such as the AI admin presentation unit should start from the visible deliverable, provide a copyable prompt that points AI to the flow-pack, keep human confirmation explicit, and stay out of the homepage integrated install prompt.
 - `README.md` and `flow-packs/README.md`: updated recommended learning order to start with the Chinese Windows encoding safety pack.
 - `flow-packs/document-to-markdown-flow-pack/README.md`: reframed so the website prompt is the general-user entry, while the flow-pack is AI/maintainer reference material.
 - `site-plan/ai-workflow-core-concepts.md`: new draft document explaining three plain-language AI workflow concepts:
@@ -278,11 +290,26 @@ Validation already run after these edits:
 - Official Dingxi brand files absent: `NO_OFFICIAL_BRAND_FILES`
 - Flow pack JSON templates parse: `FLOW_PACK_JSON_OK`
 - In-app Browser visual check for `http://127.0.0.1:4174/site/modules/doc2md.html`: title and main sentence render, one prompt box and one copy button are present, `copy-prompts.js` is loaded, GitHub advanced links are used, no horizontal overflow was detected, and clicking the copy button placed the prompt text on the clipboard.
+- 2026-06-03 Unit 4 checks after the AI admin presentation update:
+  - Site local links: `SITE_LINKS_OK`
+  - Prompt copy rules: `PROMPT_COPY_OK`
+  - No local Markdown links in site HTML: `NO_LOCAL_MD_LINKS`
+  - Official Dingxi brand files absent: `NO_OFFICIAL_BRAND_FILES`
+  - Flow pack JSON templates parse: `FLOW_PACK_JSON_OK`
+  - Homepage integrated install prompt does not include the presentation flow: `HOME_INSTALL_PROMPT_NO_PRESENTATION_FLOW`
+  - In-app Browser visual check for `http://127.0.0.1:4174/site/modules/admin-presentation.html`: title and main sentence render, two prompt boxes and two copy buttons are present, `copy-prompts.js` is loaded, no local Markdown links are present, no horizontal overflow was detected, and clicking the first copy button changed its label to `已複製`. Clipboard readback was blocked by the browser test environment, so the label change was used as the interaction signal.
+- 2026-06-07 Unit 0 / reordered roadmap checks:
+  - Site local links: `SITE_LINKS_OK`
+  - Prompt copy rules: `PROMPT_COPY_OK`
+  - No local Markdown links in site HTML: `NO_LOCAL_MD_LINKS`
+  - Official Dingxi brand files absent: `NO_OFFICIAL_BRAND_FILES`
+  - Flow pack JSON templates parse: `FLOW_PACK_JSON_OK`
+  - In-app Browser visual checks for `http://127.0.0.1:4174/site/modules/codex-install.html`, `http://127.0.0.1:4174/site/roadmap.html`, and `http://127.0.0.1:4174/site/modules/case-routing.html`: titles render, roadmap first steps show `0,1,2,3,4`, prompt boxes and copy buttons are present where expected, `copy-prompts.js` is loaded where needed, no horizontal overflow was detected, and clicking the new copy buttons changed their labels to `已複製`.
 - Earlier CDP visual checks using the shared Chrome CDP instance at `127.0.0.1:9222`, following the local CDP policy, checked desktop homepage, roadmap, packs, plus mobile homepage/packs. Homepage mobile horizontal overflow was found and fixed.
 
 Recommended next conversation focus:
 
-1. Continue with Unit 3 or another near-term support flow, using `site-plan/unit-01-windows-encoding-development-log.md` and `site-plan/unit-02-document-to-markdown-development-log.md` as reference patterns.
+1. Continue with Unit 5 or another near-term support flow, using `site-plan/unit-00-codex-install-development-log.md`, `site-plan/unit-01-windows-encoding-development-log.md`, `site-plan/unit-02-document-to-markdown-development-log.md`, `site-plan/unit-03-my-ai-admin-workbench-positioning-notes.md`, and `site-plan/unit-04-admin-presentation-development-log.md` as reference patterns.
 2. For each new unit, first decide the general user's minimal purpose, then move tool names and command details into AI-facing prompts or advanced references.
 3. Consider making the public README friendlier for outside users now that the first two reusable unit patterns exist.
 

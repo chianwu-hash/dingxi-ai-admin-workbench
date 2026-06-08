@@ -65,7 +65,7 @@ flow-pack materials 給 AI 或維護者備查：
 `site/modules/doc2md.html` 已重寫為第二單元的使用者入口：
 
 - 頁首主句改成「這是把文件變成 AI 看得懂的乾淨文字用的流程。」
-- 主要 CTA 改為給 AI 的轉換提示詞。
+- 主要 CTA 改為給 AI 的安裝/套用提示詞。
 - 提示詞加入工具缺失標準句：
 
 ```text
@@ -74,7 +74,8 @@ flow-pack materials 給 AI 或維護者備查：
 
 - 頁面載入 `../copy-prompts.js`，提示詞區塊有「複製」鈕。
 - 進階材料連結一律連 GitHub 渲染頁或 GitHub 資料夾，不連本機 `.md`。
-- 後續再精簡主提示詞：不重抄 doc2md-toolkit 的完整引擎分流、OCR 分流與檢查清單，只要求 AI 安裝或使用 repo，並依 README / SKILL.md / workflow / checklist 執行。
+- 後續再精簡主提示詞：不重抄 doc2md-toolkit 的完整引擎分流、OCR 分流與檢查清單，也不要求 AI 在安裝提示詞裡立刻轉檔；只要求 AI 安裝或套用 repo，並依 README / SKILL.md / workflow / checklist 執行。真正轉檔留到使用者下一步提供文件時，由 skill 自行判斷。
+- 後續再把第一、二單元整合到首頁的一段「基礎工具安裝提示詞」：一次安裝或套用 `windows-powershell-encoding-skill` 與 `doc2md-toolkit`。未來若新增同類型 repo 工具，優先加到首頁整合提示詞。
 - 後續決定不把 MinerU 或其他重型 OCR 工具放入主流程；第二單元預設只使用 doc2md-toolkit 中的 MarkItDown 與 pdf2txt。
 - 後續補上小量例外：10 頁以內的掃描或圖片型文件，可以由 AI 轉成逐頁圖片後做小量 OCR/視覺讀取；這是救援流程，不是預設主流程。
 - 後續補上 NotebookLM 進階路線：大量或複雜但可上傳雲端的文件，可以由使用者自行上傳 NotebookLM，借用其閱讀理解能力整理成 Markdown、摘要或章節大綱。若含個資、機密、未公開公文或校內敏感資料，不建議上傳。這段應作為下方備註，不放進主要轉換提示詞。
@@ -103,6 +104,6 @@ NotebookLM 參考邊界：
 
 目前第二單元已完成到可作為支援型流程頁範本的程度：
 
-- `site/modules/doc2md.html` 有白話說明、AI 轉換提示詞、複製鈕、品質提醒與進階備查。公開頁面的提示詞不寫固定本機路徑，因為每個使用者環境不同。
+- `site/modules/doc2md.html` 有白話說明、AI 安裝提示詞、複製鈕、品質提醒與進階備查。公開頁面的提示詞不寫固定本機路徑，因為每個使用者環境不同。
 - `site-plan/web-writing-sop.md` 補上文件轉換類頁面的寫作規則。
 - `HANDOFF.md` 補上第二單元發展狀態。
