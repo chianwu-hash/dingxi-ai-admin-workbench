@@ -1,6 +1,6 @@
 # 流程包總覽
 
-網站第 0 單元是「安裝 Codex」，不是流程包。完成第 0 單元後，建議先從「中文 Windows 編碼安全包」開始，再做文件轉 Markdown，接著建立「我的 AI 行政工作台」，最後進入「AI 行政簡報流程包」。
+網站第 0 單元是「安裝 Codex」，不是流程包。完成第 0 單元後，建議先從「中文 Windows 編碼安全包」開始，再做文件轉 Markdown，接著建立「我的 AI 行政工作台」。目前網站確認內容到第 3 單元；第 4 單元之後先標示為製作中。
 
 ## 第一站：底層安全
 
@@ -24,7 +24,7 @@
 
 | 流程包 | 目的 |
 | --- | --- |
-| [ai-admin-presentation-flow-pack](ai-admin-presentation-flow-pack/README.md) | 從 brief、大綱、圖像提示詞到簡報審查與匯出 |
+| [ai-admin-presentation-flow-pack](ai-admin-presentation-flow-pack/README.md) | 網站第 4 單元製作中 |
 
 ## 支援簡報與工作台的近身流程
 

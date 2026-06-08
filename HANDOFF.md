@@ -6,9 +6,9 @@ Last updated: 2026-06-03
 
 This project is now the standalone public repository for the Dingxi AI Admin Workbench teaching site and flow packs.
 
-Current instructional priority: guide users into the project through a new Unit 0, `site/modules/codex-install.html`, so they first install Codex and can work with local folders. After that, move through `windows-chinese-encoding-safety-pack`, `document-to-markdown-flow-pack`, and the renamed website-facing Unit 3, "我的 AI 行政工作台". Presentation work remains an important visible outcome workflow, but it now follows the setup, text-preparation, and workbench-decision units.
+Current instructional priority: guide users into the project through Unit 0, `site/modules/codex-install.html`, so they first install Codex and can work with local folders. After that, move through `windows-chinese-encoding-safety-pack`, `document-to-markdown-flow-pack`, and the renamed website-facing Unit 3, "我的 AI 行政工作台". Current confirmed website content stops at Unit 3; Unit 4 and later should show only `製作中......` until explicitly approved.
 
-Current development focus: Unit 0 (`codex-install.html`), Unit 1 (`windows-chinese-encoding-safety-pack`), Unit 2 (`document-to-markdown-flow-pack`), Unit 3 (`admin-case-routing-template-pack` shown as "我的 AI 行政工作台"), and Unit 4 (`ai-admin-presentation-flow-pack`) have been developed into reusable patterns. Unit 0 is the entry/setup pattern; Unit 1 is the safety/setup pattern; Unit 2 is the support-flow pattern for turning raw materials into AI-readable text; Unit 3 is the workbench-decision pattern for deciding what tasks belong in an AI admin workbench; Unit 4 is the outcome-workflow pattern for producing a visible administrative deliverable without treating it as an installable tool.
+Current development focus: Unit 0 (`codex-install.html`), Unit 1 (`windows-chinese-encoding-safety-pack`), Unit 2 (`document-to-markdown-flow-pack`), and Unit 3 (`admin-case-routing-template-pack` shown as "我的 AI 行政工作台") are the confirmed public units. Unit 0 is the entry/setup pattern; Unit 1 is the safety/setup pattern; Unit 2 is the support-flow pattern for turning raw materials into AI-readable text; Unit 3 is the workbench-decision pattern for deciding what tasks belong in an AI admin workbench. Unit 4 (`ai-admin-presentation-flow-pack`) has draft material in the repo but is not yet ready for public website content.
 
 - Local project: `C:\Users\user\projects\dingxi-ai-admin-workbench`
 - GitHub repo: `https://github.com/chianwu-hash/dingxi-ai-admin-workbench`
@@ -232,6 +232,7 @@ Files already updated for that direction:
 - `site/roadmap.html`: learning roadmap now starts with Unit 0 install Codex, then Chinese Windows encoding safety, document-to-Markdown, "我的 AI 行政工作台", and AI admin presentation.
 - `site/modules/case-routing.html`: reframed from "行政案件類型路由" to "我的 AI 行政工作台", with a copyable suitability prompt and two examples: recurring school activity planning from last year's files, and Google Calendar `.ics` / API batch calendar work.
 - `site-plan/unit-00-codex-install-development-log.md`: new development log for Unit 0, including official Codex documentation basis and page-writing boundaries.
+- `site/modules/admin-presentation.html`: later reverted to a `製作中......` placeholder because confirmed public content currently stops at Unit 3.
 - `site/index.html`: homepage now leads with "先避開中文亂碼，再做一份簡報" and sends users first to the Chinese Windows encoding safety unit, then the presentation workflow.
 - `site/index.html`: later reframed to lead with installing Codex first, then Chinese safety, document-to-Markdown, and the AI admin workbench.
 - `site/index.html`: later added a homepage-level integrated install prompt for foundational repo tools. It currently installs/applies `windows-powershell-encoding-skill` and `doc2md-toolkit` in one copyable prompt; future install-only repo tools should be added there first.
