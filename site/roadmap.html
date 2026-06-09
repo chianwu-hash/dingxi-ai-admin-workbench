@@ -8,11 +8,10 @@
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="index.html"><img src="../assets/brand/placeholder-school-crest.svg" alt="頂溪國小校徽"><span>頂溪國小<br>AI 行政工作臺</span></a>
+    <a class="brand" href="index.html"><img src="../assets/brand/placeholder-school-crest.svg" data-official-asset="../assets/brand/dingxi-crest.png" alt="頂溪國小校徽"><span>頂溪國小<br>AI 行政工作臺</span></a>
     <nav class="nav" aria-label="主導覽">
       <a href="index.html">首頁</a>
       <a href="roadmap.html" aria-current="page">學習路線</a>
-      <a href="packs.html">流程包</a>
       <a href="safety.html">安全守則</a>
     </nav>
   </header>
@@ -32,7 +31,7 @@
             <div>
               <h3>先安裝 Codex</h3>
               <p>這是進入課程前的準備。先讓承辦人有一個可以開本機資料夾、讀流程包、協助檢查結果的 AI 工作環境。</p>
-              <div class="actions"><a class="button ghost" href="modules/codex-install.html">進入單元</a></div>
+              <div class="actions"><a class="button ghost" href="modules/codex-install.html">進入單元</a><a class="button ghost" href="https://developers.openai.com/codex/app/windows">官方安裝文件</a></div>
             </div>
           </article>
           <article class="step">
@@ -40,7 +39,7 @@
             <div>
               <h3>中文 Windows 編碼安全</h3>
               <p>這是最底層的安全包。先讓 AI 檢查 Windows 環境，避免整理中文檔案、產生指令或修改網站內容時把中文變成亂碼。</p>
-              <div class="actions"><a class="button ghost" href="modules/windows-encoding.html">進入單元</a></div>
+              <div class="actions"><a class="button ghost" href="modules/windows-encoding.html">進入單元</a><a class="button ghost" href="https://github.com/chianwu-hash/windows-powershell-encoding-skill">GitHub repo</a></div>
             </div>
           </article>
           <article class="step">
@@ -48,15 +47,15 @@
             <div>
               <h3>文件轉 Markdown</h3>
               <p>把舊簡報、會議資料、PDF 或 Word 轉成 AI 能讀的乾淨文字，作為後續工作台與成果單元的素材。</p>
-              <div class="actions"><a class="button ghost" href="modules/doc2md.html">進入單元</a></div>
+              <div class="actions"><a class="button ghost" href="modules/doc2md.html">進入單元</a><a class="button ghost" href="https://github.com/chianwu-hash/doc2md-toolkit">GitHub repo</a></div>
             </div>
           </article>
           <article class="step">
             <div class="step-num">3</div>
             <div>
               <h3>我的 AI 行政工作台</h3>
-              <p>判斷哪些行政工作適合讓 AI 先整理、人再確認。例行活動可以整理成 SOP；一次性批次任務可以先產生可檢查的檔案或 dry-run。</p>
-              <div class="actions"><a class="button ghost" href="modules/case-routing.html">進入單元</a></div>
+              <p>判斷哪些行政工作適合 AI 先整理，自己要確認。例行活動可以整理成 SOP；一次性批次任務可以先產生可檢查的檔案或 dry-run。</p>
+              <div class="actions"><a class="button ghost" href="modules/case-routing.html">進入單元</a><a class="button ghost" href="https://github.com/chianwu-hash/dingxi-ai-admin-workbench/tree/main/flow-packs/admin-case-routing-template-pack">流程包材料</a></div>
             </div>
           </article>
           <article class="step">
@@ -135,7 +134,8 @@
       </div>
     </section>
   </main>
-  <footer class="footer"><div class="wrap"><span>學習路線</span><a href="packs.html">查看流程包</a></div></footer>
+  <footer class="footer"><div class="wrap"><span>學習路線</span><a href="safety.html">查看安全守則</a></div></footer>
+  <script src="brand-assets.js"></script>
 </body>
 </html>
 

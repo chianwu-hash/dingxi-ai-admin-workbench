@@ -1,10 +1,75 @@
 # Dingxi AI Admin Workbench Handoff
 
-Last updated: 2026-06-03
+Last updated: 2026-06-08
 
 ## Project Status
 
 This project is now the standalone public repository for the Dingxi AI Admin Workbench teaching site and flow packs.
+
+## Next Conversation Brief
+
+The next conversation should focus on fine-tuning Unit 3, `site/modules/case-routing.html`, now titled "我的 AI 行政工作台".
+
+Current public status:
+
+- Confirmed public website content is Unit 0 through Unit 3 only.
+- Unit 0: `site/modules/codex-install.html`
+- Unit 1: `site/modules/windows-encoding.html`
+- Unit 2: `site/modules/doc2md.html`
+- Unit 3: `site/modules/case-routing.html`
+- Unit 4 and later, including `site/modules/admin-presentation.html`, must stay as `製作中......` until the user explicitly approves content.
+
+Latest deployed state:
+
+- Latest pushed commit: `8bf8696 Mark presentation unit as in progress`
+- Production URL: `https://dingxi-ai-admin-workbench.vercel.app`
+- The production alias was manually reset to the latest `dingxi-ai-admin-workbench-*` deployment after Vercel initially pointed `dingxi-ai-admin-workbench.vercel.app` at an older `_public-template` deployment.
+
+Read before continuing Unit 3:
+
+- `AGENTS.md`
+- `HANDOFF.md`
+- `site-plan/web-writing-sop.md`
+- `site-plan/unit-00-codex-install-development-log.md`
+- `site-plan/unit-01-windows-encoding-development-log.md`
+- `site-plan/unit-02-document-to-markdown-development-log.md`
+- `site-plan/unit-03-my-ai-admin-workbench-positioning-notes.md`
+- `site/modules/case-routing.html`
+- `flow-packs/admin-case-routing-template-pack/README.md`
+- `flow-packs/admin-case-routing-template-pack/01-workflow.md`
+- `flow-packs/admin-case-routing-template-pack/02-template/case-routing-table-template.md`
+- `flow-packs/admin-case-routing-template-pack/02-template/output-format-template.md`
+- `flow-packs/admin-case-routing-template-pack/03-demo-data/sample-cases.md`
+- `flow-packs/admin-case-routing-template-pack/04-checklist.md`
+- `flow-packs/admin-case-routing-template-pack/05-safety-notes.md`
+
+Unit 3 current concept:
+
+- Website name: "我的 AI 行政工作台"
+- It replaces the unfriendly public-facing term "行政案件類型路由".
+- It should teach administrative staff how to judge whether a task belongs in their AI admin workbench.
+- It is not only about repeatable workflows. It should cover:
+  - repeatable work with prior materials and fixed procedures, such as planning this year's school activity from last year's files;
+  - one-off or low-frequency but structured batch work, such as turning school calendar data into an `.ics` import file, with API writing reserved for advanced/dry-run-confirmed flows.
+- Core sentence: "這件事能不能放進我的 AI 行政工作台，變成 AI 可整理、人可確認、輸出可檢查的任務？"
+
+Important Unit 3 direction from the user:
+
+- The user wants to continue in a new conversation and "細修第3單元".
+- The strongest current example is no longer "研習來文" or vague "一批行政通知"; it is "用去年資料籌辦今年的學校活動".
+- The example should emphasize that AI is not good because it invents from nothing. AI is useful because administrative staff already have prior-year files, templates, schedules, lists, and notes, and AI can extract structure from those existing materials.
+- Another important example is Google Calendar data entry:
+  - beginner path: organize events into an `.ics` file for manual import;
+  - advanced path: use Google Calendar API only with backup, dry-run, human confirmation, and operation-result logging.
+
+Do not regress these decisions:
+
+- Do not restore public content for Unit 4 or later unless explicitly asked.
+- Do not expose unconfirmed later-unit flow-pack GitHub links from the public website pages.
+- Do not put Unit 3 into the homepage integrated install prompt; it is not an install-only tool.
+- Keep copy buttons on every website prompt.
+- Website pages must not link to local `.md` files; use GitHub-rendered links only when materials are intentionally exposed.
+- `.codex-http-4174.err` is a local server log and should not be committed.
 
 Current instructional priority: guide users into the project through Unit 0, `site/modules/codex-install.html`, so they first install Codex and can work with local folders. After that, move through `windows-chinese-encoding-safety-pack`, `document-to-markdown-flow-pack`, and the renamed website-facing Unit 3, "我的 AI 行政工作台". Current confirmed website content stops at Unit 3; Unit 4 and later should show only `製作中......` until explicitly approved.
 

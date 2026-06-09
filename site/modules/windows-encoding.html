@@ -5,61 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>中文 Windows 編碼安全｜AI 行政工作臺</title>
   <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../icons.css">
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="../index.html"><img src="../../assets/brand/placeholder-school-crest.svg" alt="頂溪國小校徽"><span>頂溪國小<br>AI 行政工作臺</span></a>
-    <nav class="nav" aria-label="主導覽"><a href="../index.html">首頁</a><a href="../roadmap.html">學習路線</a><a href="../packs.html">流程包</a><a href="../safety.html">安全守則</a></nav>
+    <a class="brand" href="../index.html"><img src="../../assets/brand/placeholder-school-crest.svg" data-official-asset="../../assets/brand/dingxi-crest.png" alt="頂溪國小校徽"><span>頂溪國小<br>AI 行政工作臺</span></a>
+    <nav class="nav" aria-label="主導覽"><a href="../index.html">首頁</a><a href="../roadmap.html">學習路線</a><a href="../safety.html">安全守則</a></nav>
   </header>
   <main>
     <section class="page-title">
       <div class="wrap">
-        <p class="eyebrow">Safety Module</p>
+        <p class="eyebrow">第 1 單元</p>
         <h1>中文 Windows 編碼安全</h1>
-        <p>這是給 AI 避開中文亂碼用的安全包。</p>
+        <p>處理中文檔案前，先請 AI 檢查環境，降低中文亂碼或檔案內容被弄壞的風險。</p>
       </div>
     </section>
     <section class="section">
       <div class="wrap split">
         <div>
-          <h2>給人看的簡要說明</h2>
-          <p>這是給 AI 避開中文亂碼用的安全包。</p>
-          <p>如果你要請 AI 幫你整理中文檔案、產生指令、修改文件或處理網站內容，先把下面的提示詞貼給 AI。</p>
-          <p>AI 會自己檢查你的 Windows 環境，盡量避免把中文變成亂碼。</p>
+          <h2>先顧好中文，再處理資料</h2>
+          <p>在 Windows 電腦上處理中文檔案時，檔名、指令輸出或文字內容有時會變成亂碼。</p>
+          <p>不用自己研究編碼規則。先把下面這段貼給自己的 AI 助手，請它協助檢查與設定。</p>
+          <p>AI 可以協助我們，但自己一定要確認最後產出的中文內容是否正確。</p>
         </div>
         <div class="card">
-          <h3>使用方式</h3>
-          <p>你只需要複製下方提示詞，貼給正在協助你的 AI 助手。若 AI 有操作你電腦的權限，可以請 AI 代為檢查與安裝；若沒有權限，AI 會一步一步告訴你怎麼做。</p>
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v10H4V5Zm0 14h16M8 19v-4m8 4v-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>先做這件事</h3>
+          <p>複製提示詞，貼給自己的 AI 助手。若它有本機操作權限，就請它代為檢查；若沒有，就請它一步一步帶你做。</p>
         </div>
       </div>
     </section>
     <section class="section alt">
       <div class="wrap section-head stacked">
-        <h2>給 AI 助手看的安裝提示詞</h2>
-        <p>以下內容是給 AI 助手看的，你不需要完全理解；把它整段貼給 AI 即可。</p>
+        <h2>複製給自己的 AI 助手</h2>
+        <p>這段會請 AI 先檢查中文處理環境，並提醒你需要自己確認的地方。</p>
       </div>
       <div class="wrap prompt-box">
-        <div class="prompt-header"><p class="prompt-title">複製這段給 AI</p><button class="copy-button" type="button" data-copy-prompt>複製</button></div>
-        <pre><code>請幫我安裝並使用 Windows 中文 PowerShell 編碼安全規則。
+        <div class="prompt-header"><p class="prompt-title">複製給自己的 AI 助手</p><button class="copy-button" type="button" data-copy-prompt>複製</button></div>
+        <pre><code>你是協助學校行政同仁處理 Windows 中文檔案的 AI 助手。
 
-Repo:
+我想避免中文檔名、中文內容或指令輸出變成亂碼。請先幫我檢查這台 Windows 電腦的中文處理環境，必要時協助我完成設定。
+
+請參考這個工具說明：
 https://github.com/chianwu-hash/windows-powershell-encoding-skill
 
 如果你有本機操作或安裝權限，請代我檢查並完成必要安裝；如果你沒有權限，請用我看得懂的步驟帶我完成，不要只丟技術文件連結給我。
 
-請依照這個 repo 內的 README、SKILL.md 與診斷腳本說明執行。若 repo 規則和你原本習慣不同，請以 repo 規則為準。
-
-如果你支援安裝 Codex skill，請從上方 repo 安裝 windows-powershell-encoding-skill。安裝後請提醒我重新開啟 Codex 對話，讓新版 skill 生效。
-
-完成後，請用簡短清單回報你已完成哪些檢查、是否需要我手動安裝任何工具，以及接下來我處理中文檔案時要注意的第一步。</code></pre>
+完成後，請用簡短清單回報：
+- 你檢查了哪些項目
+- 是否有需要我手動處理的地方
+- 之後我交給你中文檔案時，第一步要注意什麼
+- 哪些輸出內容需要我自己再確認</code></pre>
       </div>
       <div class="wrap note">
-        <strong>進階備查：</strong>一般使用者只需要複製上面的提示詞。維護者或 AI 助手需要完整規則時，再查看 <a href="https://github.com/chianwu-hash/windows-powershell-encoding-skill">安全包 repo</a> 或 <a href="https://github.com/chianwu-hash/dingxi-ai-admin-workbench/tree/main/flow-packs/windows-chinese-encoding-safety-pack">流程包材料</a>。
+        <strong>補充：</strong>平常只要複製上面的提示詞即可。需要完整規則時，再查看 <a href="https://github.com/chianwu-hash/windows-powershell-encoding-skill">Windows 中文 PowerShell 編碼安全工具</a>。
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>這一頁先做到三件事</h2>
+          <p>先把中文處理環境顧好，後面整理文件、讀資料、請 AI 協助時會穩很多。</p>
+        </div>
+        <div class="grid three">
+          <article class="card"><div class="card-meta"><span class="tag">1</span><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.2 2.7 8.1 7 9.5 4.3-1.4 7-5.3 7-9.5V6l-7-3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m9 11 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><h3>先檢查</h3><p>先確認這台 Windows 電腦處理中文時，檔名、內容和指令輸出會不會出問題。</p></article>
+          <article class="card"><div class="card-meta"><span class="tag">2</span><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 8V4l-8 8 8 8v-4c4.4 0 7.5 1.4 9 4-0.6-6-3.9-12-9-12Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><h3>請 AI 協助</h3><p>把檢查和設定交給 AI 助手處理，自己不用先研究一堆編碼名詞。</p></article>
+          <article class="card"><div class="card-meta"><span class="tag">3</span><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h4l2 7 4-14 2 7h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><h3>自己確認</h3><p>真正要看的，是最後中文有沒有正常顯示，檔案內容有沒有被弄壞。</p></article>
+        </div>
       </div>
     </section>
   </main>
   <script src="../copy-prompts.js"></script>
-  <footer class="footer"><div class="wrap"><span>中文 Windows 編碼安全</span><a href="../packs.html">回流程包</a></div></footer>
+  <footer class="footer"><div class="wrap"><span>中文 Windows 編碼安全</span><a href="../roadmap.html">回學習路線</a></div></footer>
+  <script src="../brand-assets.js"></script>
 </body>
 </html>
 

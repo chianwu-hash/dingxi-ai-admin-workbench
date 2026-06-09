@@ -147,6 +147,7 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   min-height: 44px;
   padding: 10px 16px;
   border: 1px solid var(--green);
@@ -155,6 +156,17 @@ h1 {
   color: #fff;
   text-decoration: none;
   font-weight: 800;
+}
+
+.button svg.button-icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  max-width: 18px;
+  min-height: 18px;
+  max-height: 18px;
+  flex: 0 0 auto;
 }
 
 .button.secondary {
@@ -236,8 +248,39 @@ h1 {
   color: var(--muted);
 }
 
+.card-meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.card-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  border: 1px solid rgba(36, 91, 69, 0.16);
+  border-radius: 8px;
+  background: #e8f0e6;
+  color: var(--green);
+}
+
+.card-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.card > .card-icon {
+  margin-bottom: 14px;
+}
+
 .tag {
   display: inline-flex;
+  align-items: center;
+  gap: 6px;
   margin-bottom: 12px;
   padding: 4px 8px;
   border-radius: 8px;
@@ -408,6 +451,10 @@ h1 {
   margin: 0;
   color: #f4d58a;
   font-weight: 800;
+}
+
+.card-meta .tag {
+  margin-bottom: 0;
 }
 
 .prompt-header {

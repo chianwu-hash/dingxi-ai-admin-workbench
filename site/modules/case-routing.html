@@ -5,82 +5,210 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>我的 AI 行政工作台｜AI 行政工作臺</title>
   <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../icons.css">
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="../index.html"><img src="../../assets/brand/placeholder-school-crest.svg" alt="頂溪國小校徽"><span>頂溪國小<br>AI 行政工作臺</span></a>
-    <nav class="nav" aria-label="主導覽"><a href="../index.html">首頁</a><a href="../roadmap.html">學習路線</a><a href="../packs.html">流程包</a><a href="../safety.html">安全守則</a></nav>
+    <a class="brand" href="../index.html"><img src="../../assets/brand/placeholder-school-crest.svg" data-official-asset="../../assets/brand/dingxi-crest.png" alt="頂溪國小校徽"><span>頂溪國小<br>AI 行政工作臺</span></a>
+    <nav class="nav" aria-label="主導覽"><a href="../index.html">首頁</a><a href="../roadmap.html">學習路線</a><a href="../safety.html">安全守則</a></nav>
   </header>
   <main>
-    <section class="page-title"><div class="wrap"><p class="eyebrow">Unit 3</p><h1>我的 AI 行政工作台</h1><p>這一單元不是教一個工具，而是教承辦人判斷：哪些行政工作適合讓 AI 先整理、人再確認。</p></div></section>
+    <section class="page-title"><div class="wrap"><p class="eyebrow">第 3 單元</p><h1>我的 AI 行政工作台</h1><p>這一單元先從校務日期開始，練習把行政工作整理成「AI 可以協助我們，但自己一定要確認」的流程。</p></div></section>
     <section class="section"><div class="wrap split">
-      <div><h2>先判斷工作能不能放進 AI 工作台</h2><p>適合 AI 的工作不只是一再重複的工作，也包含資料量大、格式明確、結果可以先檢查的批次任務。重點是讓 AI 做整理與草稿，人保留判斷、確認與正式執行。</p><div class="actions"><a class="button" href="#judge-prompt">複製判斷提示詞</a><a class="button ghost" href="google-calendar.html">看行事曆進階流程</a></div></div>
+      <div><h2>第一個案例：把校務日期整理到 Google 行事曆</h2><p>這類工作欄位清楚、資料量大，很適合先請 AI 整理成預覽表，再由自己確認後產生 .ics 匯入檔。</p><div class="actions"><a class="button" href="#calendar-prompt"><svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4M16 2v4M4 9h16M6 5h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm2 8h3v3H8v-3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>複製行事曆提示詞</a><a class="button ghost" href="#judge-prompt"><svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 9 6 6m0-6-6 6M12 3l7 4v10l-7 4-7-4V7l7-4Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>複製判斷提示詞</a></div></div>
       <figure class="media"><img src="../../assets/brand/placeholder-hero-banner.svg" alt="AI 行政工作台示意"></figure>
     </div></section>
-    <section class="section alt" id="judge-prompt"><div class="wrap section-head stacked">
-      <h2>給 AI 助手看的判斷提示詞</h2>
-      <p>把你手上的行政工作先描述給 AI。請它不要直接做完，而是先判斷這件事適合哪一種處理方式。</p>
+    <section class="section alt" id="calendar-prompt"><div class="wrap">
+      <div class="section-head">
+        <h2>主案例：整理校務日期到 Google 行事曆</h2>
+        <p>先走安全的初階路線：AI 整理資料、產生可檢查清單與 .ics 檔，自己確認後再手動匯入 Google Calendar。不要一開始就讓 AI 直接寫入正式日曆。</p>
+      </div>
+      <div class="timeline compact">
+        <article class="step"><div class="step-num">1</div><div><h3>收集日期來源</h3><p>把校務行事曆、處室公告、研習日期、活動表、會議表或 Excel 表格整理成同一批資料。若是 PDF、Word 或圖片，先轉成 AI 容易閱讀、檢查的文字檔。</p></div></article>
+        <article class="step"><div class="step-num">2</div><div><h3>先請 AI 整理成事件表</h3><p>每筆事件至少要有標題、日期、開始時間、結束時間或全天、地點、說明、來源備註。缺少時間或日期不明的項目，要列入待確認，不要硬猜。</p></div></article>
+        <article class="step"><div class="step-num">3</div><div><h3>自己檢查預覽表</h3><p>先確認日期、星期、時間、地點、活動名稱、是否跨日、是否需要提醒。確認前不要產生正式匯入檔。</p></div></article>
+        <article class="step"><div class="step-num">4</div><div><h3>產生 .ics 匯入檔</h3><p>確認事件表後，再請 AI 產生 .ics。第一次練習建議匯入到測試日曆；確認正常後，再匯入正式目標日曆。</p></div></article>
+        <article class="step"><div class="step-num">5</div><div><h3>匯入後檢查</h3><p>到 Google Calendar 檢查事件數量、日期範圍、全天事件、時間事件、地點與說明。若有錯，先修正事件表再重產 .ics，不要在錯誤資料上硬改。</p></div></article>
+      </div>
+      <div class="grid three" style="margin-top:28px">
+        <article class="card"><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 16v4m-2-2h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><h3>初階做法</h3><p>只產生預覽表與 .ics，由自己手動匯入。這是最適合先練習的安全路線。</p></article>
+        <article class="card"><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v6l4 2M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>進階做法</h3><p>若要走 API 寫入，必須先備份目標日期範圍、產生 dry-run、自己確認，再保存 operation-result。</p></article>
+        <article class="card"><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 9v4m0 4h.01M10.3 3.9 2.6 17.2A2 2 0 0 0 4.3 20h15.4a2 2 0 0 0 1.7-2.8L13.7 3.9a2 2 0 0 0-3.4 0Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>不能省略</h3><p>不要讓 AI 猜日曆 ID、直接寫入正式日曆、跳過自己確認，或把真實 calendar ID 放到公開範例。</p></article>
+      </div>
     </div>
     <div class="wrap prompt-box">
-      <div class="prompt-header"><p class="prompt-title">複製這段給 AI</p><button class="copy-button" type="button" data-copy-prompt>複製</button></div>
-      <pre><code>請幫我判斷下面這件行政工作，適不適合放進我的 AI 行政工作台。
+      <div class="prompt-header"><p class="prompt-title">複製給自己的 AI 助手</p><button class="copy-button" type="button" data-copy-prompt>複製</button></div>
+      <pre><code>你是協助學校行政同仁整理資料的 AI 助手。
 
-請先不要直接幫我做完，而是先幫我分析：
-- 這件工作是否重複出現
-- 是否有固定流程
-- 是否需要整理複雜資料
-- 是否雖然不重複，但屬於資料量大、格式明確、結果可以檢查的批次工作
-- 需要哪些輸入資料
-- AI 可以協助哪些部分
-- 人一定要確認哪些部分
-- 輸出格式應該長什麼樣子
-- 有哪些資料安全、個資或行政責任風險
-- 適合整理成下次可重複的小 SOP，還是適合先產出可檢查的檔案、表格或 dry-run
+我要把一批校務日期整理成 Google Calendar 可以使用的資料。請先協助我整理、檢查與確認，不要直接寫入正式日曆。
 
-請用行政承辦人看得懂的白話回答。
-如果不適合交給 AI，請直接說明原因，並建議只讓 AI 協助哪一小段。
+你的任務分成兩個階段：
+
+第一階段：只整理預覽資料，等我確認。
+第二階段：我明確確認後，才產生 .ics 匯入檔。
+
+請先做第一階段，並停在確認清單，不要直接產生 .ics。
+
+請依照以下規則處理：
+
+1. 先確認資料狀態
+- 如果我還沒有提供日期資料，請先請我貼上日期清單、表格、公告文字，或提供檔案路徑。
+- 如果資料含有學生個資、家長資料、未公開內部資訊，請提醒我先去識別化，或改成只在本機處理。
+- 如果資料是 PDF、Word、圖片或掃描檔，請先協助轉成 AI 容易閱讀、檢查的文字檔；如果你無法讀取或轉換，請用白話告訴我下一步怎麼提供資料。
+
+2. 整理成事件預覽表
+請把可辨識的日期整理成表格，欄位包含：
+- 事件標題
+- 日期
+- 開始時間
+- 結束時間
+- 是否全天事件
+- 時區
+- 地點
+- 說明
+- 來源資料
+- 信心程度
+- 待確認事項
+
+3. 不要替我硬猜
+- 日期不明、時間不明、跨日不明、地點不明、活動名稱不完整的項目，請放進待確認事項。
+- 預設時區可用 Asia/Taipei，但要在表格中寫出來。
+- 如果資料只有日期、沒有時間，請暫列為全天事件，並放進待確認事項。
+- 如果同一事件疑似重複，請標示可能重複，不要自行刪除。
+
+4. 第一階段輸出格式
+請先輸出：
+- 事件預覽表
+- 待確認清單
+- 你採用的整理規則與假設
+- 預計事件總數
+- 哪些項目不能匯入，原因是什麼
+
+輸出後請停下來，等我確認。
+在我明確回覆「確認，可以產生 .ics」之前，不要產生 .ics。
+
+5. 我確認後才做第二階段
+當我回覆「確認，可以產生 .ics」後，請只根據已確認的事件預覽表產生 .ics 匯入檔。
+
+產生 .ics 時請注意：
+- 使用 Asia/Taipei 時區，除非我指定其他時區。
+- 全天事件和有時間事件要分開正確處理。
+- 事件說明中保留必要來源備註，方便我匯入後追查。
+- 若你有本機寫檔權限，請把 .ics 寫成檔案，並告訴我檔案位置。
+- 若你沒有本機寫檔權限，請提供完整 .ics 內容，並告訴我如何存成 .ics 檔。
+
+6. 匯入前提醒我
+產生 .ics 後，請提醒我：
+- 先匯入測試日曆檢查。
+- 檢查事件數量、日期範圍、全天事件、時間事件、地點與說明。
+- 確認無誤後，再匯入正式目標日曆。
+
+7. 如果我要求直接用 Google Calendar API 寫入
+請不要立刻寫入。請先改成 API 安全流程：
+- 確認目標 calendar 顯示名稱與 calendar ID。
+- 備份目標日期範圍既有事件。
+- 產生 dry-run JSON。
+- 產生我看得懂的確認清單。
+- 等我明確確認後，才依同一份 dry-run 計畫寫入。
+- 寫入後保存 operation-result JSON。
+
+我要整理的校務日期資料如下：
+（請在這裡貼上日期清單、表格、公告文字，或提供檔案路徑）</code></pre>
+    </div>
+    <div class="wrap note">
+      <strong>補充：</strong>如果之後真的要用 API 寫入日曆，請先看 <a href="https://github.com/chianwu-hash/dingxi-ai-admin-workbench/tree/main/flow-packs/google-calendar-safe-ops-pack">Google Calendar 安全批次操作流程</a>，不要跳過備份、dry-run 和自己確認。
+    </div></section>
+    <section class="section alt" id="judge-prompt"><div class="wrap section-head stacked">
+      <h2>不確定工作適不適合 AI 時，可以貼這段</h2>
+      <p>這段是給自己的 AI 助手看的。先請它判斷工作適不適合 AI 協助，不要一開始就直接做。</p>
+    </div>
+    <div class="wrap prompt-box">
+      <div class="prompt-header"><p class="prompt-title">複製給自己的 AI 助手</p><button class="copy-button" type="button" data-copy-prompt>複製</button></div>
+      <pre><code>你是協助學校行政同仁整理資料的 AI 助手。
+
+我會描述一件行政工作。請先幫我判斷這件工作適不適合交給 AI 協助整理，不要一開始就直接代我完成。
+
+請用學校行政同仁看得懂的白話回答，並依照下列項目分析：
+
+1. 這件工作適合 AI 協助嗎？
+- 適合、部分適合，或不適合。
+- 請說明原因。
+
+2. 這件工作屬於哪一種？
+- 每年、每月或每週會重複的例行工作。
+- 不常重複，但資料量大、格式明確、結果可以檢查的批次工作。
+- 臨時判斷、責任重大或資料不足，不適合交給 AI 主動處理的工作。
+
+3. 我需要準備哪些資料？
+- 舊文件、表格、日期清單、來文、公告、照片說明、名單或其他材料。
+- 哪些資料必須由我補充或確認。
+
+4. AI 可以協助哪些部分？
+- 整理資料。
+- 產生草稿。
+- 轉成表格、清單、.ics、CSV、確認表或 dry-run。
+- 找出缺漏與待確認事項。
+
+5. 自己一定要確認哪些部分？
+- 日期、時間、姓名、地點、金額、對象、正式文字、主管核定、個資與是否可以對外發布。
+
+6. 建議的輸出格式是什麼？
+- 請建議最適合的輸出格式，並說明為什麼。
+- 如果需要先確認，請先產生預覽表或確認清單，不要直接執行正式動作。
+
+7. 有哪些風險？
+- 個資。
+- 未公開資料。
+- 正式行政責任。
+- 寫入系統、寄信、公告、送簽或刪除資料的風險。
+
+8. 下一步建議
+- 如果適合，請建議我下一步要提供什麼資料。
+- 如果只適合部分交給 AI，請明確指出哪一小段可以交給 AI。
+- 如果不適合，請說明我可以怎麼縮小任務，讓 AI 只協助低風險部分。
 
 我要判斷的行政工作是：
-（請在這裡貼上你的工作描述）</code></pre>
+（請在這裡貼上工作描述）</code></pre>
     </div></section>
     <section class="section"><div class="wrap">
       <div class="section-head">
-        <h2>兩種很適合放進工作台的任務</h2>
-        <p>先不用追求自動化。能整理、能預覽、能確認，就已經是好的 AI 行政工作台起點。</p>
+        <h2>可以先從這兩種工作開始</h2>
+        <p>先不用追求自動化。能整理、能預覽、能自己確認，就已經是好的 AI 行政工作台起點。</p>
       </div>
       <div class="grid two">
-        <article class="card"><span class="tag">例行</span><h3>用去年資料籌辦今年活動</h3><p>例如兒童朝會頒獎、校內競賽、運動會或畢業典禮。AI 從往年企劃書、流程表、分工表中找出固定架構，再列出今年要確認的項目。</p></article>
-        <article class="card"><span class="tag">批次</span><h3>整理校務日期到 Google 行事曆</h3><p>這不一定每週重複，但資料量大、欄位明確。初階可產生 .ics 匯入檔；進階才走 API、備份、dry-run 與人工確認。</p></article>
+        <article class="card"><div class="card-meta"><span class="tag">批次</span><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 2v4M16 2v4M4 9h16M6 5h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm2 8h8m-8 4h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><h3>整理校務日期到 Google 行事曆</h3><p>這不一定每週重複，但資料量大、欄位明確。初階可產生 .ics 匯入檔；進階才走 API、備份、dry-run 與自己確認。</p></article>
+        <article class="card"><div class="card-meta"><span class="tag">例行</span><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19h16M6 17V7m6 10V5m6 12v-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><h3>用去年資料籌辦今年活動</h3><p>例如兒童朝會頒獎、校內競賽、運動會或畢業典禮。AI 可以從往年企劃書、流程表、分工表中找出固定架構，再列出今年要確認的項目。</p></article>
       </div>
     </div></section>
     <section class="section alt"><div class="wrap">
       <div class="section-head">
-        <h2>主案例：用去年的資料，整理今年的活動工作台</h2>
-        <p>AI 最適合接手的，不是你還沒想清楚的工作，而是你已經有往年資料、固定流程、每年都要重做一次的工作。</p>
+        <h2>另一個例子：用去年的資料準備今年活動</h2>
+        <p>AI 最適合協助的，不是完全從零開始的工作，而是大家手上已經有往年資料、固定流程、每年都要重新整理一次的工作。</p>
       </div>
       <div class="timeline compact">
         <article class="step"><div class="step-num">1</div><div><h3>找到往年資料</h3><p>企劃書、流程表、分工表、名單格式、設備需求、檢討紀錄，都可以先收在一起。</p></div></article>
-        <article class="step"><div class="step-num">2</div><div><h3>轉成 AI 可讀文字</h3><p>如果是 PDF、Word 或舊簡報，先接文件轉 Markdown 單元，整理成乾淨文字。</p></div></article>
+        <article class="step"><div class="step-num">2</div><div><h3>轉成文字檔</h3><p>如果是 PDF、Word 或舊簡報，先整理成 AI 容易閱讀、檢查的文字檔。</p></div></article>
         <article class="step"><div class="step-num">3</div><div><h3>請 AI 找出固定架構</h3><p>先整理去年怎麼做、哪些項目每年固定、哪些項目今年一定要更新。</p></div></article>
-        <article class="step"><div class="step-num">4</div><div><h3>人補上今年條件</h3><p>日期、場地、人員、預算、名單、簽核規定，這些都要由承辦人或主管確認。</p></div></article>
+        <article class="step"><div class="step-num">4</div><div><h3>自己補上今年條件</h3><p>日期、場地、人員、預算、名單、簽核規定，這些都要由自己或主管確認。</p></div></article>
         <article class="step"><div class="step-num">5</div><div><h3>產出草稿與 SOP</h3><p>AI 可以整理今年企劃草稿、活動流程、工作分工，活動後再回寫成下次可用的 SOP。</p></div></article>
       </div>
     </div></section>
     <section class="section"><div class="wrap">
       <div class="section-head">
         <h2>判斷原則</h2>
-        <p>不是問 AI 能不能做，而是問這件事能不能變成 AI 可整理、人可確認、輸出可檢查的任務。</p>
+        <p>不是問 AI 能不能做，而是問這件事能不能變成 AI 先整理、自己要確認、輸出可檢查的任務。</p>
       </div>
       <div class="grid four">
-        <article class="card"><h3>有資料</h3><p>手上有舊文件、表格、來文、照片說明、日期清單或其他可整理材料。</p></article>
-        <article class="card"><h3>有格式</h3><p>輸出可以是清單、表格、草稿、.ics、CSV、dry-run 或檢查表。</p></article>
-        <article class="card"><h3>能檢查</h3><p>人可以檢查日期、名單、金額、格式、缺資料與是否適合執行。</p></article>
-        <article class="card"><h3>不放行</h3><p>AI 不直接公告、送簽、寄信、寫入系統或替人做正式決定。</p></article>
+        <article class="card"><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 7h10M7 12h10M7 17h6M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>有資料</h3><p>手上有舊文件、表格、來文、照片說明、日期清單或其他可整理材料。</p></article>
+        <article class="card"><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h7v7H4V4Zm9 0h7v7h-7V4ZM4 13h7v7H4v-7Zm9 3h7m-7 4h7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg></span><h3>有格式</h3><p>輸出可以是清單、表格、草稿、.ics、CSV、dry-run 或檢查表。</p></article>
+        <article class="card"><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><h3>能檢查</h3><p>自己可以檢查日期、名單、金額、格式、缺資料與是否適合執行。</p></article>
+        <article class="card"><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 9 6 6m0-6-6 6M12 3l7 4v10l-7 4-7-4V7l7-4Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>不放行</h3><p>AI 不直接公告、送簽、寄信、寫入系統或替人做正式決定。</p></article>
       </div>
-      <div class="actions"><a class="button ghost" href="https://github.com/chianwu-hash/dingxi-ai-admin-workbench/tree/main/flow-packs/admin-case-routing-template-pack">進階：查看原路由流程包</a></div>
+      <div class="actions"><a class="button ghost" href="https://github.com/chianwu-hash/dingxi-ai-admin-workbench/tree/main/flow-packs/admin-case-routing-template-pack">補充：查看完整判斷材料</a></div>
     </div></section>
   </main>
   <script src="../copy-prompts.js"></script>
   <footer class="footer"><div class="wrap"><span>我的 AI 行政工作台</span><a href="../roadmap.html">回學習路線</a></div></footer>
+  <script src="../brand-assets.js"></script>
 </body>
 </html>

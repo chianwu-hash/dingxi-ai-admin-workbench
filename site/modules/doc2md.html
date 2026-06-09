@@ -3,78 +3,80 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>文件轉 Markdown｜AI 行政工作臺</title>
+  <title>文件整理成文字檔｜AI 行政工作臺</title>
   <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../icons.css">
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="../index.html"><img src="../../assets/brand/placeholder-school-crest.svg" alt="頂溪國小校徽"><span>頂溪國小<br>AI 行政工作臺</span></a>
-    <nav class="nav" aria-label="主導覽"><a href="../index.html">首頁</a><a href="../roadmap.html">學習路線</a><a href="../packs.html">流程包</a><a href="../safety.html">安全守則</a></nav>
+    <a class="brand" href="../index.html"><img src="../../assets/brand/placeholder-school-crest.svg" data-official-asset="../../assets/brand/dingxi-crest.png" alt="頂溪國小校徽"><span>頂溪國小<br>AI 行政工作臺</span></a>
+    <nav class="nav" aria-label="主導覽"><a href="../index.html">首頁</a><a href="../roadmap.html">學習路線</a><a href="../safety.html">安全守則</a></nav>
   </header>
   <main>
     <section class="page-title">
       <div class="wrap">
-        <p class="eyebrow">Module 2</p>
-        <h1>文件轉 Markdown</h1>
-        <p>這是把文件變成 AI 看得懂的乾淨文字用的流程。</p>
+        <p class="eyebrow">第 2 單元</p>
+        <h1>文件整理成文字檔</h1>
+        <p>把 PDF、Word、簡報或表格整理成 AI 容易閱讀、也方便自己檢查的文字檔。</p>
       </div>
     </section>
     <section class="section">
       <div class="wrap split">
         <div>
-          <h2>給人看的簡要說明</h2>
-          <p>如果你手上有 PDF、Word、簡報、表格或研習資料，先不要急著整份丟給 AI 摘要。</p>
-          <p>比較穩的做法，是先請 AI 幫你把文件整理成乾淨文字，再檢查有沒有漏字、亂碼、表格跑掉或頁首頁尾混進正文。</p>
-          <p>你只需要準備文件位置，複製下方提示詞，貼給正在協助你的 AI 助手。</p>
+          <h2>先整理成文字檔，再請 AI 幫忙</h2>
+          <p>如果手上有 PDF、Word、簡報、表格或研習資料，先不要急著整份丟給 AI 摘要。</p>
+          <p>比較穩的做法，是先請 AI 把文件整理成 AI 容易閱讀、檢查的文字檔，再自己看一次有沒有漏字、亂碼、表格跑掉或頁首頁尾混進正文。</p>
+          <p>準備好檔案位置後，複製下方提示詞貼給自己的 AI 助手即可。</p>
         </div>
         <div class="card">
-          <h3>最小用途</h3>
-          <p>把文件交給 AI 前，先變成乾淨、可檢查、可再利用的文字版本。後面要做摘要、會議紀錄、簡報 brief 或公告草稿，都會更穩。</p>
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm7 0v6h6M8 13h8M8 17h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>先做這件事</h3>
+          <p>先把文件變成文字檔。後面要做摘要、會議紀錄、公告草稿或活動資料整理，都會更穩。</p>
         </div>
       </div>
     </section>
     <section class="section alt">
       <div class="wrap section-head stacked">
-        <h2>給 AI 助手看的轉換提示詞</h2>
-        <p>以下內容是給 AI 助手看的，你不需要先懂工具名稱；把它整段貼給 AI，請 AI 先把工具安裝或套用好。</p>
+        <h2>複製給自己的 AI 助手</h2>
+        <p>這段會請 AI 先確認能不能處理你的文件，必要時協助安裝工具，再告訴你怎麼提供檔案。</p>
       </div>
       <div class="wrap prompt-box">
-        <div class="prompt-header"><p class="prompt-title">複製這段給 AI</p><button class="copy-button" type="button" data-copy-prompt>複製</button></div>
-        <pre><code>請幫我安裝並使用 doc2md-toolkit。
+        <div class="prompt-header"><p class="prompt-title">複製給自己的 AI 助手</p><button class="copy-button" type="button" data-copy-prompt>複製</button></div>
+        <pre><code>你是協助學校行政同仁整理文件的 AI 助手。
 
-Repo:
+我想把 PDF、Word、簡報、表格或資料夾整理成 AI 容易閱讀、也方便我檢查的文字檔。
+
+請先幫我確認這台電腦是否可以處理文件轉文字。需要工具時，請參考這個說明：
 https://github.com/chianwu-hash/doc2md-toolkit
 
 如果你有本機操作或安裝權限，請代我檢查並完成必要安裝；如果你沒有權限，請用我看得懂的步驟帶我完成，不要只丟技術文件連結給我。
 
-請依照這個 repo 內的 README、SKILL.md、workflow 與 checklist 執行。若 repo 規則和你原本習慣不同，請以 repo 規則為準。
-
-如果你支援安裝 Codex skill，請從上方 repo 安裝 doc2md-toolkit。安裝後請提醒我重新開啟 Codex 對話，讓新版 skill 生效。
-
-完成後，請用簡短清單回報你已完成哪些檢查、是否需要我手動安裝任何工具，以及之後我要轉文件時該怎麼把檔案交給你。</code></pre>
+完成後，請用簡短清單回報：
+- 你完成了哪些檢查或安裝
+- 我之後要怎麼提供檔案路徑或資料夾路徑
+- 哪些文件適合直接轉文字
+- 哪些文件可能需要 OCR 或自己再確認</code></pre>
       </div>
     </section>
     <section class="section">
       <div class="wrap grid three">
-        <article class="card"><h3>轉之前</h3><p>先確認文件能不能交給 AI 處理。真實公文、學生或家長資料、未公開資料，要先去識別化或留在本機。</p></article>
-        <article class="card"><h3>轉之後</h3><p>不要只看有沒有產出檔案，還要檢查標題、表格、中文、漏頁與頁首頁尾。</p></article>
-        <article class="card"><h3>再利用</h3><p>乾淨文字可以接著做摘要、待辦事項、會議紀錄、簡報 brief 或公告草稿。</p></article>
+        <article class="card"><div class="card-meta"><span class="tag">1</span><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.2 2.7 8.1 7 9.5 4.3-1.4 7-5.3 7-9.5V6l-7-3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m9 11 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><h3>轉之前</h3><p>先確認文件能不能交給 AI 處理。真實公文、學生或家長資料、未公開資料，要先去識別化或留在本機。</p></article>
+        <article class="card"><div class="card-meta"><span class="tag">2</span><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h4l2 7 4-14 2 7h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><h3>轉之後</h3><p>AI 可以協助我們，但自己一定要確認標題、表格、中文、漏頁與頁首頁尾。</p></article>
+        <article class="card"><div class="card-meta"><span class="tag">3</span><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 7h10M7 12h10M7 17h6M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><h3>再利用</h3><p>整理好的文字檔，可以接著做摘要、待辦事項、會議紀錄或公告草稿。</p></article>
       </div>
       <div class="wrap note">
-        <strong>安裝後怎麼用：</strong>之後只要把文件路徑、資料夾路徑或你要處理的檔案交給 AI，AI 會依照 doc2md-toolkit 的規則判斷要轉成 Markdown、純文字、小量 OCR 救援，或標記為需要人工確認。
+        <strong>安裝後怎麼用：</strong>之後只要把文件路徑、資料夾路徑或你要處理的檔案交給 AI，AI 會判斷要轉成 Markdown、純文字、小量 OCR 救援，或標記為需要自己確認。
       </div>
       <div class="wrap note">
-        <strong>大量 OCR 的進階解法：</strong>如果文件頁數很多、掃描品質複雜，或本機工具抽不出乾淨文字，而且文件沒有個資、機密或未公開內容，可以考慮改走 NotebookLM 這類雲端閱讀理解路線。做法是由使用者自行登入、確認資料可以上傳、加入來源，再請 NotebookLM 依來源整理成 Markdown、摘要或章節大綱。這不是本機預設流程；只適合已確認可上傳的資料。
+        <strong>大量 OCR 的進階解法：</strong>如果文件頁數很多、掃描品質複雜，或本機工具抽不出乾淨文字，而且文件沒有個資、機密或未公開內容，可以考慮改走 NotebookLM 這類雲端閱讀理解路線。這不是預設做法，只適合已確認可以上傳的資料。
       </div>
       <div class="wrap note">
-        <strong>未來自動化備註：</strong>若日後開發 NotebookLM CDP-assisted route，腳本只應在使用者已登入、已上傳來源、並明確同意後，協助貼提示詞、等待回覆、擷取 Markdown 與產生待確認清單。不要自動登入、不要自行選取敏感文件、不要保存 cookies、profile 或 session。
-      </div>
-      <div class="wrap note">
-        <strong>進階備查：</strong>一般使用者先複製上面的提示詞即可。AI 助手或維護者需要完整材料時，再查看 <a href="https://github.com/chianwu-hash/dingxi-ai-admin-workbench/tree/main/flow-packs/document-to-markdown-flow-pack">流程包資料夾</a>、<a href="https://github.com/chianwu-hash/dingxi-ai-admin-workbench/blob/main/flow-packs/document-to-markdown-flow-pack/01-workflow.md">完整流程</a>、<a href="https://github.com/chianwu-hash/dingxi-ai-admin-workbench/blob/main/flow-packs/document-to-markdown-flow-pack/04-checklist.md">品質檢查清單</a> 與 <a href="https://github.com/chianwu-hash/dingxi-ai-admin-workbench/blob/main/flow-packs/document-to-markdown-flow-pack/05-safety-notes.md">安全注意事項</a>。
+        <strong>補充：</strong>需要完整材料時，再查看 <a href="https://github.com/chianwu-hash/dingxi-ai-admin-workbench/tree/main/flow-packs/document-to-markdown-flow-pack">文件轉文字流程資料</a>。
       </div>
     </section>
   </main>
   <script src="../copy-prompts.js"></script>
-  <footer class="footer"><div class="wrap"><span>文件轉 Markdown</span><a href="../roadmap.html">回學習路線</a></div></footer>
+  <footer class="footer"><div class="wrap"><span>文件整理成文字檔</span><a href="../roadmap.html">回學習路線</a></div></footer>
+  <script src="../brand-assets.js"></script>
 </body>
 </html>
