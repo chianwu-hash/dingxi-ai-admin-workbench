@@ -1,14 +1,35 @@
 # Dingxi AI Admin Workbench Handoff
 
-Last updated: 2026-06-08
+Last updated: 2026-06-09
 
 ## Project Status
 
 This project is now the standalone public repository for the Dingxi AI Admin Workbench teaching site and flow packs.
 
+## Pilot Status
+
+Pilot implementation started on 2026-06-09 at 10:49 Asia/Taipei.
+
+Installed / onboarded roles so far:
+
+- 文書組
+- 出納幹事
+- 會計主任
+- 輔導主任
+
+Privacy note: keep the trial record role-based. Do not commit screenshots, account identifiers, usage-quota details, browser sessions, or any personal data from the pilot environment.
+
 ## Next Conversation Brief
 
-The next conversation should focus on fine-tuning Unit 3, `site/modules/case-routing.html`, now titled "我的 AI 行政工作台".
+The next conversation should start by discussing the user's planned new Unit 4: CDP / browser automation safety. Do not immediately implement a page rewrite. First help the user decide the learner-facing positioning, naming, and scope.
+
+Current candidate Unit 4 idea from the user:
+
+- The old roadmap item "CDP 安全底座" should be considered as the next unit to develop.
+- It likely needs a more user-facing name, such as "瀏覽器自動化安全基礎" or "讓 AI 操作瀏覽器前的安全設定".
+- The topic is not general beginner AI use. It is an advanced safety unit for situations where AI or scripts operate Chrome through Chrome DevTools Protocol (CDP).
+- The current flow pack explains: shared launcher, fixed browser profile, correct target URL, polling/screenshot throttling, file-based logs, and not exposing cookies/session/profile.
+- Before changing roadmap numbering or public navigation, confirm whether this CDP unit should replace the previous draft Unit 4 (`ai-admin-presentation-flow-pack`) or simply become the next unit the user wants to build.
 
 Current public status:
 
@@ -17,7 +38,7 @@ Current public status:
 - Unit 1: `site/modules/windows-encoding.html`
 - Unit 2: `site/modules/doc2md.html`
 - Unit 3: `site/modules/case-routing.html`
-- Unit 4 and later, including `site/modules/admin-presentation.html`, must stay as `製作中......` until the user explicitly approves content.
+- Unit 4 and later currently stay as `製作中......` until the user explicitly approves content. The next discussion is expected to be about making the CDP / browser automation safety topic into the next Unit 4.
 
 Latest deployed state:
 
@@ -25,7 +46,7 @@ Latest deployed state:
 - Production URL: `https://dingxi-ai-admin-workbench.vercel.app`
 - The production alias was manually reset to the latest `dingxi-ai-admin-workbench-*` deployment after Vercel initially pointed `dingxi-ai-admin-workbench.vercel.app` at an older `_public-template` deployment.
 
-Read before continuing Unit 3:
+Read before continuing Unit 3 or discussing the next unit:
 
 - `AGENTS.md`
 - `HANDOFF.md`
@@ -42,6 +63,11 @@ Read before continuing Unit 3:
 - `flow-packs/admin-case-routing-template-pack/03-demo-data/sample-cases.md`
 - `flow-packs/admin-case-routing-template-pack/04-checklist.md`
 - `flow-packs/admin-case-routing-template-pack/05-safety-notes.md`
+- `flow-packs/cdp-safety-foundation-pack/README.md`
+- `flow-packs/cdp-safety-foundation-pack/01-workflow.md`
+- `flow-packs/cdp-safety-foundation-pack/04-checklist.md`
+- `flow-packs/cdp-safety-foundation-pack/05-safety-notes.md`
+- `site/modules/cdp-tools.html`
 
 Unit 3 current concept:
 
@@ -55,12 +81,24 @@ Unit 3 current concept:
 
 Important Unit 3 direction from the user:
 
-- The user wants to continue in a new conversation and "細修第3單元".
+- Unit 3 was fine-tuned in the current conversation and should not regress.
 - The strongest current example is no longer "研習來文" or vague "一批行政通知"; it is "用去年資料籌辦今年的學校活動".
 - The example should emphasize that AI is not good because it invents from nothing. AI is useful because administrative staff already have prior-year files, templates, schedules, lists, and notes, and AI can extract structure from those existing materials.
 - Another important example is Google Calendar data entry:
   - beginner path: organize events into an `.ics` file for manual import;
-  - advanced path: use Google Calendar API only with backup, dry-run, human confirmation, and operation-result logging.
+  - API writing should not be inside the beginner copyable prompt; mention it only as a later advanced topic, if needed.
+
+Latest Unit 3 edits made on 2026-06-09:
+
+- In `site/modules/case-routing.html`, removed the two hero action buttons "複製行事曆提示詞" and "複製判斷提示詞".
+- Renamed the first example and main case wording from "校務日期" toward "活動行事曆" where the user requested it.
+- In the `.ics` copyable prompt, added a requirement to tell the user how to import the generated `.ics` into Google Calendar: Google Calendar web -> settings -> import/export -> choose `.ics` file -> choose target calendar -> import.
+- Removed the Google Calendar API instruction block from the beginner `.ics` prompt.
+- Changed the "進階做法" card to say users should first become familiar with beginner AI operation, then study API writing, backups, dry-run, and operation-result later.
+- Replaced the old "paste this to AI to judge suitability" prompt box with a user-facing concept section: "哪些是適合交給 AI 協助的工作呢？" with two categories, "資料量大且複雜的文件" and "具備重複性的工作".
+- Removed the "可以先從這兩種工作開始" repeated card section.
+- Removed the "補充：查看完整判斷材料" button from the bottom of the judgment principles section.
+- After these edits, `site/modules/case-routing.html` should have only one `data-copy-prompt` button: the main `.ics` prompt.
 
 Do not regress these decisions:
 
@@ -71,9 +109,9 @@ Do not regress these decisions:
 - Website pages must not link to local `.md` files; use GitHub-rendered links only when materials are intentionally exposed.
 - `.codex-http-4174.err` is a local server log and should not be committed.
 
-Current instructional priority: guide users into the project through Unit 0, `site/modules/codex-install.html`, so they first install Codex and can work with local folders. After that, move through `windows-chinese-encoding-safety-pack`, `document-to-markdown-flow-pack`, and the renamed website-facing Unit 3, "我的 AI 行政工作台". Current confirmed website content stops at Unit 3; Unit 4 and later should show only `製作中......` until explicitly approved.
+Current instructional priority: guide users into the project through Unit 0, `site/modules/codex-install.html`, so they first install Codex and can work with local folders. After that, move through `windows-chinese-encoding-safety-pack`, `document-to-markdown-flow-pack`, and the renamed website-facing Unit 3, "我的 AI 行政工作台". Current confirmed website content stops at Unit 3; Unit 4 and later should show only `製作中......` until explicitly approved. The user now wants to discuss making CDP / browser automation safety the next Unit 4.
 
-Current development focus: Unit 0 (`codex-install.html`), Unit 1 (`windows-chinese-encoding-safety-pack`), Unit 2 (`document-to-markdown-flow-pack`), and Unit 3 (`admin-case-routing-template-pack` shown as "我的 AI 行政工作台") are the confirmed public units. Unit 0 is the entry/setup pattern; Unit 1 is the safety/setup pattern; Unit 2 is the support-flow pattern for turning raw materials into AI-readable text; Unit 3 is the workbench-decision pattern for deciding what tasks belong in an AI admin workbench. Unit 4 (`ai-admin-presentation-flow-pack`) has draft material in the repo but is not yet ready for public website content.
+Current development focus: Unit 0 (`codex-install.html`), Unit 1 (`windows-chinese-encoding-safety-pack`), Unit 2 (`document-to-markdown-flow-pack`), and Unit 3 (`admin-case-routing-template-pack` shown as "我的 AI 行政工作台") are the confirmed public units. Unit 0 is the entry/setup pattern; Unit 1 is the safety/setup pattern; Unit 2 is the support-flow pattern for turning raw materials into AI-readable text; Unit 3 is the workbench-decision pattern for deciding what tasks belong in an AI admin workbench. The next planned discussion is whether the CDP safety foundation pack should become the new Unit 4. The previous draft Unit 4 (`ai-admin-presentation-flow-pack`) exists but is not currently the user's next priority.
 
 - Local project: `C:\Users\user\projects\dingxi-ai-admin-workbench`
 - GitHub repo: `https://github.com/chianwu-hash/dingxi-ai-admin-workbench`
@@ -375,13 +413,16 @@ Validation already run after these edits:
 
 Recommended next conversation focus:
 
-1. Continue with Unit 5 or another near-term support flow, using `site-plan/unit-00-codex-install-development-log.md`, `site-plan/unit-01-windows-encoding-development-log.md`, `site-plan/unit-02-document-to-markdown-development-log.md`, `site-plan/unit-03-my-ai-admin-workbench-positioning-notes.md`, and `site-plan/unit-04-admin-presentation-development-log.md` as reference patterns.
-2. For each new unit, first decide the general user's minimal purpose, then move tool names and command details into AI-facing prompts or advanced references.
-3. Consider making the public README friendlier for outside users now that the first two reusable unit patterns exist.
+1. Discuss the planned CDP / browser automation safety unit before editing pages. Clarify whether it becomes the new Unit 4 and how to explain it for non-engineers.
+2. Read `flow-packs/cdp-safety-foundation-pack/README.md`, `01-workflow.md`, `04-checklist.md`, `05-safety-notes.md`, and `site/modules/cdp-tools.html`.
+3. Decide the learner-facing name. Avoid making "CDP 安全底座" the primary visible title if it feels too technical.
+4. Decide the page purpose: likely to teach "when AI controls a browser, keep accounts, profiles, polling, screenshots, and session data safe."
+5. Only after the user confirms the framing, update roadmap/module page/navigation. Keep unapproved later units as `製作中......`.
 
 Current local caveat:
 
 - `.codex-http-4174.err` is an untracked local HTTP server log and should not be committed.
+- Current local edits include `site/modules/case-routing.html` and this `HANDOFF.md` update.
 - Before committing the next batch, rerun site link checks, prompt-copy checks, official brand file checks, and flow-pack JSON parsing.
 
 ## Current Open Decisions
