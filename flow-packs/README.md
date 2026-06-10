@@ -1,6 +1,6 @@
 # 流程包總覽
 
-網站第 0 單元是「安裝 Codex」，不是流程包。完成第 0 單元後，建議先從「中文 Windows 編碼安全包」開始，再做文件轉 Markdown，接著建立「我的 AI 行政工作台」。目前網站確認內容到第 3 單元；第 4 單元之後先標示為製作中。
+網站第 0 單元是「安裝 Codex」，不是流程包。完成第 0 單元後，建議先從「中文 Windows 編碼安全包」開始，再做文件轉 Markdown，接著建立「我的 AI 行政工作台」，並學會讓 AI 使用瀏覽器前先確認五件事。目前網站確認內容到第 4 單元；第 5 單元之後先標示為製作中。
 
 ## 第一站：底層安全
 
@@ -20,11 +20,17 @@
 | --- | --- |
 | [admin-case-routing-template-pack](admin-case-routing-template-pack/README.md) | 建立行政案件分類、規則、輸出格式與人工確認界線；網站以「我的 AI 行政工作台」呈現 |
 
-## 第四站：入門成果流程
+## 第四站：瀏覽器自動化安全
 
 | 流程包 | 目的 |
 | --- | --- |
-| [ai-admin-presentation-flow-pack](ai-admin-presentation-flow-pack/README.md) | 網站第 4 單元製作中 |
+| [cdp-safety-foundation-pack](cdp-safety-foundation-pack/README.md) | 網站顯示為「讓 AI 使用瀏覽器前，先確認五件事」，先建立帳號、資料、截圖與正式動作的安全邊界 |
+
+## 第五站：入門成果流程
+
+| 流程包 | 目的 |
+| --- | --- |
+| [ai-admin-presentation-flow-pack](ai-admin-presentation-flow-pack/README.md) | 網站第 5 單元製作中 |
 
 ## 支援簡報與工作台的近身流程
 
@@ -45,6 +51,5 @@
 
 | 流程包 | 目的 |
 | --- | --- |
-| [cdp-safety-foundation-pack](cdp-safety-foundation-pack/README.md) | 建立瀏覽器自動化的 CDP 安全底座 |
 | [browser-session-foundation-pack](browser-session-foundation-pack/README.md) | 準備已登入但不外流的瀏覽器 session |
 | [browser-ai-workflow-pack](browser-ai-workflow-pack/README.md) | 整理跨 AI 工具的瀏覽器操作、截圖驗證與 log |

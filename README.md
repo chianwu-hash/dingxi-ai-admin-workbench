@@ -4,7 +4,7 @@
 
 核心目標不是公開原始工作 repo，也不是讓使用者一次理解 12 個流程包。
 
-目前第一目標是先讓使用者完成「安裝 Codex」這個第 0 單元，再做「中文 Windows 編碼安全」與「文件轉 Markdown」這兩個底層準備，接著建立「我的 AI 行政工作台」。目前網站確認內容到第 3 單元；第 4 單元之後先標示為製作中。
+目前第一目標是先讓使用者完成「安裝 Codex」這個第 0 單元，再做「中文 Windows 編碼安全」與「文件轉 Markdown」這兩個底層準備，接著建立「我的 AI 行政工作台」，並學會讓 AI 使用瀏覽器前先確認五件事。目前網站確認內容到第 4 單元；第 5 單元之後先標示為製作中。
 
 整體教學模式仍維持：
 
@@ -20,13 +20,13 @@
 1. `windows-chinese-encoding-safety-pack`
 2. `document-to-markdown-flow-pack`
 3. `admin-case-routing-template-pack`（網站顯示為「我的 AI 行政工作台」）
-4. `ai-admin-presentation-flow-pack`（網站第 4 單元製作中）
-5. `admin-brand-image-flow-pack`
-6. `obsidian-confirmation-flow-pack`
-7. `voice-input-workflow-pack`
-8. `google-calendar-safe-ops-pack`
-9. `gmail-label-cleanup-flow-pack`
-10. `cdp-safety-foundation-pack`
+4. `cdp-safety-foundation-pack`（網站顯示為「讓 AI 使用瀏覽器前，先確認五件事」）
+5. `ai-admin-presentation-flow-pack`（網站第 5 單元製作中）
+6. `admin-brand-image-flow-pack`
+7. `obsidian-confirmation-flow-pack`
+8. `voice-input-workflow-pack`
+9. `google-calendar-safe-ops-pack`
+10. `gmail-label-cleanup-flow-pack`
 11. `browser-session-foundation-pack`
 12. `browser-ai-workflow-pack`
 

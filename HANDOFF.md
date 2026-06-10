@@ -1,6 +1,6 @@
 # Dingxi AI Admin Workbench Handoff
 
-Last updated: 2026-06-09
+Last updated: 2026-06-10
 
 ## Project Status
 
@@ -9,6 +9,8 @@ This project is now the standalone public repository for the Dingxi AI Admin Wor
 ## Pilot Status
 
 Pilot implementation started on 2026-06-09 at 10:49 Asia/Taipei.
+
+2026-06-10 status update: pilot is still active, and the number of installed / onboarded users is unchanged from 2026-06-09.
 
 Installed / onboarded roles so far:
 
