@@ -1,6 +1,6 @@
 # Dingxi AI Admin Workbench Handoff
 
-Last updated: 2026-06-10
+Last updated: 2026-06-12
 
 ## Project Status
 
@@ -12,6 +12,10 @@ Pilot implementation started on 2026-06-09 at 10:49 Asia/Taipei.
 
 2026-06-10 status update: pilot is still active, and the number of installed / onboarded users is unchanged from 2026-06-09.
 
+2026-06-11 status update: pilot is still active, and the number of installed / onboarded users remains unchanged.
+
+2026-06-12 status update: pilot is still active. Continue using overall quota movement as the main observable signal, because per-user tasks and other staff's actual workflows are not available in real time.
+
 Installed / onboarded roles so far:
 
 - 文書組
@@ -19,57 +23,73 @@ Installed / onboarded roles so far:
 - 會計主任
 - 輔導主任
 
+Pilot interpretation note: current usage data should be treated mainly as overall activity, not as proof of broad daily adoption. The main user may still be the project owner while building teaching units, testing workflows, and validating the site. The next meaningful signal is whether more staff join and continue using it over the next month. If usage remains limited to only a few people after about one month, interpret that as evidence that this may not be a current need for most school administrative staff, and consider other implementation or support options.
+
 Privacy note: keep the trial record role-based. Do not commit screenshots, account identifiers, usage-quota details, browser sessions, or any personal data from the pilot environment.
 
 ## Next Conversation Brief
 
-The next conversation should start by discussing the user's planned new Unit 4: CDP / browser automation safety. Do not immediately implement a page rewrite. First help the user decide the learner-facing positioning, naming, and scope.
+The next conversation should start by establishing the website's visual / art direction. Do not begin by adding another teaching unit or installing browser automation repos.
 
-Current candidate Unit 4 idea from the user:
+Current priority for the next conversation:
 
-- The old roadmap item "CDP 安全底座" should be considered as the next unit to develop.
-- It likely needs a more user-facing name, such as "瀏覽器自動化安全基礎" or "讓 AI 操作瀏覽器前的安全設定".
-- The topic is not general beginner AI use. It is an advanced safety unit for situations where AI or scripts operate Chrome through Chrome DevTools Protocol (CDP).
-- The current flow pack explains: shared launcher, fixed browser profile, correct target URL, polling/screenshot throttling, file-based logs, and not exposing cookies/session/profile.
-- Before changing roadmap numbering or public navigation, confirm whether this CDP unit should replace the previous draft Unit 4 (`ai-admin-presentation-flow-pack`) or simply become the next unit the user wants to build.
+- Review the current public pages visually, especially `site/index.html`, `site/roadmap.html`, and `site/modules/cdp-tools.html`.
+- Decide the site's design direction for administrative staff: calm, readable, trustworthy, warm, and school-appropriate.
+- Keep the site as an actual teaching/workbench site, not a marketing landing page.
+- Avoid decorative complexity that distracts from the learning flow.
+- After the art direction is agreed, update reusable CSS / components before polishing more units.
+
+Key writing decision from the Unit 4 discussion:
+
+- If a point can be said clearly in one sentence, do not repeat it in multiple sections, cards, or reminder boxes.
+- Avoid using different headings to restate the same safety principle.
+- The page should feel like a colleague giving a clear next step, not like repeated warnings.
+
+2026-06-12 update: the anti-repetition rule is now a hard rule in `site-plan/web-writing-sop.md` ("重複內容硬規則"), with a single deletion-test criterion, five named violation patterns, a one-note-per-page cap, a one-meta-sentence-per-page cap, and a mandatory pre-delivery gist-list self-check. Units 0-4 were all audited and deduplicated against it on 2026-06-12. Any future page work must run that self-check before delivering.
 
 Current public status:
 
-- Confirmed public website content is Unit 0 through Unit 3 only.
+- Confirmed public website content is Unit 0 through Unit 4.
 - Unit 0: `site/modules/codex-install.html`
 - Unit 1: `site/modules/windows-encoding.html`
 - Unit 2: `site/modules/doc2md.html`
 - Unit 3: `site/modules/case-routing.html`
-- Unit 4 and later currently stay as `製作中......` until the user explicitly approves content. The next discussion is expected to be about making the CDP / browser automation safety topic into the next Unit 4.
+- Unit 4: `site/modules/cdp-tools.html`, shown publicly as "讓 AI 使用瀏覽器前，先確認五件事"
+- Unit 5 and later currently stay as `製作中......` until the user explicitly approves content.
 
 Latest deployed state:
 
-- Latest pushed commit: `8bf8696 Mark presentation unit as in progress`
+- Latest pushed commit: `e091960 Add browser safety unit`
 - Production URL: `https://dingxi-ai-admin-workbench.vercel.app`
 - The production alias was manually reset to the latest `dingxi-ai-admin-workbench-*` deployment after Vercel initially pointed `dingxi-ai-admin-workbench.vercel.app` at an older `_public-template` deployment.
 
-Read before continuing Unit 3 or discussing the next unit:
+Read before continuing design work:
 
 - `AGENTS.md`
 - `HANDOFF.md`
 - `site-plan/web-writing-sop.md`
-- `site-plan/unit-00-codex-install-development-log.md`
-- `site-plan/unit-01-windows-encoding-development-log.md`
-- `site-plan/unit-02-document-to-markdown-development-log.md`
-- `site-plan/unit-03-my-ai-admin-workbench-positioning-notes.md`
-- `site/modules/case-routing.html`
-- `flow-packs/admin-case-routing-template-pack/README.md`
-- `flow-packs/admin-case-routing-template-pack/01-workflow.md`
-- `flow-packs/admin-case-routing-template-pack/02-template/case-routing-table-template.md`
-- `flow-packs/admin-case-routing-template-pack/02-template/output-format-template.md`
-- `flow-packs/admin-case-routing-template-pack/03-demo-data/sample-cases.md`
-- `flow-packs/admin-case-routing-template-pack/04-checklist.md`
-- `flow-packs/admin-case-routing-template-pack/05-safety-notes.md`
-- `flow-packs/cdp-safety-foundation-pack/README.md`
-- `flow-packs/cdp-safety-foundation-pack/01-workflow.md`
-- `flow-packs/cdp-safety-foundation-pack/04-checklist.md`
-- `flow-packs/cdp-safety-foundation-pack/05-safety-notes.md`
+- `site/index.html`
+- `site/roadmap.html`
+- `site/packs.html`
+- `site/styles.css`
 - `site/modules/cdp-tools.html`
+- `site/modules/codex-install.html`
+- `site/modules/windows-encoding.html`
+- `site/modules/doc2md.html`
+- `site/modules/case-routing.html`
+
+Unit 4 final direction:
+
+- The learner-facing title is "讓 AI 使用瀏覽器前，先確認五件事".
+- Unit 4 is not an installation page and should not ask general administrative users to install repos.
+- GitHub, CDP, repo names, commands, session, cookie, profile, and similar maintenance terms should stay out of the main Unit 4 page.
+- Repo installation belongs later in a maintainer / advanced setup page, after the general user has learned the browser-use safety concept.
+- The public page currently has four sections:
+  - why AI sometimes needs the browser
+  - five things to confirm
+  - a short reminder about misleading webpage content
+  - what to do when unsure
+- The CDP safety flow pack can still preserve technical and maintainer details.
 
 Unit 3 current concept:
 

@@ -15,13 +15,13 @@
   <main>
     <section class="page-title"><div class="wrap"><p class="eyebrow">第 3 單元</p><h1>我的 AI 行政工作台</h1><p>這一單元先從校務日期開始，練習把行政工作整理成「AI 可以協助我們，但自己一定要確認」的流程。</p></div></section>
     <section class="section"><div class="wrap split">
-      <div><h2>第一個案例：把活動行事曆整理到 Google 行事曆</h2><p>這類工作欄位清楚、資料量大，很適合先請 AI 整理成預覽表，再由自己確認後產生 .ics 匯入檔。</p></div>
+      <div><h2>第一個案例：把活動行事曆整理到 Google 行事曆</h2><p>這類工作欄位清楚、資料量大，最適合當作第一個練習。</p></div>
       <figure class="media"><img src="../../assets/brand/placeholder-hero-banner.svg" alt="AI 行政工作台示意"></figure>
     </div></section>
     <section class="section alt" id="calendar-prompt"><div class="wrap">
       <div class="section-head">
-        <h2>主案例：整理活動行事曆到 Google 行事曆</h2>
-        <p>先走安全的初階路線：AI 整理資料、產生可檢查清單與 .ics 檔，自己確認後再手動匯入 Google Calendar。不要一開始就讓 AI 直接寫入正式日曆。</p>
+        <h2>怎麼做</h2>
+        <p>照下面五個步驟，一步一步來。</p>
       </div>
       <div class="timeline compact">
         <article class="step"><div class="step-num">1</div><div><h3>收集日期來源</h3><p>把校務行事曆、處室公告、研習日期、活動表、會議表或 Excel 表格整理成同一批資料。若是 PDF、Word 或圖片，先轉成 AI 容易閱讀、檢查的文字檔。(若你已完成第2單元，AI會自動完成文字轉換)</p></div></article>
@@ -108,19 +108,16 @@
 （請在這裡貼上日期清單、表格、公告文字，或提供檔案路徑）</code></pre>
     </div>
     <div class="wrap note">
-      <strong>補充：</strong>如果之後真的要用 API 寫入日曆，請先看 <a href="https://github.com/chianwu-hash/dingxi-ai-admin-workbench/tree/main/flow-packs/google-calendar-safe-ops-pack">Google Calendar 安全批次操作流程</a>，不要跳過備份、dry-run 和自己確認。
+      <strong>補充：</strong>之後要研究 API 寫入日曆時，先看 <a href="https://github.com/chianwu-hash/dingxi-ai-admin-workbench/tree/main/flow-packs/google-calendar-safe-ops-pack">Google Calendar 安全批次操作流程</a>。
     </div></section>
     <section class="section alt" id="workbench-judgement"><div class="wrap section-head stacked">
       <h2>哪些是適合交給 AI 協助的工作呢？</h2>
-      <p>主要有兩類：資料量大且複雜的文件，以及具備重複性的工作。AI 不是用來替我們負責，而是協助整理資料、產生草稿、找出缺漏。</p>
+      <p>AI 不是用來替我們負責，而是協助整理資料、產生草稿、找出缺漏。</p>
     </div>
     <div class="wrap">
       <div class="grid two">
         <article class="card"><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 7h10M7 12h10M7 17h6M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>1. 資料量大且複雜的文件</h3><p>例如多份公告、行事曆、表格、名單、來文或舊資料。AI 可以先幫忙整理成表格、清單或待確認事項，讓自己比較容易檢查。</p></article>
-        <article class="card"><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v6l4 2M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>2. 具備重複性的工作</h3><p>例如每年活動、每月報表、固定通知、例行名單整理。AI 可以從過去資料中找出固定架構，再協助產生今年或這一次的草稿。</p></article>
-      </div>
-      <div class="note">
-        <strong>提醒：</strong>如果工作牽涉個資、正式公告、簽核、寄信或寫入系統，先只讓 AI 做整理和草稿；最後仍要由自己確認日期、姓名、金額、地點、對象與正式文字。
+        <article class="card"><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v6l4 2M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>2. 具備重複性的工作</h3><p>例如每年活動、每月報表、固定通知、例行名單整理。下面「用去年的資料準備今年活動」就是這一類。</p></article>
       </div>
     </div></section>
     <section class="section alt"><div class="wrap">
