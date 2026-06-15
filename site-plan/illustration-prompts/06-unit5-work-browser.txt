@@ -1,0 +1,9 @@
+Calm flat vector illustration for an elementary school administrative staff teaching website in Taiwan.
+
+Scene: a tidy desk with a laptop. On the laptop screen, two side-by-side browser windows are visible: the left one is labeled "ChatGPT" in clean display text at the top, the right one is labeled "Gemini". Both windows show a simple chat interface with a few abstract line bars suggesting conversation. Between the two windows, a large soft green checkmark badge floats in the center of the screen, suggesting both are set up and ready. Beside the laptop on the desk, a small notebook lies open with a short handwritten-style list showing three checkmarks — representing the three setup steps completed. A small padlock icon glows green near the notebook.
+
+Style: muted campus green and warm paper-white palette with soft golden accents. Clean, quiet, trustworthy mood, like a friendly worksheet illustration, not a marketing banner. Flat shapes, minimal shading, generous whitespace.
+
+Composition: wide 16:9 landscape.
+
+Constraints: no logos, no school crest, no mascots, no realistic people or faces. Chinese display text only on the two browser window labels "ChatGPT" and "Gemini" — clean grid font, not handwriting.

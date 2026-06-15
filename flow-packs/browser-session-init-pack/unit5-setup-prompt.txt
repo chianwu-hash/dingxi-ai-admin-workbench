@@ -1,0 +1,75 @@
+請依序完成三件事：安裝必要工具、建立 ChatGPT 工作瀏覽器，以及設定重開瀏覽器的快捷語句。
+
+【第一部分：安裝必要工具】
+
+請確認這台 Windows 電腦是否已備妥必要環境，並安裝或更新以下三個 repo：
+
+1. https://github.com/chianwu-hash/cdp-tools
+   安裝至 D:\projects\cdp-tools
+2. https://github.com/chianwu-hash/cbs-workflows
+   安裝至 D:\projects\cbs-workflows
+3. https://github.com/chianwu-hash/browser-automation-workflow
+   安裝至 D:\projects\browser-automation-workflow
+
+請依序：
+- 確認 Git、Node.js、npm 是否可用
+- 資料夾不存在時 clone repo；已存在時確認 remote 正確後更新到最新版本
+- 進入每個 repo 執行必要的 npm install
+- 確認 cdp-tools 啟動指令可用
+- 確認 cbs-workflows 可以啟動安全工作瀏覽器流程
+- 確認 browser-automation-workflow 可以找到 ChatGPT 生圖相關指令
+
+【第二部分：建立 ChatGPT 工作瀏覽器】
+
+安裝完成後，繼續：
+- 檢查是否已有 ChatGPT 專用 browser profile（放在 D:\chrome-cdp-profiles）
+- 沒有的話，建立一個清楚命名的 profile，例如 chatgpt
+- 不要使用我的日常 Chrome profile
+- 用這個 profile 開啟 ChatGPT 網頁後，停下來等我手動登入
+- 我說「我登入好了」之後，再確認登入狀態可以保留，並回報之後重用的指令
+
+【第三部分：設定重開瀏覽器快捷語句】
+
+完成以上步驟後，請在目前工作資料夾的 AGENTS.md 中加入以下規則
+（AGENTS.md 不存在時請建立；已存在時附加到檔案結尾）：
+
+---
+## AI 行政工作臺瀏覽器
+
+當使用者說「請幫我開啟 AI 行政工作臺瀏覽器」時：
+
+1. 問使用者：「這次要使用哪個？1. ChatGPT  2. Gemini」
+2. 根據答案執行 cdp-launch chatgpt 或 cdp-launch gemini
+   （cdp-launch 指令在 D:\projects\cdp-tools\bin）
+3. 執行 cdp-status 確認瀏覽器已開啟並連線
+4. 如果是第一次建立 Gemini profile：
+   - 說明會開啟新的工作瀏覽器視窗
+   - 開啟 Gemini 網頁後停下來等使用者登入
+   - 使用者說「我登入好了」後確認連線可用
+5. 如果登入狀態還在：直接回報可以開始使用
+6. 如果已登出：開啟對應網頁後停下來等使用者重新登入
+
+與使用者溝通時，不要提到 CDP、port、Playwright、session file、browser profile
+等技術詞，改用「工作瀏覽器」、「已儲存的登入狀態」等白話說明。
+---
+
+寫入完成後，請告訴使用者：
+「設定完成。以後只要對我說『請幫我開啟 AI 行政工作臺瀏覽器』，
+我就會幫你開啟 ChatGPT 或 Gemini 的工作瀏覽器，不需要再複製提示詞。」
+
+【安全規則】
+
+- 不要讀取、輸出或提交我的 cookie、session、密碼、驗證碼、登入畫面或 browser profile 內容
+- browser profile 不要放進任何 Git repo 或專案資料夾
+- 不要截圖登入畫面
+- 不要用任何真實學生、家長或教職員資料測試
+- 需要執行送出、刪除、寄信、公告、匯入或修改正式資料的動作前，請先停下來問我
+- 看到陌生網站或不確定的登入頁，請先停下來讓我確認
+- 如果你沒有本機操作或安裝權限，請用我看得懂的步驟帶我完成，不要只丟文件連結給我
+
+完成後請用簡短清單回報：
+- 已安裝或更新的 repo 與本機路徑
+- 哪些安裝檢查通過
+- ChatGPT 工作瀏覽器是否建立並可重用
+- AGENTS.md 更新位置
+- 之後說哪句話可以重開工作瀏覽器
