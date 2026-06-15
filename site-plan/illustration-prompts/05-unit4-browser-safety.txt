@@ -1,0 +1,9 @@
+Calm flat vector illustration for an elementary school administrative staff teaching website in Taiwan.
+
+Scene: a careful pre-flight checklist moment before letting AI control a browser. Center of the image: a laptop screen showing a browser window with a single open tab. Overlaid on the screen are five rounded checklist items stacked vertically, each with a soft checkbox on the left and a short Chinese label: "瀏覽器", "帳號", "網站", "資料", "動作". The first three checkboxes are already filled with green checkmarks; the fourth and fifth are still empty, suggesting the user is mid-check. Beside the laptop, a small padlock icon glows softly green, representing security. A gentle human hand (abstract, glove-like flat shape, no realistic fingers) hovers near the screen — pausing before clicking — conveying deliberate confirmation rather than rushing.
+
+Style: muted campus green and warm paper-white palette with soft golden accents. Clean, quiet, trustworthy mood, like a friendly worksheet illustration, not a marketing banner. Flat shapes, minimal shading, generous whitespace.
+
+Composition: wide 16:9 landscape.
+
+Constraints: no logos, no school crest, no mascots, no realistic people or faces. Chinese display text only on the five checklist labels described above — clean grid font, not handwriting.
