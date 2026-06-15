@@ -1,0 +1,9 @@
+Calm flat vector illustration for an elementary school administrative staff teaching website in Taiwan.
+
+Scene: a metaphor for turning mixed office documents into one clean text file. On the left, a loose pile of different document types each carries a small label: a thick bound report labeled "PDF", a slide-deck card labeled "簡報", a spreadsheet grid card labeled "表格", and a scanned page labeled "掃描". They funnel through a soft rounded paper tray in the middle. On the right, a single clean document emerges labeled "文字檔" at the top, with neat horizontal line bars below. A magnifying glass hovers over it with a small tag reading "自己確認".
+
+Style: muted campus green and warm paper-white palette with soft golden accents. Clean, quiet, trustworthy mood, like a friendly worksheet illustration, not a marketing banner. Flat shapes, minimal shading, generous whitespace.
+
+Composition: wide 16:9 landscape, clear left-to-right flow.
+
+Constraints: no logos, no school crest, no mascots, no people. Chinese display text only on the document type labels and output label described above — clean grid font, not handwriting.

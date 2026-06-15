@@ -1,0 +1,9 @@
+Calm flat vector illustration for an elementary school administrative staff teaching website in Taiwan.
+
+Scene: a tidy school office desk. A desktop computer screen shows a simple setup-in-progress: a large rounded progress bar at about 70%, labeled "安裝中" in clean sans-serif Chinese below it. A small folder icon on the right side of the screen is labeled "公文資料夾", slightly open, suggesting the computer can now reach local files. Beside the keyboard sit a cup of tea, a small potted plant, and a neat stack of folders.
+
+Style: muted campus green and warm paper-white palette with soft golden accents. Clean, quiet, trustworthy mood, like a friendly worksheet illustration, not a marketing banner. Flat shapes, minimal shading, generous whitespace.
+
+Composition: wide 16:9 landscape.
+
+Constraints: no logos, no school crest, no mascots, no people. Chinese display text only on the screen elements described above — clean grid font, not handwriting.

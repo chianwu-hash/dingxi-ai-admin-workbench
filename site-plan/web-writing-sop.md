@@ -153,6 +153,33 @@ AI 先整理，自己要確認。
 如果你有本機操作或安裝權限，請代我檢查並完成必要安裝；如果你沒有權限，請用我看得懂的步驟帶我完成，不要只丟技術文件連結給我。
 ```
 
+## 網站圖片與 AI 生圖
+
+單元頁的情境插圖用 ChatGPT 網頁版生圖，由 `C:\Users\user\projects\browser-automation-workflow` 的 `chatgpt:image-batch` 腳本批次產生（透過已登入的 CDP 瀏覽器 session）。
+
+生圖規則：
+
+- 提示詞一律存成 UTF-8 `.txt` 檔，用 `--prompt-dir` 或 `--prompt-file` 提供；不要用 `--prompt-text` 在 PowerShell 傳中文，避免編碼損壞。
+- 風格遵循 `site-plan/visual-style-guide.md`：沉穩校園綠、紙白背景、溫和、不花俏，像教學講義的插圖，不像產品廣告。
+- 圖片內不得出現任何文字、字母、標誌；也不得生成校徽、吉祥物或其他正式品牌識別（公開 repo 品牌規則）。
+- 一個單元一張情境圖即可，插圖是輔助，不要讓圖搶過學習動線。
+
+上網前必須縮圖，原始生成檔不要直接放上網站：
+
+- 寬度縮到 1400px 以內，輸出 WebP（或壓縮過的 JPG），單張以 200KB 以下為目標。
+- 縮圖後的檔案放在 `assets/illustrations/`，檔名用單元代稱，例如 `unit0-codex-install.webp`。
+- 原始大圖（PNG 原檔）與生圖過程的 metadata 不要 commit 進公開 repo。
+- `<img>` 要有說明用途的中文 `alt`，並加上 `loading="lazy"`。
+
+## 單元導覽
+
+每個公開單元頁的 `</main>` 結尾前，必須放單元導覽元件 `nav.unit-nav`，依序提供三格：上一單元、回首頁、下一單元。
+
+- 上一單元與下一單元要寫出單元編號與單元標題，連到對應的 `site/modules/*.html`。
+- 沒有上一單元（第 0 單元）或下一單元尚未公開時，該格改用 `span.unit-nav-link.disabled` 呈現，例如「第 5 單元：製作中……」，不放連結。
+- 新增或改名單元時，要同步更新前後兩個單元頁的導覽，不能只改新頁面。
+- 「製作中……」的占位頁不需要加單元導覽。
+
 ## Markdown 材料連結
 
 網站頁面不要直接連到本機 repo 內的 `.md` 檔案。

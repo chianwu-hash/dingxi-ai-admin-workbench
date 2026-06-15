@@ -1,6 +1,6 @@
 # Dingxi AI Admin Workbench Handoff
 
-Last updated: 2026-06-12
+Last updated: 2026-06-15
 
 ## Project Status
 
@@ -15,6 +15,8 @@ Pilot implementation started on 2026-06-09 at 10:49 Asia/Taipei.
 2026-06-11 status update: pilot is still active, and the number of installed / onboarded users remains unchanged.
 
 2026-06-12 status update: pilot is still active. Continue using overall quota movement as the main observable signal, because per-user tasks and other staff's actual workflows are not available in real time.
+
+2026-06-15 status update: pilot is still active after the weekend. Overall weekly quota movement over the weekend appears small, which supports interpreting this pilot by school workdays rather than by a simple seven-day average.
 
 Installed / onboarded roles so far:
 
@@ -59,9 +61,23 @@ Current public status:
 
 Latest deployed state:
 
-- Latest pushed commit: `e091960 Add browser safety unit`
+- Latest pushed commit: see `git log --oneline -1` — pushed 2026-06-15
 - Production URL: `https://dingxi-ai-admin-workbench.vercel.app`
-- The production alias was manually reset to the latest `dingxi-ai-admin-workbench-*` deployment after Vercel initially pointed `dingxi-ai-admin-workbench.vercel.app` at an older `_public-template` deployment.
+- The production alias was manually reset to the latest `dingxi-ai-admin-workbench-*` deployment after Vercel initially pointed `dingxi-ai-admin-workbench.vercel.app` at an older `_public-template` deployment. This may need to be re-pointed after each deploy.
+
+2026-06-15 session work (committed in one batch after `baf06ba`):
+
+- Hardened `site-plan/web-writing-sop.md` with anti-repetition hard rules: single deletion-test criterion, five named violation patterns, one `.note` box per page cap, one meta-sentence per page cap, mandatory pre-delivery gist-list self-check. AI must fix duplicates before delivering, not ask the user.
+- Audited and deduplicated all Units 0-4 against the new SOP rules.
+- Added `nav.unit-nav` (prev / home / next) to all 5 public unit pages and `site/styles.css`.
+- Added hero visual refresh to `site/index.html` and `site/styles.css` (light green gradient replacing dark image hero).
+- Generated 4 WebP illustrations with contextual Chinese text labels via ChatGPT CDP batch:
+  - `assets/illustrations/unit0-codex-install.webp` — progress bar "70%" + "安裝中", 1400×787, 44KB
+  - `assets/illustrations/unit1-encoding-safety.webp` — "亂碼" → 防護盾"編碼檢查" → "中文正常", 1400×787, 32KB
+  - `assets/illustrations/unit2-doc-to-text.webp` — "PDF""簡報""表格""掃描" → "文字檔""自己確認", 1400×787, 33KB
+  - `assets/illustrations/unit3-admin-workbench.webp` — 日曆格"運動會""校慶""期末", 資料夾"去年資料"→"今年活動", 1400×787, 44KB
+- Illustration prompts saved in `site-plan/illustration-prompts/` (01–04).
+- Local preview server config saved in `.claude/launch.json` (Python http.server on port 4174).
 
 Read before continuing design work:
 

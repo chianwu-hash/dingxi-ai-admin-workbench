@@ -1,0 +1,9 @@
+Calm flat vector illustration for an elementary school administrative staff teaching website in Taiwan.
+
+Scene: a metaphor for protecting Chinese documents from encoding corruption. On the left, two paper documents are labeled "亂碼" in broken, fragmented-looking display text, with scrambled abstract fragments around them. The documents pass through a soft, rounded shield-shaped gate in the center; the shield displays the word "編碼檢查" in clean Chinese. On the right, the same documents emerge clean, each labeled "中文正常" with a small green checkmark badge.
+
+Style: muted campus green and warm paper-white palette with soft golden accents. Clean, quiet, trustworthy mood, like a friendly worksheet illustration, not a marketing banner. Flat shapes, minimal shading, generous whitespace.
+
+Composition: wide 16:9 landscape, clear left-to-right flow.
+
+Constraints: no logos, no school crest, no mascots, no people. Chinese display text only on the document labels and shield label described above — clean grid font, not handwriting.
