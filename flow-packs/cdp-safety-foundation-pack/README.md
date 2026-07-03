@@ -4,7 +4,7 @@
 
 這個流程包不是給一般行政同仁學 CDP 指令用的。
 
-它記錄的是：當 AI 需要借用瀏覽器、使用登入後網頁、NotebookLM、ChatGPT 生圖、Google 工具或其他網頁服務時，應該怎麼把安全責任分層。
+它記錄的是：當 AI 需要借用瀏覽器、使用登入後網頁、NotebookLM、ChatGPT 生圖、Google 工具或其他網頁服務時，應該怎麼把「使用者自己的瀏覽器」和「AI 工作瀏覽器」分開，並把安全責任分層。
 
 ```text
 一般同仁：確認網站、帳號、資料、動作。
@@ -33,7 +33,7 @@ npm run guided:cdp-tools
 
 3. 教學網站第 4 單元
    - 角色：使用者確認課。
-   - 重點：為什麼要讓 AI 使用瀏覽器，以及借用前要確認什麼。
+   - 重點：為什麼要把自己的瀏覽器和 AI 工作瀏覽器分開，以及借用前要確認什麼。
    - 不要求一般同仁理解 CDP、port、profile、session 或 target。
 
 ## 適合誰？
@@ -48,6 +48,7 @@ npm run guided:cdp-tools
 ## 核心原則
 
 - 行政同仁不學 CDP；行政同仁只確認網站、帳號、資料、動作。
+- 使用者自己的日常瀏覽器和 AI 工作瀏覽器要分開。
 - 新瀏覽器工作優先使用 `cbs-workflows` 的 `npm run guided:cdp-tools`。
 - 底層啟動與 profile 管理交給 `cdp-tools`。
 - 不手動用 raw `chrome.exe --remote-debugging-port`。

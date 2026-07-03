@@ -4,7 +4,7 @@
 
 核心目標不是公開原始工作 repo，也不是讓使用者一次理解 12 個流程包。
 
-目前第一目標是先讓使用者完成「安裝 Codex」這個第 0 單元，再做「中文 Windows 編碼安全」與「文件轉 Markdown」這兩個底層準備，接著建立「我的 AI 行政工作台」，並學會讓 AI 使用瀏覽器前先確認五件事。目前網站確認內容到第 4 單元；第 5 單元之後先標示為製作中。
+目前第一目標是先讓使用者完成「安裝 Codex」這個第 0 單元，再做「中文 Windows 編碼安全」與「文件轉 Markdown」這兩個底層準備，接著建立「我的 AI 行政工作台」，學會讓 AI 使用瀏覽器前先確認五件事，設定 AI 工作瀏覽器，並用它做出第一張會議通知小卡。目前網站確認內容到第 6 單元；第 7 單元之後先標示為製作中。
 
 整體教學模式仍維持：
 
@@ -21,8 +21,8 @@
 2. `document-to-markdown-flow-pack`
 3. `admin-case-routing-template-pack`（網站顯示為「我的 AI 行政工作台」）
 4. `cdp-safety-foundation-pack`（網站顯示為「讓 AI 使用瀏覽器前，先確認五件事」）
-5. `ai-admin-presentation-flow-pack`（網站第 5 單元製作中）
-6. `admin-brand-image-flow-pack`
+5. 建立 AI 工作瀏覽器（網站第 5 單元，使用 `cdp-tools`、`cbs-workflows`、`browser-automation-workflow`）
+6. `admin-brand-image-flow-pack`（網站顯示為「做一張會議通知小卡」）
 7. `obsidian-confirmation-flow-pack`
 8. `voice-input-workflow-pack`
 9. `google-calendar-safe-ops-pack`

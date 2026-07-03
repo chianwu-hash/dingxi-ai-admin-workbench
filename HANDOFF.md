@@ -1,6 +1,6 @@
 # Dingxi AI Admin Workbench Handoff
 
-Last updated: 2026-06-15
+Last updated: 2026-07-03
 
 ## Project Status
 
@@ -18,6 +18,32 @@ Pilot implementation started on 2026-06-09 at 10:49 Asia/Taipei.
 
 2026-06-15 status update: pilot is still active after the weekend. Overall weekly quota movement over the weekend appears small, which supports interpreting this pilot by school workdays rather than by a simple seven-day average.
 
+2026-06-16 status update: pilot remains active in the new weekly metering period. Keep detailed quota snapshots in local-private reports only; public handoff notes should stay qualitative and avoid account or quota details.
+
+2026-06-17 status update: pilot remains active in the second weekly metering period, with observable weekday quota movement. Keep interpreting this as overall activity, not as proof of broad adoption.
+
+2026-06-18 status update: pilot remains active. The quota UI appears to show a possible weekly metering reset or reset-date change earlier than expected; keep this as an observation to verify with the next few snapshots rather than treating it as a confirmed rule.
+
+2026-06-22 status update: pilot remains active after the Dragon Boat Festival long weekend. This week has one fewer school workday, so quota movement should be compared cautiously against ordinary full workweeks. The reset-date observation remains relevant.
+
+2026-06-23 status update: pilot remains active during the shortened workweek, with continued observable quota movement. Keep interpreting this week cautiously because of the holiday-shortened schedule and previously observed reset-date variability.
+
+2026-06-24 status update: pilot remains active during the shortened workweek. Quota movement continues, and the previously observed reset-date variability should be checked against the next reset display.
+
+2026-06-25 status update: pilot remains active on the previously displayed reset date. The quota UI now shows time-based reset information instead of the prior date display, so keep treating weekly metering as not fully predictable and continue daily snapshots.
+
+2026-06-26 status update: pilot remains active after the previously observed reset-date transition. The quota UI now shows the next weekly reset date, supporting the interpretation that a new weekly metering window is active, while the exact reset behavior should still be treated cautiously.
+
+2026-06-29 status update: pilot remains active, and the quota UI again appears to have moved into a new weekly window earlier than the previously displayed reset date. Treat Codex weekly metering as a displayed rolling/variable window rather than a simple fixed school-week or calendar-week rule; continue using daily snapshots and keep a buffer when planning trial expansion.
+
+2026-06-30 status update: pilot remains active. The quota UI continues to show the same next weekly reset date as the prior snapshot, while usage has moved within that displayed window. This supports treating the panel as a current availability indicator, not a reliable calendar schedule.
+
+2026-07-01 status update: pilot remains active. The weekly quota does not appear to have reset again, but the displayed next reset date moved forward compared with the prior snapshot. This further supports treating the reset display as variable and the Usage panel as a current availability indicator rather than a reliable schedule.
+
+2026-07-02 status update: pilot remains active. The weekly quota shows only small additional movement compared with the prior snapshot, so this does not appear to be another weekly reset. However, the available manual reset count increased, which should be tracked separately from weekly quota reset behavior.
+
+2026-07-03 status update: pilot remains active. The weekly quota again shows only small additional movement, with the same displayed reset date and unchanged manual reset count. This continues to support treating the Usage panel as a current availability indicator rather than a predictable reset schedule.
+
 Installed / onboarded roles so far:
 
 - 文書組
@@ -31,15 +57,15 @@ Privacy note: keep the trial record role-based. Do not commit screenshots, accou
 
 ## Next Conversation Brief
 
-The next conversation should start by establishing the website's visual / art direction. Do not begin by adding another teaching unit or installing browser automation repos.
+The next conversation should continue from the newly opened Unit 6 direction: use the AI work browser to produce a small, concrete artifact, starting with a meeting notice card.
 
 Current priority for the next conversation:
 
-- Review the current public pages visually, especially `site/index.html`, `site/roadmap.html`, and `site/modules/cdp-tools.html`.
-- Decide the site's design direction for administrative staff: calm, readable, trustworthy, warm, and school-appropriate.
-- Keep the site as an actual teaching/workbench site, not a marketing landing page.
-- Avoid decorative complexity that distracts from the learning flow.
-- After the art direction is agreed, update reusable CSS / components before polishing more units.
+- Review `site/modules/brand-image.html` visually on desktop and mobile.
+- Keep Unit 6 as the first small output after Unit 5, not a broad brand-design theory page.
+- The learner outcome is: open the AI work browser, confirm meeting-card text, generate a 16:9 draft in ChatGPT, then check text, date, privacy, fake logos, and crest safe zone.
+- Keep official crest/logo generation out of image prompts; use fixed overlay when precision matters.
+- If expanding this unit later, add more small card variants only after the meeting notice card flow is stable.
 
 Key writing decision from the Unit 4 discussion:
 
@@ -51,13 +77,15 @@ Key writing decision from the Unit 4 discussion:
 
 Current public status:
 
-- Confirmed public website content is Unit 0 through Unit 4.
+- Confirmed public website content is Unit 0 through Unit 6.
 - Unit 0: `site/modules/codex-install.html`
 - Unit 1: `site/modules/windows-encoding.html`
 - Unit 2: `site/modules/doc2md.html`
 - Unit 3: `site/modules/case-routing.html`
 - Unit 4: `site/modules/cdp-tools.html`, shown publicly as "讓 AI 使用瀏覽器前，先確認五件事"
-- Unit 5 and later currently stay as `製作中......` until the user explicitly approves content.
+- Unit 5: `site/modules/work-browser.html`, shown publicly as "建立 AI 工作瀏覽器"
+- Unit 6: `site/modules/brand-image.html`, shown publicly as "做一張會議通知小卡"
+- Unit 7 and later currently stay as `製作中......` until the user explicitly approves content.
 
 Latest deployed state:
 
@@ -98,10 +126,11 @@ Unit 4 final direction:
 
 - The learner-facing title is "讓 AI 使用瀏覽器前，先確認五件事".
 - Unit 4 is not an installation page and should not ask general administrative users to install repos.
+- The core explanation is now: one browser is for the user’s daily work, and one is the AI work browser. Separating them makes the workflow easier to trust.
 - GitHub, CDP, repo names, commands, session, cookie, profile, and similar maintenance terms should stay out of the main Unit 4 page.
 - Repo installation belongs later in a maintainer / advanced setup page, after the general user has learned the browser-use safety concept.
 - The public page currently has four sections:
-  - why AI sometimes needs the browser
+  - why the user’s daily browser and the AI work browser should be separated
   - five things to confirm
   - a short reminder about misleading webpage content
   - what to do when unsure
@@ -140,16 +169,16 @@ Latest Unit 3 edits made on 2026-06-09:
 
 Do not regress these decisions:
 
-- Do not restore public content for Unit 4 or later unless explicitly asked.
+- Do not restore public content for Unit 7 or later unless explicitly asked.
 - Do not expose unconfirmed later-unit flow-pack GitHub links from the public website pages.
 - Do not put Unit 3 into the homepage integrated install prompt; it is not an install-only tool.
 - Keep copy buttons on every website prompt.
 - Website pages must not link to local `.md` files; use GitHub-rendered links only when materials are intentionally exposed.
 - `.codex-http-4174.err` is a local server log and should not be committed.
 
-Current instructional priority: guide users into the project through Unit 0, `site/modules/codex-install.html`, so they first install Codex and can work with local folders. After that, move through `windows-chinese-encoding-safety-pack`, `document-to-markdown-flow-pack`, and the renamed website-facing Unit 3, "我的 AI 行政工作台". Current confirmed website content stops at Unit 3; Unit 4 and later should show only `製作中......` until explicitly approved. The user now wants to discuss making CDP / browser automation safety the next Unit 4.
+Current instructional priority: guide users into the project through Unit 0, `site/modules/codex-install.html`, so they first install Codex and can work with local folders. After that, move through `windows-chinese-encoding-safety-pack`, `document-to-markdown-flow-pack`, the renamed website-facing Unit 3 "我的 AI 行政工作台", Unit 4 browser-use safety, Unit 5 AI work browser setup, and Unit 6 meeting notice card production.
 
-Current development focus: Unit 0 (`codex-install.html`), Unit 1 (`windows-chinese-encoding-safety-pack`), Unit 2 (`document-to-markdown-flow-pack`), and Unit 3 (`admin-case-routing-template-pack` shown as "我的 AI 行政工作台") are the confirmed public units. Unit 0 is the entry/setup pattern; Unit 1 is the safety/setup pattern; Unit 2 is the support-flow pattern for turning raw materials into AI-readable text; Unit 3 is the workbench-decision pattern for deciding what tasks belong in an AI admin workbench. The next planned discussion is whether the CDP safety foundation pack should become the new Unit 4. The previous draft Unit 4 (`ai-admin-presentation-flow-pack`) exists but is not currently the user's next priority.
+Current development focus: Unit 6 should prove that the AI work browser leads to a small, useful output. Keep it practical: confirm visible text first, generate a 16:9 meeting notice card draft, inspect errors, and avoid fake school identity. The previous draft `ai-admin-presentation-flow-pack` exists but is not currently the user's next priority.
 
 - Local project: `C:\Users\user\projects\dingxi-ai-admin-workbench`
 - GitHub repo: `https://github.com/chianwu-hash/dingxi-ai-admin-workbench`
@@ -451,16 +480,16 @@ Validation already run after these edits:
 
 Recommended next conversation focus:
 
-1. Discuss the planned CDP / browser automation safety unit before editing pages. Clarify whether it becomes the new Unit 4 and how to explain it for non-engineers.
-2. Read `flow-packs/cdp-safety-foundation-pack/README.md`, `01-workflow.md`, `04-checklist.md`, `05-safety-notes.md`, and `site/modules/cdp-tools.html`.
-3. Decide the learner-facing name. Avoid making "CDP 安全底座" the primary visible title if it feels too technical.
-4. Decide the page purpose: likely to teach "when AI controls a browser, keep accounts, profiles, polling, screenshots, and session data safe."
-5. Only after the user confirms the framing, update roadmap/module page/navigation. Keep unapproved later units as `製作中......`.
+1. Visually review `site/modules/brand-image.html`, especially the prompt box and meeting-card preview.
+2. Decide whether Unit 6 should stay limited to one meeting notice card or add one more variant such as an administrative announcement card.
+3. If generating a real sample image, use the AI work browser / ChatGPT image route and keep official crest/logo out of the generated image.
+4. After visual review, rerun safety checks and deploy if the public sequence feels stable.
+5. Keep unapproved Unit 7 and later pages as `製作中......`.
 
 Current local caveat:
 
 - `.codex-http-4174.err` is an untracked local HTTP server log and should not be committed.
-- Current local edits include `site/modules/case-routing.html` and this `HANDOFF.md` update.
+- Current local edits include Unit 6 meeting-card updates and this `HANDOFF.md` update.
 - Before committing the next batch, rerun site link checks, prompt-copy checks, official brand file checks, and flow-pack JSON parsing.
 
 ## Current Open Decisions
