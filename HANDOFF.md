@@ -61,10 +61,10 @@ The next conversation should continue from the newly opened Unit 6 direction: us
 
 Current priority for the next conversation:
 
-- Review `site/modules/brand-image.html` visually on desktop and mobile.
-- Keep Unit 6 as the first small output after Unit 5, not a broad brand-design theory page.
-- The learner outcome is: open the AI work browser, confirm meeting-card text, generate a 16:9 draft in ChatGPT, then check text, date, privacy, fake logos, and crest safe zone.
-- Keep official crest/logo generation out of image prompts; use fixed overlay when precision matters.
+- Review `site/modules/meeting-notice-card.html` visually on desktop and mobile.
+- Keep Unit 6 as the first small output after Unit 5: a meeting notice card, not a broad brand-design theory page.
+- The learner outcome is: open the AI work browser, ask AI to organize existing meeting data into visible card text, generate a first draft in ChatGPT, then check text, date, privacy, layout, and publishing channel.
+- Keep brand identity topics such as official crest, mascot, or fixed overlay out of Unit 6; reserve them for a later unit.
 - If expanding this unit later, add more small card variants only after the meeting notice card flow is stable.
 
 Key writing decision from the Unit 4 discussion:
@@ -84,7 +84,7 @@ Current public status:
 - Unit 3: `site/modules/case-routing.html`
 - Unit 4: `site/modules/cdp-tools.html`, shown publicly as "讓 AI 使用瀏覽器前，先確認五件事"
 - Unit 5: `site/modules/work-browser.html`, shown publicly as "建立 AI 工作瀏覽器"
-- Unit 6: `site/modules/brand-image.html`, shown publicly as "做一張會議通知小卡"
+- Unit 6: `site/modules/meeting-notice-card.html`, shown publicly as "做一張會議通知小卡"
 - Unit 7 and later currently stay as `製作中......` until the user explicitly approves content.
 
 Latest deployed state:
@@ -219,7 +219,7 @@ There are 12 current flow packs:
 4. `google-calendar-safe-ops-pack`
 5. `windows-chinese-encoding-safety-pack`
 6. `ai-admin-presentation-flow-pack`
-7. `admin-brand-image-flow-pack`
+7. `meeting-notice-card-flow-pack`
 8. `gmail-label-cleanup-flow-pack`
 9. `cdp-safety-foundation-pack`
 10. `browser-session-foundation-pack`
@@ -480,9 +480,9 @@ Validation already run after these edits:
 
 Recommended next conversation focus:
 
-1. Visually review `site/modules/brand-image.html`, especially the prompt box and meeting-card preview.
+1. Visually review `site/modules/meeting-notice-card.html`, especially the prompt box and meeting-card preview.
 2. Decide whether Unit 6 should stay limited to one meeting notice card or add one more variant such as an administrative announcement card.
-3. If generating a real sample image, use the AI work browser / ChatGPT image route and keep official crest/logo out of the generated image.
+3. If generating a real sample image, use the AI work browser / ChatGPT image route and keep it as a plain meeting notice card without brand identity elements.
 4. After visual review, rerun safety checks and deploy if the public sequence feels stable.
 5. Keep unapproved Unit 7 and later pages as `製作中......`.
 

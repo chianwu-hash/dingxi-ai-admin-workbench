@@ -17,7 +17,7 @@
       <div class="wrap">
         <p class="eyebrow">第 5 單元</p>
         <h1>建立 AI 工作瀏覽器</h1>
-        <p>安裝必要工具、建立一個 AI 可以協助操作的工作瀏覽器，設定完成後只要說一句話就能重開。</p>
+        <p>安裝必要工具、建立一個 AI 可以協助操作的工作瀏覽器，登入過的網站之後可以在同一個工作瀏覽器裡重用。</p>
       </div>
     </section>
 
@@ -25,21 +25,21 @@
       <div class="wrap split">
         <div>
           <h2>設定一次，之後說一句話就好</h2>
-          <p>這個單元只需要做一次設定：安裝瀏覽器自動化工具、建立一個 ChatGPT 專屬的工作瀏覽器、完成登入。</p>
-          <p>設定完成後，之後每次只要對 Codex 說「請幫我開啟 AI 行政工作臺瀏覽器」，AI 就會自動把工作環境準備好。</p>
+          <p>這個單元只需要做一次設定：安裝瀏覽器自動化工具、建立一個和日常 Chrome 分開的工作瀏覽器。</p>
+          <p>設定完成後，之後每次只要對 Codex 說「開啟AI工作瀏覽器」，AI 就會先開啟 ChatGPT；需要其他網站時，也可以在同一個工作瀏覽器登入使用。</p>
         </div>
-        <figure class="media"><img src="../../assets/illustrations/unit5-work-browser.webp" alt="筆電旁邊放著兩個瀏覽器視窗，分別標示 ChatGPT 與 Gemini，一個綠色勾勾代表已設定完成" loading="lazy"></figure>
+        <figure class="media"><img src="../../assets/illustrations/unit5-work-browser.webp" alt="筆電旁邊放著兩個瀏覽器視窗，代表 ChatGPT 與其他網頁工具，一個綠色勾勾代表已設定完成" loading="lazy"></figure>
       </div>
     </section>
 
     <section class="section alt">
       <div class="wrap section-head stacked">
         <h2>複製給自己的 AI 助手</h2>
-        <p>這段提示詞會分三步驟進行。AI 完成安裝後會停下來等你登入，你登入完成後告訴 AI「我登入好了」，它再繼續完成剩下的設定。</p>
+        <p>這段提示詞會分三步驟進行。AI 完成安裝後會停下來等你登入，你登入完成後告訴 AI「我登入好了」，它再把快捷語句寫進本機等級的 Codex 規則。</p>
       </div>
       <div class="wrap prompt-box">
         <div class="prompt-header"><p class="prompt-title">提示詞</p><button class="copy-button" type="button" data-copy-prompt>複製</button></div>
-        <pre><code>請依序完成三件事：安裝必要工具、建立 ChatGPT 工作瀏覽器，以及設定重開瀏覽器的快捷語句。
+        <pre><code>請依序完成三件事：安裝必要工具、建立 AI 工作瀏覽器，以及設定重開瀏覽器的快捷語句。
 
 【第一部分：安裝必要工具】
 
@@ -60,47 +60,49 @@
 - 確認 cbs-workflows 可以啟動安全工作瀏覽器流程
 - 確認 browser-automation-workflow 可以找到 ChatGPT 生圖相關指令
 
-【第二部分：建立 ChatGPT 工作瀏覽器】
+【第二部分：建立 AI 工作瀏覽器】
 
 安裝完成後，繼續：
-- 檢查是否已有 ChatGPT 專用 browser profile（放在 D:\chrome-cdp-profiles）
-- 沒有的話，建立一個清楚命名的 profile，例如 chatgpt
+- 檢查是否已有 AI 工作瀏覽器 profile（預設名稱 chatgpt，放在 D:\chrome-cdp-profiles）
+- 沒有的話，建立這個 profile
 - 不要使用我的日常 Chrome profile
-- 用這個 profile 開啟 ChatGPT 網頁後，停下來等我手動登入
+- 用這個工作瀏覽器開啟 ChatGPT 網頁後，停下來等我手動登入
 - 我說「我登入好了」之後，再確認登入狀態可以保留，並回報之後重用的指令
+- 如果我之後要使用 ChatGPT 以外的網站，請在同一個工作瀏覽器開啟該網站，停下來等我手動登入；登入狀態會由工作瀏覽器保存
 
 【第三部分：設定重開瀏覽器快捷語句】
 
-完成以上步驟後，請在目前工作資料夾的 AGENTS.md 中加入以下規則
-（AGENTS.md 不存在時請建立；已存在時附加到檔案結尾）：
+完成以上步驟後，請把以下規則加入本機等級的 Codex 指令檔 ~/.codex/AGENTS.md
+（Windows 通常在使用者資料夾下的 .codex\AGENTS.md；檔案不存在時請建立，已存在時附加到檔案結尾）。
+不要把這段本機規則寫進目前專案的公開 AGENTS.md；如果無法判斷本機等級 AGENTS.md 的位置，請先停下來問我。
 
 ---
-## AI 行政工作臺瀏覽器
+## AI 工作瀏覽器
 
-當使用者說「請幫我開啟 AI 行政工作臺瀏覽器」時：
+當使用者說「開啟AI工作瀏覽器」時：
 
-1. 問使用者：「這次要使用哪個？1. ChatGPT  2. Gemini」
-2. 根據答案執行 cdp-launch chatgpt 或 cdp-launch gemini
+1. 執行 cdp-launch chatgpt
    （cdp-launch 指令在 D:\projects\cdp-tools\bin）
-3. 執行 cdp-status 確認瀏覽器已開啟並連線
-4. 如果是第一次建立 Gemini profile：
-   - 說明會開啟新的工作瀏覽器視窗
-   - 開啟 Gemini 網頁後停下來等使用者登入
-   - 使用者說「我登入好了」後確認連線可用
-5. 如果登入狀態還在：直接回報可以開始使用
-6. 如果已登出：開啟對應網頁後停下來等使用者重新登入
+2. 執行 cdp-status 確認工作瀏覽器已開啟並連線
+3. 如果使用者沒有指定網站，預設開啟 ChatGPT
+4. 如果使用者指定 ChatGPT 以外的網站，請在同一個工作瀏覽器開啟該網站
+5. 如果是第一次登入某個網站，停下來等使用者手動登入
+6. 使用者說「我登入好了」後，確認該網站可以在工作瀏覽器中繼續使用
+7. 如果登入狀態還在：直接回報可以開始使用
+8. 如果已登出：開啟對應網站後停下來等使用者重新登入
 
 與使用者溝通時，不要提到 CDP、port、Playwright、session file、browser profile
 等技術詞，改用「工作瀏覽器」、「已儲存的登入狀態」等白話說明。
 ---
 
 寫入完成後，請告訴使用者：
-「設定完成。以後只要對我說『請幫我開啟 AI 行政工作臺瀏覽器』，
-我就會幫你開啟 ChatGPT 或 Gemini 的工作瀏覽器，不需要再複製提示詞。」
+「設定完成。以後只要對我說『開啟AI工作瀏覽器』，
+我就會幫你開啟工作瀏覽器。預設會先開 ChatGPT；如果你指定其他網站，也可以在同一個工作瀏覽器登入使用，不需要再複製提示詞。」
 
 【安全規則】
 
 - 不要讀取、輸出或提交我的 cookie、session、密碼、驗證碼、登入畫面或 browser profile 內容
+- 工作瀏覽器可以保存登入狀態，但不要把登入狀態、cookie 或 session 當成可讀取或可分享的資料
 - browser profile 不要放進任何 Git repo 或專案資料夾
 - 不要截圖登入畫面
 - 不要用任何真實學生、家長或教職員資料測試
@@ -111,8 +113,8 @@
 完成後請用簡短清單回報：
 - 已安裝或更新的 repo 與本機路徑
 - 哪些安裝檢查通過
-- ChatGPT 工作瀏覽器是否建立並可重用
-- AGENTS.md 更新位置
+- AI 工作瀏覽器是否建立並可重用
+- 本機等級 AGENTS.md 更新位置
 - 之後說哪句話可以重開工作瀏覽器</code></pre>
       </div>
     </section>
@@ -122,17 +124,17 @@
         <article class="card">
           <div class="card-meta"><span class="tag">設定後</span></div>
           <h3>說一句話重開</h3>
-          <p>設定完成後，之後只要對 Codex 說「請幫我開啟 AI 行政工作臺瀏覽器」，AI 就會問你要用 ChatGPT 還是 Gemini，然後幫你開好。</p>
+          <p>設定完成後，之後只要對 Codex 說「開啟AI工作瀏覽器」，AI 就會開好同一個工作瀏覽器，預設先進 ChatGPT。</p>
         </article>
         <article class="card">
-          <div class="card-meta"><span class="tag">第一次用 Gemini</span></div>
-          <h3>AI 會引導你登入</h3>
-          <p>這次設定只建立 ChatGPT 工作瀏覽器。第一次說要用 Gemini 時，AI 會自動引導你建立 Gemini 的工作瀏覽器並完成登入。</p>
+          <div class="card-meta"><span class="tag">其他網站</span></div>
+          <h3>同一個工作瀏覽器登入</h3>
+          <p>如果之後要用其他網頁工具，可以在同一個工作瀏覽器登入。登入狀態會保存，但密碼和驗證碼仍然要自己處理。</p>
         </article>
         <article class="card">
           <div class="card-meta"><span class="tag">登入失效時</span></div>
           <h3>說同一句話就好</h3>
-          <p>如果工作瀏覽器被關掉或登入失效，說「請幫我開啟 AI 行政工作臺瀏覽器」，AI 會重新開啟並在需要時請你重新登入。</p>
+          <p>如果工作瀏覽器被關掉或登入失效，說「開啟AI工作瀏覽器」，AI 會重新開啟並在需要時請你重新登入。</p>
         </article>
       </div>
     </section>
@@ -141,7 +143,7 @@
       <div class="wrap">
         <a class="unit-nav-link prev" href="cdp-tools.html"><span class="unit-nav-label">上一單元</span><span class="unit-nav-title">第 4 單元：讓 AI 使用瀏覽器前，先確認五件事</span></a>
         <a class="unit-nav-link home" href="../index.html">回首頁</a>
-        <a class="unit-nav-link next" href="brand-image.html"><span class="unit-nav-label">下一單元</span><span class="unit-nav-title">第 6 單元：做一張會議通知小卡</span></a>
+        <a class="unit-nav-link next" href="meeting-notice-card.html"><span class="unit-nav-label">下一單元</span><span class="unit-nav-title">第 6 單元：做一張會議通知小卡</span></a>
       </div>
     </nav>
   </main>

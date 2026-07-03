@@ -4,7 +4,7 @@
 
 核心目標不是公開原始工作 repo，也不是讓使用者一次理解 12 個流程包。
 
-目前第一目標是先讓使用者完成「安裝 Codex」這個第 0 單元，再做「中文 Windows 編碼安全」與「文件轉 Markdown」這兩個底層準備，接著建立「我的 AI 行政工作台」，學會讓 AI 使用瀏覽器前先確認五件事，設定 AI 工作瀏覽器，並用它做出第一張會議通知小卡。目前網站確認內容到第 6 單元；第 7 單元之後先標示為製作中。
+目前第一目標是先讓使用者完成「安裝 Codex」這個第 0 單元，再做「中文 Windows 編碼安全」與「文件轉 Markdown」這兩個底層準備，接著建立「我的 AI 行政工作台」，學會讓 AI 使用瀏覽器前先確認五件事，設定 AI 工作瀏覽器，做出第一張會議通知小卡，並在第 7 單元加入頂溪四精靈。目前網站確認內容到第 7 單元；第 8 單元之後先標示為製作中。
 
 整體教學模式仍維持：
 
@@ -14,7 +14,7 @@
 
 ## 目前內容
 
-目前包含 12 個流程包與對應網站單元頁。建議學習順序如下：
+目前包含 12 個流程包與對應網站單元頁；第 7 單元另外使用校內 AI 工作素材。建議學習順序如下：
 
 0. 安裝 Codex（網站第 0 單元，不是流程包）
 1. `windows-chinese-encoding-safety-pack`
@@ -22,13 +22,14 @@
 3. `admin-case-routing-template-pack`（網站顯示為「我的 AI 行政工作台」）
 4. `cdp-safety-foundation-pack`（網站顯示為「讓 AI 使用瀏覽器前，先確認五件事」）
 5. 建立 AI 工作瀏覽器（網站第 5 單元，使用 `cdp-tools`、`cbs-workflows`、`browser-automation-workflow`）
-6. `admin-brand-image-flow-pack`（網站顯示為「做一張會議通知小卡」）
-7. `obsidian-confirmation-flow-pack`
-8. `voice-input-workflow-pack`
-9. `google-calendar-safe-ops-pack`
-10. `gmail-label-cleanup-flow-pack`
-11. `browser-session-foundation-pack`
-12. `browser-ai-workflow-pack`
+6. `meeting-notice-card-flow-pack`（網站顯示為「做一張會議通知小卡」）
+7. 加入頂溪四精靈（網站第 7 單元，使用校內 AI 工作素材）
+8. `obsidian-confirmation-flow-pack`
+9. `voice-input-workflow-pack`
+10. `google-calendar-safe-ops-pack`
+11. `gmail-label-cleanup-flow-pack`
+12. `browser-session-foundation-pack`
+13. `browser-ai-workflow-pack`
 
 ## 專案交接
 
