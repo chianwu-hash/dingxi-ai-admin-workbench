@@ -43,21 +43,20 @@
 
 【第一部分：安裝必要工具】
 
-請確認這台 Windows 電腦是否已備妥必要環境，並安裝或更新以下三個 repo：
+請確認這台 Windows 電腦是否已備妥必要環境，並安裝或更新這個 repo：
 
-1. https://github.com/chianwu-hash/cdp-tools
-   安裝至 D:\projects\cdp-tools
-2. https://github.com/chianwu-hash/cbs-workflows
-   安裝至 D:\projects\cbs-workflows
-3. https://github.com/chianwu-hash/browser-automation-workflow
-   安裝至 D:\projects\browser-automation-workflow
+https://github.com/chianwu-hash/browser-automation-workflow
+安裝至 D:\projects\browser-automation-workflow
+
+這個 repo 的 npm install 會自動帶入 cbs-workflows 與 cdp-tools，不需要另外 clone 或安裝那兩個 repo。
 
 請依序：
 - 確認 Git、Node.js、npm 是否可用
-- 資料夾不存在時 clone repo；已存在時確認 remote 正確後更新到最新版本
-- 進入每個 repo 執行必要的 npm install
-- 確認 cdp-tools 啟動指令可用
-- 確認 cbs-workflows 可以啟動安全工作瀏覽器流程
+- 資料夾不存在時 clone browser-automation-workflow；已存在時確認 remote 正確後更新到最新版本
+- 進入 D:\projects\browser-automation-workflow 執行 npm install
+- 執行 npm run skills:install；如果已安裝但需要更新，改用 npm run skills:install:force
+- 執行 npm run check
+- 確認 browser:init、browser:status、browser:smoke 這幾個 npm script 可用
 - 確認 browser-automation-workflow 可以找到 ChatGPT 生圖相關指令
 
 【第二部分：建立 AI 工作瀏覽器】
@@ -66,8 +65,9 @@
 - 檢查是否已有 AI 工作瀏覽器 profile（預設名稱 chatgpt，放在 D:\chrome-cdp-profiles）
 - 沒有的話，建立這個 profile
 - 不要使用我的日常 Chrome profile
+- 在 D:\projects\browser-automation-workflow 執行 npm run browser:init -- -- --app chatgpt --browser chrome --port 9222 --yes
 - 用這個工作瀏覽器開啟 ChatGPT 網頁後，停下來等我手動登入
-- 我說「我登入好了」之後，再確認登入狀態可以保留，並回報之後重用的指令
+- 我說「我登入好了」之後，執行 npm run browser:status -- --ports 9222 與 npm run browser:smoke，確認登入狀態可以保留，並回報之後重用的指令
 - 如果我之後要使用 ChatGPT 以外的網站，請在同一個工作瀏覽器開啟該網站，停下來等我手動登入；登入狀態會由工作瀏覽器保存
 
 【第三部分：設定重開瀏覽器快捷語句】
@@ -81,15 +81,14 @@
 
 當使用者說「開啟AI工作瀏覽器」時：
 
-1. 執行 cdp-launch chatgpt
-   （cdp-launch 指令在 D:\projects\cdp-tools\bin）
-2. 執行 cdp-status 確認工作瀏覽器已開啟並連線
-3. 如果使用者沒有指定網站，預設開啟 ChatGPT
-4. 如果使用者指定 ChatGPT 以外的網站，請在同一個工作瀏覽器開啟該網站
-5. 如果是第一次登入某個網站，停下來等使用者手動登入
-6. 使用者說「我登入好了」後，確認該網站可以在工作瀏覽器中繼續使用
-7. 如果登入狀態還在：直接回報可以開始使用
-8. 如果已登出：開啟對應網站後停下來等使用者重新登入
+1. 進入 D:\projects\browser-automation-workflow
+2. 執行 npm run browser:init -- -- --app chatgpt --browser chrome --port 9222 --yes
+3. 執行 npm run browser:status -- --ports 9222 確認工作瀏覽器已開啟並連線
+4. 如果使用者沒有指定網站，預設開啟 ChatGPT
+5. 如果使用者指定 ChatGPT 以外的網站，請在同一個工作瀏覽器開啟該網站
+6. 如果是第一次登入某個網站，停下來等使用者手動登入
+7. 使用者說「我登入好了」後，確認該網站可以在工作瀏覽器中繼續使用
+8. 如果登入狀態還在：直接回報可以開始使用；如果已登出：開啟對應網站後停下來等使用者重新登入
 
 與使用者溝通時，不要提到 CDP、port、Playwright、session file、browser profile
 等技術詞，改用「工作瀏覽器」、「已儲存的登入狀態」等白話說明。
@@ -111,7 +110,7 @@
 - 如果你沒有本機操作或安裝權限，請用我看得懂的步驟帶我完成，不要只丟文件連結給我
 
 完成後請用簡短清單回報：
-- 已安裝或更新的 repo 與本機路徑
+- 已安裝或更新的 repo 與本機路徑；並說明 cbs-workflows 與 cdp-tools 是由 npm install 自動帶入
 - 哪些安裝檢查通過
 - AI 工作瀏覽器是否建立並可重用
 - 本機等級 AGENTS.md 更新位置

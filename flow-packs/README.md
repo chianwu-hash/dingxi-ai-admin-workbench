@@ -28,7 +28,7 @@
 
 ## 第五站：建立 AI 工作瀏覽器
 
-網站第 5 單元使用 `cdp-tools`、`cbs-workflows`、`browser-automation-workflow` 建立可重用的 AI 工作瀏覽器。
+網站第 5 單元只要求安裝 `browser-automation-workflow` 來建立可重用的 AI 工作瀏覽器；`cbs-workflows` 與 `cdp-tools` 會由 `npm install` 自動帶入，不需要使用者另外 clone。
 
 ## 第六站：入門成果流程
 

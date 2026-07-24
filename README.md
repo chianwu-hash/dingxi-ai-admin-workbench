@@ -21,7 +21,7 @@
 2. `document-to-markdown-flow-pack`
 3. `admin-case-routing-template-pack`（網站顯示為「我的 AI 行政工作台」）
 4. `cdp-safety-foundation-pack`（網站顯示為「讓 AI 使用瀏覽器前，先確認五件事」）
-5. 建立 AI 工作瀏覽器（網站第 5 單元，使用 `cdp-tools`、`cbs-workflows`、`browser-automation-workflow`）
+5. 建立 AI 工作瀏覽器（網站第 5 單元，安裝 `browser-automation-workflow`；它會自動帶入 `cbs-workflows` 與 `cdp-tools`）
 6. `meeting-notice-card-flow-pack`（網站顯示為「做一張會議通知小卡」）
 7. 加入頂溪四精靈（網站第 7 單元，使用校內 AI 工作素材）
 8. `obsidian-confirmation-flow-pack`
