@@ -221,14 +221,14 @@ Do not treat that old folder as the primary project anymore. Use this repo under
    - 學方法
    - 拿流程包
 4. Built a static teaching site under `site/`.
-5. Built 12 flow packs under `flow-packs/`.
+5. Built the current flow packs under `flow-packs/`; older browser setup packs are archived under `legacy/flow-packs-archive/`.
 6. Created public placeholder brand assets under `assets/brand/`.
 7. Kept the internal Dingxi brand asset source as a school-network UNC path, but did not include official crest/mascot/banner files in this public repo.
 8. Exported the public template, pushed it to GitHub, deployed it to Vercel, then moved it into this standalone project folder.
 
 ## Flow Packs
 
-There are 12 current flow packs:
+There are 11 current flow packs:
 
 1. `obsidian-confirmation-flow-pack`
 2. `document-to-markdown-flow-pack`
@@ -238,10 +238,16 @@ There are 12 current flow packs:
 6. `ai-admin-presentation-flow-pack`
 7. `meeting-notice-card-flow-pack`
 8. `gmail-label-cleanup-flow-pack`
-9. `cdp-safety-foundation-pack`
-10. `browser-session-foundation-pack`
-11. `browser-ai-workflow-pack`
-12. `voice-input-workflow-pack`
+9. `browser-session-foundation-pack`
+10. `browser-ai-workflow-pack`
+11. `voice-input-workflow-pack`
+
+Archived legacy browser setup materials:
+
+- `legacy/flow-packs-archive/2026-07-before-work-browser-rewrite/cdp-safety-foundation-pack`
+- `legacy/flow-packs-archive/2026-07-before-work-browser-rewrite/browser-session-init-pack`
+
+These archived packs describe the older CDP / three-repo setup route. They should not be linked from the public website or treated as the current Unit 4 or Unit 5 flow. Current Unit 4 is a browser-use safety concept page, and current Unit 5 uses `browser-automation-workflow` as the single setup entrypoint.
 
 Each pack should keep this shape where possible:
 

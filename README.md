@@ -2,9 +2,9 @@
 
 這個工作區用來製作「AI 行政工作臺」教學網站與流程包。
 
-核心目標不是公開原始工作 repo，也不是讓使用者一次理解 12 個流程包。
+核心目標不是公開原始工作 repo，也不是讓使用者一次理解所有流程包。
 
-目前第一目標是先讓使用者完成「安裝 ChatGPT 桌面版並開啟 Codex」這個第 0 單元，再做「中文 Windows 編碼安全」與「文件轉 Markdown」這兩個底層準備，接著建立「我的 AI 行政工作台」，學會讓 AI 使用瀏覽器前先確認五件事，設定 AI 工作瀏覽器，做出第一張會議通知小卡，並在第 7 單元加入頂溪四精靈。目前網站確認內容到第 7 單元；第 8 單元之後先標示為製作中。
+目前第一目標是先讓使用者完成「安裝 ChatGPT 桌面版並開啟 Codex」這個第 0 單元，再做「中文 Windows 編碼安全」與「文件轉 Markdown」這兩個底層準備，接著建立「我的 AI 行政工作台」，學會讓 AI 使用瀏覽器前先確認五件事，設定 AI 工作瀏覽器，做出第一張會議通知小卡，並在第 7 單元加入頂溪四精靈。目前網站確認內容到第 8 單元；第 9 單元之後先標示為製作中。
 
 整體教學模式仍維持：
 
@@ -14,13 +14,13 @@
 
 ## 目前內容
 
-目前包含 12 個流程包與對應網站單元頁；第 7 單元另外使用校內 AI 工作素材。建議學習順序如下：
+目前包含 11 個正式流程包與對應網站單元頁；第 4、5、7、8 單元是網站教學頁，不一定各自對應一個流程包。建議學習順序如下：
 
 0. 安裝 ChatGPT 桌面版並開啟 Codex（網站第 0 單元，不是流程包）
 1. `windows-chinese-encoding-safety-pack`
 2. `document-to-markdown-flow-pack`
 3. `admin-case-routing-template-pack`（網站顯示為「我的 AI 行政工作台」）
-4. `cdp-safety-foundation-pack`（網站顯示為「讓 AI 使用瀏覽器前，先確認五件事」）
+4. 讓 AI 使用瀏覽器前，先確認五件事（網站第 4 單元，概念頁，不是安裝流程包）
 5. 建立 AI 工作瀏覽器（網站第 5 單元，安裝 `browser-automation-workflow`；它會自動帶入 `cbs-workflows` 與 `cdp-tools`）
 6. `meeting-notice-card-flow-pack`（網站顯示為「做一張會議通知小卡」）
 7. 加入頂溪四精靈（網站第 7 單元，使用校內 AI 工作素材）
@@ -30,6 +30,8 @@
 11. `gmail-label-cleanup-flow-pack`
 12. `browser-session-foundation-pack`
 13. `browser-ai-workflow-pack`
+
+舊版 `cdp-safety-foundation-pack` 與 `browser-session-init-pack` 已移到 `legacy/flow-packs-archive/2026-07-before-work-browser-rewrite/`，只作為歷史參考，不再作為目前網站路線使用。
 
 ## 專案交接
 
