@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>製作活動海報並加入校徽｜AI 行政工作臺</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html"><img src="../../assets/brand/placeholder-school-crest.svg" data-official-asset="../../assets/brand/dingxi-crest.png" alt="頂溪國小校徽"><span>頂溪國小<br>AI 行政工作臺</span></a>
+    <nav class="nav" aria-label="主導覽"><a href="../index.html">首頁</a><a href="../roadmap.html">學習路線</a><a href="../safety.html">安全守則</a></nav>
+  </header>
+  <main>
+    <section class="page-title">
+      <div class="wrap">
+        <p class="eyebrow">第 8 單元</p>
+        <h1>製作活動海報並加入校徽</h1>
+        <p>把前兩個單元的小卡經驗放大成活動海報：用 AI 工作瀏覽器生成設計底圖，再把頂溪國小校徽以固定素材疊上去。</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap split">
+        <div>
+          <h2>校徽不要讓 AI 自己畫</h2>
+          <p>活動海報比通知小卡更正式，校徽也更容易被看見。這次的重點不是叫 AI 生成一個看起來像校徽的圖案，而是讓 AI 先做不含校徽的海報底圖，並預留乾淨角落。</p>
+          <p>底圖完成後，再使用校內 AI 工作素材裡的官方校徽檔固定疊加。這樣可以保留 AI 設計速度，也能維持正式識別的準確度。</p>
+        </div>
+        <figure class="notice-card-preview poster-preview" aria-label="活動海報與校徽安全區示意">
+          <div class="notice-safe-zone">校徽安全區</div>
+          <div class="notice-card-kicker">頂溪國小</div>
+          <div class="notice-card-title">活動海報</div>
+          <dl>
+            <div><dt>活動</dt><dd>__________</dd></div>
+            <div><dt>時間</dt><dd>____ / __ / __</dd></div>
+            <div><dt>地點</dt><dd>__________</dd></div>
+          </dl>
+          <p>先留位置，再用官方校徽疊加</p>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap section-head">
+        <h2>活動海報先確認五件事</h2>
+        <p>海報資訊比小卡多，先把文字和版型定下來，後面才不會一直重做。</p>
+      </div>
+      <div class="wrap grid three">
+        <article class="card">
+          <div class="card-meta"><span class="tag">1</span></div>
+          <h3>整理活動資料</h3>
+          <p>請 AI 先從現有公告、計畫、Email 或 LINE 訊息整理活動名稱、日期、地點、對象與提醒。</p>
+        </article>
+        <article class="card">
+          <div class="card-meta"><span class="tag">2</span></div>
+          <h3>決定發布情境</h3>
+          <p>印出張貼適合 A4 直式；LINE 或校網宣傳可用 4:5 或 9:16。先選一種主要用途。</p>
+        </article>
+        <article class="card">
+          <div class="card-meta"><span class="tag">3</span></div>
+          <h3>留下校徽角落</h3>
+          <p>生圖提示詞要明確要求右上或左上角保持乾淨，不放文字、人物、精靈或裝飾。</p>
+        </article>
+        <article class="card">
+          <div class="card-meta"><span class="tag">4</span></div>
+          <h3>選擇是否放精靈</h3>
+          <p>一般活動海報可只放校徽；若活動主題適合，再依第 7 單元方式選 1 到 2 隻精靈輔助。</p>
+        </article>
+        <article class="card">
+          <div class="card-meta"><span class="tag">5</span></div>
+          <h3>先看文字再發布</h3>
+          <p>標題、日期、地點、報名方式與對象最容易出錯。發布前要用人眼重新檢查。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap section-head stacked">
+        <h2>複製給自己的 AI 助手</h2>
+        <p>貼上後，AI 會使用頂溪國小品牌識別生圖流程，先生成不含校徽的海報底圖，再把官方校徽固定疊加。</p>
+      </div>
+      <div class="wrap prompt-box">
+        <div class="prompt-header"><p class="prompt-title">提示詞</p><button class="copy-button" type="button" data-copy-prompt>複製</button></div>
+        <pre><code>請使用「頂溪國小品牌識別生圖」流程，幫我用 AI 工作瀏覽器製作一張活動海報，並加入頂溪國小官方校徽。
+
+請依序協助我：
+
+1. 先確認 skill 與工作瀏覽器
+如果尚未安裝 dingxi-brand-image skill，請先協助我從 GitHub repo 安裝：
+chianwu-hash/dingxi-brand-image-workflow
+
+skill 路徑：
+skills/dingxi-brand-image
+
+如果已安裝，請直接使用「頂溪國小品牌識別生圖」流程。
+請依照「開啟AI工作瀏覽器」啟動工作瀏覽器，並使用 ChatGPT 生成海報底圖。
+
+2. 取得必要品牌素材
+請依 skill 規則，只從校內 AI 工作素材資料夾複製本次需要的檔案到本機工作資料夾：
+- dingxi-crest.png
+- AI-usage-guide.md
+
+如果這次活動適合加入四精靈，再另外讀取：
+- four-mascots-reference.png
+- four-mascots-design-intent.md
+
+如果讀不到校內資料夾，請停下來提醒我先用 Windows 檔案總管開啟校內路徑並完成區網認證，不要猜密碼，也不要掃描上層資料夾。
+
+3. 先整理海報文字
+如果我已提供活動公告、活動計畫、Email、LINE 訊息或會議紀錄，請先從資料中整理海報需要的欄位。
+如果資料不足，請向我確認：
+- 活動名稱
+- 日期與時間
+- 地點
+- 參加對象
+- 主辦或承辦單位是否需要出現
+- 是否有報名方式或簡短提醒
+- 主要用途：A4 張貼、LINE 分享、Email、校網，或還不確定
+- 這張圖是練習草稿，還是準備正式發布
+
+4. 生成前先讓我確認
+請先列出海報上會出現的可見文字，並建議版型：
+- A4 直式：適合列印張貼
+- 4:5 直式：適合 LINE、社群或校網縮圖
+- 16:9 橫式：適合簡報或網頁橫幅
+
+等我確認文字、版型與是否加入四精靈後，再開始生圖。
+
+5. 生圖時不要生成校徽
+請在 ChatGPT 工作瀏覽器中生成一張不含校徽的海報底圖。
+生圖提示詞務必包含：
+- 使用繁體中文
+- 文字大而清楚
+- 風格乾淨、溫和、正式但親切，適合國小活動宣傳
+- 使用頂溪深綠、暖米白、柔和金黃、天空藍、葉綠等色彩
+- 預留右上角乾淨空白區，供後製疊加官方校徽
+- 不要在右上角放文字、人物、精靈、裝飾、圖案或重要內容
+- 不要生成任何校徽、logo、印章、徽章、浮水印、QR code、網址、電話、頁碼或假識別
+- 不要放真實個資
+
+如果有加入四精靈，請依主題選 1 到 2 隻合適的精靈，先告訴我選擇理由並等我確認。精靈只能放在底部或側邊，不要遮住文字，也不要靠近校徽安全區。
+
+6. 用官方校徽固定疊加
+海報底圖完成後，請使用本機的 dingxi-crest.png 進行後製疊加，不要請 AI 重新畫校徽。
+請把校徽放在預留的乾淨角落，大小要清楚但不搶主標題。
+請輸出一張最終版海報，並保留：
+- 不含校徽的底圖
+- 已疊加官方校徽的最終圖
+- 使用的可見文字清單
+
+7. 完成後請幫我檢查
+請檢查：
+- 活動名稱、日期、時間、地點、對象是否正確
+- 繁體中文是否可讀，沒有錯字或文字變形
+- 校徽是否使用官方檔案固定疊加，而不是 AI 生成或仿畫
+- 校徽周圍是否乾淨，沒有被背景或文字干擾
+- 圖中是否沒有假的 logo、印章、浮水印、QR code、網址或電話
+- 如果有四精靈，是否符合主題、沒有變形、沒有多手多腳多眼睛或多翅膀
+- 是否適合依我指定的管道發布
+
+如果有問題，請先列出要修改的地方，再協助我產生下一版。</code></pre>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap grid three">
+        <article class="card">
+          <div class="card-meta"><span class="tag">校徽</span></div>
+          <h3>固定疊加</h3>
+          <p>正式校徽使用 <code>dingxi-crest.png</code> 後製疊加，不請 AI 仿畫，避免形狀、文字或比例失真。</p>
+        </article>
+        <article class="card">
+          <div class="card-meta"><span class="tag">版型</span></div>
+          <h3>先選用途</h3>
+          <p>A4 適合列印張貼，4:5 或 9:16 適合手機分享，16:9 適合簡報或網頁橫幅。</p>
+        </article>
+        <article class="card">
+          <div class="card-meta"><span class="tag">檢查</span></div>
+          <h3>底圖與最終圖都保留</h3>
+          <p>保留不含校徽的底圖，之後活動資訊或校徽位置要微調時，不必整張重生。</p>
+        </article>
+      </div>
+    </section>
+
+    <nav class="unit-nav" aria-label="單元導覽">
+      <div class="wrap">
+        <a class="unit-nav-link prev" href="mascot-notice-card.html"><span class="unit-nav-label">上一單元</span><span class="unit-nav-title">第 7 單元：加入頂溪四精靈</span></a>
+        <a class="unit-nav-link home" href="../index.html">回首頁</a>
+        <a class="unit-nav-link next" href="obsidian-checklist.html"><span class="unit-nav-label">下一單元</span><span class="unit-nav-title">第 9 單元：製作中……</span></a>
+      </div>
+    </nav>
+  </main>
+  <script src="../copy-prompts.js"></script>
+  <footer class="footer"><div class="wrap"><span>製作活動海報並加入校徽</span><a href="../roadmap.html">回學習路線</a></div></footer>
+  <script src="../brand-assets.js"></script>
+</body>
+</html>

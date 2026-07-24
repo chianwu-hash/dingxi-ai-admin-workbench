@@ -1,6 +1,6 @@
 # Dingxi AI Admin Workbench Handoff
 
-Last updated: 2026-07-03
+Last updated: 2026-07-21
 
 ## Project Status
 
@@ -44,14 +44,31 @@ Pilot implementation started on 2026-06-09 at 10:49 Asia/Taipei.
 
 2026-07-03 status update: pilot remains active. The weekly quota again shows only small additional movement, with the same displayed reset date and unchanged manual reset count. This continues to support treating the Usage panel as a current availability indicator rather than a predictable reset schedule.
 
+2026-07-03 adoption update: the Student Affairs Director started using the trial environment. This is a meaningful expansion signal because it adds another administrative office context beyond the original installed / onboarded roles.
+
+2026-07-06 status update: pilot remains active after the weekend. The weekly quota shows additional movement while the displayed reset date remains unchanged, so this snapshot still does not indicate a fresh weekly reset. Continue watching whether the new user role leads to sustained use across actual administrative tasks.
+
+2026-07-07 status update: pilot remains active on the previously displayed reset date. The quota UI changed from a date display to time-based weekly information again, but this snapshot does not show the weekly quota returning to full. Keep treating the weekly reset display as ambiguous and continue daily snapshots.
+
+2026-07-08 status update: pilot remains active. The quota UI now appears to show a new weekly metering window after the prior date/time transition, but the exact reset behavior should still be treated cautiously. The observation period is now during summer break, so lower usage may reflect administrative handlers taking leave or having fewer immediate school-year tasks rather than low interest alone.
+
+2026-07-15 status update: pilot remains active. The Usage panel no longer shows the previous 5-hour usage limit, and now presents the weekly usage limit plus available manual resets. Manual resets have their own expiration dates, so they should be tracked separately from weekly quota behavior and reminders should be used before each reset expires.
+
+2026-07-16 status update: pilot remains active under the new Usage panel layout. The weekly usage limit remains the only quota percentage shown, with the same next weekly reset date and the same available manual reset count. Treat the larger one-day movement as activity within the current weekly window, not as a reset event.
+
+2026-07-20 status update: pilot remains active under the new Usage panel layout. The weekly reset display moved again, and the available manual reset count decreased after the first recorded full-reset expiry date. Continue tracking weekly quota movement and manual reset availability as separate signals.
+
+2026-07-21 status update: pilot remains active under the new Usage panel layout. The weekly reset date and available manual reset count are unchanged from the prior snapshot, while weekly quota continues to move within the same displayed window. This remains ordinary activity within the current weekly window, not a reset signal.
+
 Installed / onboarded roles so far:
 
 - 文書組
 - 出納幹事
 - 會計主任
 - 輔導主任
+- 學務主任
 
-Pilot interpretation note: current usage data should be treated mainly as overall activity, not as proof of broad daily adoption. The main user may still be the project owner while building teaching units, testing workflows, and validating the site. The next meaningful signal is whether more staff join and continue using it over the next month. If usage remains limited to only a few people after about one month, interpret that as evidence that this may not be a current need for most school administrative staff, and consider other implementation or support options.
+Pilot interpretation note: current usage data should be treated mainly as overall activity, not as proof of broad daily adoption. The main user may still be the project owner while building teaching units, testing workflows, and validating the site. The next meaningful signal is whether more staff join and continue using it over the next month. If usage remains limited to only a few people after about one month, interpret that as evidence that this may not be a current need for most school administrative staff, and consider other implementation or support options. During summer break, usage may also decrease because administrative handlers take leave or have fewer immediate school-year tasks, so summer snapshots should be interpreted with that seasonal context. Starting 2026-07-15, the UI no longer shows the previous 5-hour limit and instead emphasizes weekly usage plus expiring manual resets. Manual reset availability should be interpreted separately from weekly remaining quota.
 
 Privacy note: keep the trial record role-based. Do not commit screenshots, account identifiers, usage-quota details, browser sessions, or any personal data from the pilot environment.
 
