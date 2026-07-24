@@ -35,7 +35,7 @@
     <section class="section alt">
       <div class="wrap section-head stacked">
         <h2>複製給自己的 AI 助手</h2>
-        <p>這段提示詞會分三步驟進行。AI 完成安裝後會停下來等你登入，你登入完成後告訴 AI「我登入好了」，它再把快捷語句寫進本機等級的 Codex 規則。</p>
+        <p>這段提示詞會分三步驟進行。AI 會先代你檢查並安裝必要工具，安裝完成後才停下來等你登入；你登入完成後告訴 AI「我登入好了」，它再把快捷語句寫進本機等級的 Codex 規則。</p>
       </div>
       <div class="wrap prompt-box">
         <div class="prompt-header"><p class="prompt-title">提示詞</p><button class="copy-button" type="button" data-copy-prompt>複製</button></div>
@@ -52,6 +52,9 @@ https://github.com/chianwu-hash/browser-automation-workflow
 
 請依序：
 - 確認 Git、Node.js、npm 是否可用
+- 如果沒有 Node.js 或 npm，請優先代我安裝 Node.js LTS；npm 會隨 Node.js 一起安裝
+- Windows 可優先使用 winget 安裝 Node.js LTS；如果需要 UAC、管理員密碼或學校電腦權限，請停下來讓我核准或協助
+- 安裝後請重新確認 node --version 與 npm --version 都能正常顯示版本
 - 資料夾不存在時 clone browser-automation-workflow；已存在時確認 remote 正確後更新到最新版本
 - 進入 D:\projects\browser-automation-workflow 執行 npm install
 - 執行 npm run skills:install；如果已安裝但需要更新，改用 npm run skills:install:force
@@ -107,11 +110,12 @@ https://github.com/chianwu-hash/browser-automation-workflow
 - 不要用任何真實學生、家長或教職員資料測試
 - 需要執行送出、刪除、寄信、公告、匯入或修改正式資料的動作前，請先停下來問我
 - 看到陌生網站或不確定的登入頁，請先停下來讓我確認
-- 如果你沒有本機操作或安裝權限，請用我看得懂的步驟帶我完成，不要只丟文件連結給我
+- 如果你沒有本機操作或安裝權限，請用我看得懂的步驟帶我完成，不要只丟文件連結給我；能代為安裝時就直接協助安裝
 
 完成後請用簡短清單回報：
 - 已安裝或更新的 repo 與本機路徑；並說明 cbs-workflows 與 cdp-tools 是由 npm install 自動帶入
 - 哪些安裝檢查通過
+- Node.js 與 npm 是否已安裝並可用
 - AI 工作瀏覽器是否建立並可重用
 - 本機等級 AGENTS.md 更新位置
 - 之後說哪句話可以重開工作瀏覽器</code></pre>
