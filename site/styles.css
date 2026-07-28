@@ -539,6 +539,21 @@ h1 {
   color: var(--muted);
 }
 
+.command-phrase {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 12px 0;
+  padding: 10px 12px;
+  border: 1px solid rgba(36, 91, 69, 0.16);
+  border-radius: 8px;
+  background: #f7f0df;
+  color: var(--green);
+  font-size: 20px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
 .card-meta {
   display: flex;
   align-items: flex-start;
