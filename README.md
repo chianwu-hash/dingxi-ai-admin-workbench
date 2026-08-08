@@ -39,6 +39,9 @@
 
 - [HANDOFF.md](HANDOFF.md)
 - [AGENTS.md](AGENTS.md)
+- [docs/PROJECT_MEMORY.md](docs/PROJECT_MEMORY.md)
+- [docs/RUNBOOK.md](docs/RUNBOOK.md)
+- [docs/OPERATIONS_LOG.md](docs/OPERATIONS_LOG.md)
 
 ## 重要原則
 

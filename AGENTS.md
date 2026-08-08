@@ -7,6 +7,8 @@ Before making changes, read:
 - `HANDOFF.md`
 - `README.md`
 - `public-template-policy.md`
+- `docs/PROJECT_MEMORY.md`
+- `docs/RUNBOOK.md`
 
 This project is the standalone public repo for the Dingxi AI Admin Workbench teaching site and flow packs.
 
