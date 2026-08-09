@@ -884,6 +884,56 @@ h1 {
   height: 230px;
 }
 
+.crest-consistency-preview {
+  display: grid;
+  align-content: end;
+  min-height: 500px;
+  padding-top: 104px;
+}
+
+.crest-variation-row {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  display: flex;
+  gap: 8px;
+}
+
+.crest-variation {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 2px solid rgba(36, 91, 69, 0.44);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.crest-variation.two {
+  transform: translateY(7px) rotate(-4deg);
+  border-color: rgba(185, 137, 38, 0.55);
+}
+
+.crest-variation.three {
+  transform: translateY(1px) rotate(5deg);
+  border-color: rgba(53, 111, 159, 0.45);
+}
+
+.poster-line {
+  position: relative;
+  z-index: 1;
+  width: min(180px, 72%);
+  height: 8px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  background: rgba(36, 91, 69, 0.16);
+}
+
 .wide-diagram {
   margin: 0 0 18px;
   overflow: hidden;

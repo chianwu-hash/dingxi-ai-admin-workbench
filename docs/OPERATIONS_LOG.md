@@ -73,3 +73,26 @@ Validation:
 - `PROMPT_COPY_OK`
 - `NO_LOCAL_MD_LINKS`
 - `git diff --check` passed with only CRLF conversion warnings.
+
+## 2026-08-09 — Rework Unit 8 crest teaching stance
+
+Changed:
+
+- Rewrote `site/modules/activity-poster.html` around the agreed stance: ChatGPT can make a crest-like mark that looks fine in a single draft, but official/public posters should use the official crest file so every poster stays identical.
+- Changed the learner flow to: try layout first, regenerate a clean poster base without crest or fake marks, then paste the official crest file in the right top corner.
+- Shortened the Unit 8 starter prompt so it opens the conversation instead of carrying the whole workflow.
+- Updated homepage, roadmap, packs page, flow-pack overview, and README wording so Unit 8 uses plain language such as `貼上去`, `留角落`, and `每張都一樣` instead of technical overlay language.
+
+Reason:
+
+- A ChatGPT web test showed that AI-generated crest marks may be acceptable to ordinary viewers in a single poster, so the public page should not exaggerate visible distortion. The stronger administrative reason is consistency across repeated school materials and reducing one checking task.
+
+Validation:
+
+- `SITE_LINKS_OK`
+- `PROMPT_COPY_OK`
+- `NO_LOCAL_MD_LINKS`
+- `NO_OFFICIAL_BRAND_FILES` for the public/tracked tree
+- `FLOW_PACK_JSON_OK`
+- `git diff --check` passed with only CRLF conversion warnings.
+- AI Work Browser CDP check on `http://127.0.0.1:4175/site/modules/activity-poster.html` confirmed desktop and 375px mobile views had no horizontal overflow, the Unit 8 core wording rendered, the new crest-consistency preview existed, the disabled next-unit navigation rendered, and the prompt box had one working copy button.

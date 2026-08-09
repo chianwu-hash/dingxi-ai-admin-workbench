@@ -24,12 +24,13 @@
 5. 建立 AI 工作瀏覽器（網站第 5 單元，安裝 `browser-automation-workflow`；它會自動帶入 `cbs-workflows` 與 `cdp-tools`）
 6. `meeting-notice-card-flow-pack`（網站顯示為「做一張會議通知小卡」）
 7. 加入頂溪四精靈（網站第 7 單元，使用校內 AI 工作素材）
-8. `obsidian-confirmation-flow-pack`
-9. `voice-input-workflow-pack`
-10. `google-calendar-safe-ops-pack`
-11. `gmail-label-cleanup-flow-pack`
-12. `browser-session-foundation-pack`
-13. `browser-ai-workflow-pack`
+8. 製作活動海報並加入校徽（網站第 8 單元，試版面可讓 AI 生成；正式版用官方校徽檔貼上去）
+9. `obsidian-confirmation-flow-pack`
+10. `voice-input-workflow-pack`
+11. `google-calendar-safe-ops-pack`
+12. `gmail-label-cleanup-flow-pack`
+13. `browser-session-foundation-pack`
+14. `browser-ai-workflow-pack`
 
 舊版 `cdp-safety-foundation-pack` 與 `browser-session-init-pack` 已移到 `legacy/flow-packs-archive/2026-07-before-work-browser-rewrite/`，只作為歷史參考，不再作為目前網站路線使用。
 
