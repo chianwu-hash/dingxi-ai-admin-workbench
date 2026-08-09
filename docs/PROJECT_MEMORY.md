@@ -41,6 +41,7 @@ Allowed:
 - checklists
 - generic reusable examples
 - placeholder brand assets
+- reviewed generated Dingxi mascot or brand-style derivative examples
 - internal brand-source pointer files such as `brand/brand-source.json`
 
 Not allowed:
@@ -72,6 +73,23 @@ Decision:
 Reason:
 
 - This repo is public teaching material, not the internal school working copy.
+
+### 2026-08-09 Authorized mascot references may be used for derivative examples
+
+Status: active
+Scope: Dingxi mascot and brand-style teaching examples
+Source: user decision, `public-template-policy.md`
+
+Decision:
+
+- Authorized internal Dingxi mascot and brand-style reference images may be uploaded to ChatGPT for derivative image generation.
+- Reviewed derivative mascot or brand-style examples may be committed and published in the public repo.
+- Original official crest files, original mascot references, internal banners, logged-in screenshots, and personal data still must not be committed.
+- Public derivative examples should be visibly marked as samples when they could be mistaken for real notices.
+
+Reason:
+
+- Unit 7 teaches a real school workflow that depends on mascot identity, while the public repo still needs to avoid publishing source assets or internal records.
 
 ### 2026-08-09 Static site remains the default architecture
 
@@ -105,6 +123,24 @@ Decision:
 Reason:
 
 - The target reader needs the next safe action, not the underlying tool architecture.
+
+### 2026-08-09 Completed units require chat-mode Claude review
+
+Status: active
+Scope: website unit completion workflow
+Source: user decision, `site-plan/web-writing-sop.md`
+
+Decision:
+
+- When a website unit reaches completion quality, Codex should run a `$chat-mode` Claude Desktop read-only review before treating the unit as final.
+- Use a clean Git baseline and guarded `review-readonly` Bypass when possible.
+- If the worktree is dirty, unversioned, detached, or unusually sensitive, use Manual read-only fallback rather than forcing Bypass.
+- Codex remains the sole writer and decides which Claude findings to accept.
+- Record the review summary in `docs/OPERATIONS_LOG.md`; store durable policy decisions in Nowledge Memory.
+
+Reason:
+
+- Claude review is now part of the project quality gate for completed teaching units, especially for public-safety, copy clarity, layout, and SOP compliance.
 
 ### 2026-08-09 Current browser setup route is `browser-automation-workflow`
 

@@ -27,6 +27,7 @@ It may include:
 - Fake demo data
 - Safety checklists
 - Placeholder brand assets
+- Public-safe generated mascot derivative examples based on authorized internal brand references
 - `brand/brand-source.json`, including the internal UNC path pointer
 
 It must not include:
@@ -41,6 +42,17 @@ It must not include:
 - Google Calendar IDs, backups, or real event data
 - Browser profiles, cookies, sessions, or screenshots containing logged-in accounts
 - Real official documents or internal records
+
+## Generated Brand Examples
+
+Authorized internal Dingxi mascot and brand-style reference images may be uploaded to ChatGPT for the purpose of generating derivative teaching examples, including mascot-based notice cards, when the workflow is approved by the user.
+
+Generated derivative examples may be committed and published when all of the following are true:
+
+- The original official crest, mascot reference files, source design files, internal banners, and logged-in screenshots are not committed.
+- The generated output is a teaching example or reusable template, not a real internal record.
+- The generated output contains no personal data, private contact information, internal links, QR codes, account identifiers, or confidential school records.
+- The page clearly marks the output as a sample, mockup, or generated example when it could be mistaken for an official notice.
 
 ## Internal Brand Source
 

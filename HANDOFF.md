@@ -1,10 +1,12 @@
 # Dingxi AI Admin Workbench Handoff
 
-Last updated: 2026-07-28
+Last updated: 2026-08-09
 
 ## Project Status
 
 This project is now the standalone public repository for the Dingxi AI Admin Workbench teaching site and flow packs.
+
+`HANDOFF.md` is now a short repo-local landing page for the next agent. Use Nowledge Memory for cross-tool recall and durable decisions; keep this file focused on current status, next steps, and hard public-repo boundaries.
 
 ## Pilot Status
 
@@ -74,15 +76,15 @@ Privacy note: keep the trial record role-based. Do not commit screenshots, accou
 
 ## Next Conversation Brief
 
-The next conversation should start the next unit after the completed Unit 6 meeting notice card lesson. Treat Unit 6 as finished unless the user explicitly asks for follow-up polishing.
+The next conversation should continue Unit 7 after the first mascot notice-card draft and Claude review. Treat Unit 6 as finished unless the user explicitly asks for follow-up polishing.
 
 Current priority for the next conversation:
 
-- Start Unit 7 from the application layer after the AI work browser is set up.
-- Unit 7 is expected to introduce school-specific visual assets, likely "加入頂溪四精靈", while keeping public-repo safety rules in force.
-- Do not commit official Dingxi crest, mascot reference files, internal banner files, or screenshots containing logged-in accounts.
-- If Unit 7 needs brand/mascot visuals, use the existing internal brand-source policy and keep public examples fake, generic, or placeholder-safe until the user confirms the intended asset route.
-- Preserve the Unit 6 teaching pattern: real work is often a sequence of short AI/user turns, not one long perfect prompt.
+- Polish Unit 7 `site/modules/mascot-notice-card.html` after the first review.
+- Keep the lesson dialogue-based: install or apply the brand workflow, read internal mascot references, let AI suggest a mascot, user confirms, then use the AI work browser / ChatGPT to generate and inspect the card.
+- Official crest files, original mascot reference files, internal banners, logged-in screenshots, and personal data still must not be committed.
+- User confirmed on 2026-08-09 that authorized internal mascot reference images may be uploaded to ChatGPT for derivative generation, and reviewed derivative mascot examples may be public.
+- Public derivative examples should be visibly marked as samples when they could be mistaken for real notices.
 
 Key writing decision from the Unit 4 discussion:
 
@@ -94,7 +96,7 @@ Key writing decision from the Unit 4 discussion:
 
 Current public status:
 
-- Confirmed public website content is Unit 0 through Unit 6.
+- Confirmed public website content is Unit 0 through Unit 8.
 - Unit 0: `site/modules/codex-install.html`
 - Unit 1: `site/modules/windows-encoding.html`
 - Unit 2: `site/modules/doc2md.html`
@@ -102,12 +104,13 @@ Current public status:
 - Unit 4: `site/modules/cdp-tools.html`, shown publicly as "讓 AI 使用瀏覽器前，先確認五件事"
 - Unit 5: `site/modules/work-browser.html`, shown publicly as "建立 AI 工作瀏覽器"
 - Unit 6: `site/modules/meeting-notice-card.html`, shown publicly as "做一張會議通知小卡"
-- Unit 7 is the next active unit to design.
-- Unit 8 and later should not be expanded unless the user explicitly approves content.
+- Unit 7: `site/modules/mascot-notice-card.html`, shown publicly as "加入頂溪四精靈"
+- Unit 8: `site/modules/activity-poster.html`, shown publicly as "製作活動海報並加入校徽"
+- Unit 9 and later should not be expanded unless the user explicitly approves content.
 
 Latest pushed state:
 
-- Latest pushed commit: `96164f1 Polish unit 6 meeting notice lesson` — pushed to `main` on 2026-07-28.
+- Latest pushed commit before the current Unit 7 polish pass: `b32b08d Ignore chat-mode exchange files` — pushed to `main` on 2026-08-09.
 - Production URL: `https://dingxi-ai-admin-workbench.vercel.app`
 - The production alias was manually reset to the latest `dingxi-ai-admin-workbench-*` deployment after Vercel initially pointed `dingxi-ai-admin-workbench.vercel.app` at an older `_public-template` deployment. This may need to be verified after each deploy.
 
@@ -204,16 +207,17 @@ Latest Unit 3 edits made on 2026-06-09:
 
 Do not regress these decisions:
 
-- Do not expand Unit 8 or later unless explicitly asked.
+- Do not expand Unit 9 or later unless explicitly asked.
 - Do not expose unconfirmed later-unit flow-pack GitHub links from the public website pages.
 - Do not put Unit 3 into the homepage integrated install prompt; it is not an install-only tool.
 - Keep copy buttons on every website prompt.
 - Website pages must not link to local `.md` files; use GitHub-rendered links only when materials are intentionally exposed.
+- Completed website units should receive a `$chat-mode` Claude Desktop read-only review before being treated as final; use guarded Bypass only from a clean baseline.
 - `.codex-http-4174.err` is a local server log and should not be committed.
 
-Current instructional priority: guide users into the project through Unit 0, `site/modules/codex-install.html`, so they first install ChatGPT desktop / Codex and can work with local folders. After that, move through `windows-chinese-encoding-safety-pack`, `document-to-markdown-flow-pack`, the renamed website-facing Unit 3 "我的 AI 行政工作台", Unit 4 browser-use safety, Unit 5 AI work browser setup, and Unit 6 meeting notice card production. The next active work should start Unit 7.
+Current instructional priority: guide users into the project through Unit 0, `site/modules/codex-install.html`, so they first install ChatGPT desktop / Codex and can work with local folders. After that, move through `windows-chinese-encoding-safety-pack`, `document-to-markdown-flow-pack`, the renamed website-facing Unit 3 "我的 AI 行政工作台", Unit 4 browser-use safety, Unit 5 AI work browser setup, Unit 6 meeting notice card production, and Unit 7 mascot notice-card production.
 
-Current development focus: Unit 7 should build on the Unit 6 pattern and move into school-specific visual production. Keep the public repo boundary strict: do not commit official crest, mascot reference files, internal banners, or logged-in browser screenshots. If the lesson uses school mascots or brand elements, first decide the safe asset route with the user.
+Current development focus: polish Unit 7 after the first Claude review. Keep the public repo boundary strict: do not commit official crest, mascot reference files, internal banners, logged-in browser screenshots, or personal data. Authorized internal mascot references may be uploaded to ChatGPT for derivative generation, and reviewed derivative examples may be public.
 
 - Local project: `C:\Users\user\projects\dingxi-ai-admin-workbench`
 - GitHub repo: `https://github.com/chianwu-hash/dingxi-ai-admin-workbench`
@@ -521,11 +525,10 @@ Validation already run after these edits:
 
 Recommended next conversation focus:
 
-1. Open Unit 7, likely `site/modules/mascot-notice-card.html`, and read its current placeholder or draft.
-2. Decide the Unit 7 learner outcome before writing copy: what concrete output should the user create after Unit 6?
-3. Discuss how to handle Dingxi mascot / brand assets safely: public placeholder, internal-only asset route, or generated-but-nonofficial example.
-4. Keep the Unit 7 page practical and dialogue-based where useful; avoid turning it into broad brand theory.
-5. Before commit/push, rerun site link checks, prompt-copy checks, official brand file checks, flow-pack JSON parsing, and responsive visual checks.
+1. Continue polishing `site/modules/mascot-notice-card.html` from Claude's Unit 7 review findings.
+2. Keep the copy practical and dialogue-based; avoid turning it into abstract brand theory.
+3. Make sure public derivative mascot examples are visibly marked as samples and contain no personal or internal records.
+4. Before commit/push, rerun site link checks, prompt-copy checks, official brand file checks, flow-pack JSON parsing, and responsive visual checks.
 
 Current local caveat:
 

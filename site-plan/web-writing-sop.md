@@ -141,6 +141,39 @@ AI 先整理，自己要確認。
 - 每個含 `button[data-copy-prompt]` 的頁面都要載入 `copy-prompts.js`。
 - 更新後要跑站內連結檢查。
 
+## 單元完成後的 Claude review
+
+每個網站單元完成到可交稿狀態後，要善用 `chat-mode` 交由 Claude Desktop 做一次唯讀 review。這是單元收尾流程，不是每次小修改都要啟動。
+
+啟動時機：
+
+- 頁面內容、導覽、圖片與提示詞已由 Codex 完成第一輪整理。
+- 已完成本 SOP 的重複內容自查。
+- 已跑過相關 public safety checks，例如站內連結、prompt copy、官方品牌檔案、flow-pack JSON、local Markdown links。
+- Git worktree 最好已經有乾淨 baseline；若仍是 dirty 狀態，`chat-mode` 必須依規則使用 Manual read-only fallback，不能硬開 Bypass。
+
+review contract：
+
+- 使用 `$chat-mode` 的 `review` 模式。
+- Codex 仍是唯一 writer；Claude 只能讀取、搜尋、檢查 Git 狀態與執行明確列出的唯讀檢查命令。
+- 若 worktree 乾淨，使用 guarded `review-readonly` Bypass；若 worktree dirty、unversioned、detached 或敏感，改用 Manual read-only。
+- request 要明確禁止 Claude 修改檔案、stage、commit、push、部署、讀取 repo 外部路徑、使用網路或接觸 credentials。
+
+Claude review 至少要看：
+
+- 教學邏輯是否符合「看成果 -> 學方法 -> 拿流程包」。
+- 文案是否像同事引導，不像工程文件。
+- 是否有重複概念、裸露維護者脈絡、或可貼給 AI 的文字卻沒有複製按鈕。
+- 圖片、範例資料與品牌素材是否符合 public-template policy。
+- 導覽、prompt copy、手機版面、alt text、文字遮擋與安全檢查是否有明顯風險。
+
+收尾方式：
+
+- Codex 評估 Claude findings，不自動照單全收。
+- 同意的 findings 要修正並重跑相關檢查。
+- 不同意或需要使用者決策的 findings，要明確列出原因或待確認問題。
+- 把 review 摘要記到 `docs/OPERATIONS_LOG.md`；重大決策寫入 Nowledge Memory。`HANDOFF.md` 只保留當前狀態與下一步，不存長篇 review 原文。
+
 安裝或環境設定類提示詞：
 
 - 給人看的說明要提醒使用者：若 AI 有本機操作或安裝權限，可以請 AI 代為檢查與安裝。

@@ -46,6 +46,8 @@ Validation:
 - Confirm every `.prompt-box` has `button[data-copy-prompt]`.
 - Confirm pages with copy buttons load `copy-prompts.js`.
 - Confirm site HTML does not link to local `.md` files.
+- When a unit reaches completion quality, run a `$chat-mode` Claude Desktop read-only review from a clean Git baseline when possible. Use guarded `review-readonly` Bypass only for clean worktrees; otherwise use Manual read-only fallback.
+- Evaluate Claude findings before applying them. Record the final review summary in `docs/OPERATIONS_LOG.md`, and store durable decisions in Nowledge Memory.
 
 ### Run public safety checks
 

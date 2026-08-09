@@ -833,11 +833,38 @@ h1 {
   aspect-ratio: 9 / 16;
 }
 
-.mascot-card-preview::after {
-  right: -58px;
-  bottom: -58px;
-  width: 210px;
-  height: 210px;
+.mascot-card-preview img {
+  object-fit: contain;
+}
+
+.sample-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  padding: 6px 10px;
+  border: 1px solid rgba(36, 91, 69, 0.28);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 900;
+  box-shadow: 0 6px 18px rgba(32, 35, 31, 0.1);
+}
+
+.mascot-card-preview figcaption {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  z-index: 2;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.5;
 }
 
 .poster-preview {

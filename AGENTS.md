@@ -26,6 +26,7 @@ The old planning workspace `D:\文書組\AI行政工作臺教學網站` is not t
 - Do not commit official Dingxi crest, mascot reference, or internal banner image files.
 - Do not commit OAuth tokens, client secrets, API keys, cookies, sessions, real Gmail data, real Calendar IDs, public-document case details, or personal data.
 - Keep public examples fake, generic, and reusable.
+- Generated Dingxi mascot or brand-style derivative examples may be public only when based on an authorized workflow, clearly marked as examples when needed, and free of personal or internal records.
 - Maintain the "看成果 -> 學方法 -> 拿流程包" teaching model.
 - This is a static site; avoid adding a build system unless there is a clear need.
 
