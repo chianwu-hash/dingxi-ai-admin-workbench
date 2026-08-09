@@ -1,6 +1,6 @@
 # Dingxi AI Admin Workbench Handoff
 
-Last updated: 2026-07-21
+Last updated: 2026-07-28
 
 ## Project Status
 
@@ -74,15 +74,15 @@ Privacy note: keep the trial record role-based. Do not commit screenshots, accou
 
 ## Next Conversation Brief
 
-The next conversation should continue from the newly opened Unit 6 direction: use the AI work browser to produce a small, concrete artifact, starting with a meeting notice card.
+The next conversation should start the next unit after the completed Unit 6 meeting notice card lesson. Treat Unit 6 as finished unless the user explicitly asks for follow-up polishing.
 
 Current priority for the next conversation:
 
-- Review `site/modules/meeting-notice-card.html` visually on desktop and mobile.
-- Keep Unit 6 as the first small output after Unit 5: a meeting notice card, not a broad brand-design theory page.
-- The learner outcome is: open the AI work browser, ask AI to organize existing meeting data into visible card text, generate a first draft in ChatGPT, then check text, date, privacy, layout, and publishing channel.
-- Keep brand identity topics such as official crest, mascot, or fixed overlay out of Unit 6; reserve them for a later unit.
-- If expanding this unit later, add more small card variants only after the meeting notice card flow is stable.
+- Start Unit 7 from the application layer after the AI work browser is set up.
+- Unit 7 is expected to introduce school-specific visual assets, likely "加入頂溪四精靈", while keeping public-repo safety rules in force.
+- Do not commit official Dingxi crest, mascot reference files, internal banner files, or screenshots containing logged-in accounts.
+- If Unit 7 needs brand/mascot visuals, use the existing internal brand-source policy and keep public examples fake, generic, or placeholder-safe until the user confirms the intended asset route.
+- Preserve the Unit 6 teaching pattern: real work is often a sequence of short AI/user turns, not one long perfect prompt.
 
 Key writing decision from the Unit 4 discussion:
 
@@ -102,13 +102,31 @@ Current public status:
 - Unit 4: `site/modules/cdp-tools.html`, shown publicly as "讓 AI 使用瀏覽器前，先確認五件事"
 - Unit 5: `site/modules/work-browser.html`, shown publicly as "建立 AI 工作瀏覽器"
 - Unit 6: `site/modules/meeting-notice-card.html`, shown publicly as "做一張會議通知小卡"
-- Unit 7 and later currently stay as `製作中......` until the user explicitly approves content.
+- Unit 7 is the next active unit to design.
+- Unit 8 and later should not be expanded unless the user explicitly approves content.
 
-Latest deployed state:
+Latest pushed state:
 
-- Latest pushed commit: see `git log --oneline -1` — pushed 2026-06-15
+- Latest pushed commit: `96164f1 Polish unit 6 meeting notice lesson` — pushed to `main` on 2026-07-28.
 - Production URL: `https://dingxi-ai-admin-workbench.vercel.app`
-- The production alias was manually reset to the latest `dingxi-ai-admin-workbench-*` deployment after Vercel initially pointed `dingxi-ai-admin-workbench.vercel.app` at an older `_public-template` deployment. This may need to be re-pointed after each deploy.
+- The production alias was manually reset to the latest `dingxi-ai-admin-workbench-*` deployment after Vercel initially pointed `dingxi-ai-admin-workbench.vercel.app` at an older `_public-template` deployment. This may need to be verified after each deploy.
+
+2026-07-28 Unit 6 completion work, committed and pushed as `96164f1`:
+
+- Reworked `site/modules/meeting-notice-card.html` from a long copyable prompt into a dialogue-first lesson.
+- The Unit 6 learner outcome is now: give AI meeting data, ask AI to organize visible card text, confirm the text, say "開啟AI工作瀏覽器", have AI go to ChatGPT to generate a 16:9 draft, then check Chinese text, date, layout, privacy, and publishing fit.
+- Added three "first provide data" options: directly paste short text, drag a file or paste a copied file path, and paste a work-folder path for multiple files.
+- Clarified the Windows file-path hint as: `對檔案按右鍵，選「複製路徑」`, emphasized visually in the page.
+- Adjusted the dialogue logic so the user, not the AI, explicitly asks to open the AI work browser.
+- Added a style cue before generation: clean, warm, formal but friendly, like an elementary-school administrative notice.
+- Added an intermediate AI message: `ChatGPT 生圖中...`.
+- Removed the old two-copy-prompt block and the later three-card reminder section because the dialogue now teaches the workflow more naturally.
+- Added a real generated sample image at `assets/illustrations/unit6-meeting-notice-card.webp`; it uses fake/simple meeting data, no official crest, no mascot, no QR code, no phone, and no personal data.
+- Added a bottom note recommending ChatGPT web image generation for normal course workflows, so Codex token use can be reserved for data organization, prompt writing, checks, downloads, and process records.
+- Added the AGENTS.md concept: after a repeated workflow stabilizes, ask AI to summarize the process into an SOP and save it into the project folder's `AGENTS.md`.
+- Styled the dialogue area as a distinct transcript panel, with user turns aligned right and AI turns aligned left, separated from ordinary explanatory cards.
+- Removed `copy-prompts.js` from Unit 6 because the page no longer has copy-prompt buttons.
+- Validation before commit: `SITE_LINKS_OK`, `NO_OFFICIAL_BRAND_FILES`, `FLOW_PACK_JSON_OK`, `PROMPT_COPY_OK`, desktop and 375px mobile layout checked through shared CDP Chrome, no horizontal overflow, generated image loaded correctly.
 
 2026-06-15 session work (committed in one batch after `baf06ba`):
 
@@ -186,16 +204,16 @@ Latest Unit 3 edits made on 2026-06-09:
 
 Do not regress these decisions:
 
-- Do not restore public content for Unit 7 or later unless explicitly asked.
+- Do not expand Unit 8 or later unless explicitly asked.
 - Do not expose unconfirmed later-unit flow-pack GitHub links from the public website pages.
 - Do not put Unit 3 into the homepage integrated install prompt; it is not an install-only tool.
 - Keep copy buttons on every website prompt.
 - Website pages must not link to local `.md` files; use GitHub-rendered links only when materials are intentionally exposed.
 - `.codex-http-4174.err` is a local server log and should not be committed.
 
-Current instructional priority: guide users into the project through Unit 0, `site/modules/codex-install.html`, so they first install Codex and can work with local folders. After that, move through `windows-chinese-encoding-safety-pack`, `document-to-markdown-flow-pack`, the renamed website-facing Unit 3 "我的 AI 行政工作台", Unit 4 browser-use safety, Unit 5 AI work browser setup, and Unit 6 meeting notice card production.
+Current instructional priority: guide users into the project through Unit 0, `site/modules/codex-install.html`, so they first install ChatGPT desktop / Codex and can work with local folders. After that, move through `windows-chinese-encoding-safety-pack`, `document-to-markdown-flow-pack`, the renamed website-facing Unit 3 "我的 AI 行政工作台", Unit 4 browser-use safety, Unit 5 AI work browser setup, and Unit 6 meeting notice card production. The next active work should start Unit 7.
 
-Current development focus: Unit 6 should prove that the AI work browser leads to a small, useful output. Keep it practical: confirm visible text first, generate a 16:9 meeting notice card draft, inspect errors, and avoid fake school identity. The previous draft `ai-admin-presentation-flow-pack` exists but is not currently the user's next priority.
+Current development focus: Unit 7 should build on the Unit 6 pattern and move into school-specific visual production. Keep the public repo boundary strict: do not commit official crest, mascot reference files, internal banners, or logged-in browser screenshots. If the lesson uses school mascots or brand elements, first decide the safe asset route with the user.
 
 - Local project: `C:\Users\user\projects\dingxi-ai-admin-workbench`
 - GitHub repo: `https://github.com/chianwu-hash/dingxi-ai-admin-workbench`
@@ -503,16 +521,16 @@ Validation already run after these edits:
 
 Recommended next conversation focus:
 
-1. Visually review `site/modules/meeting-notice-card.html`, especially the prompt box and meeting-card preview.
-2. Decide whether Unit 6 should stay limited to one meeting notice card or add one more variant such as an administrative announcement card.
-3. If generating a real sample image, use the AI work browser / ChatGPT image route and keep it as a plain meeting notice card without brand identity elements.
-4. After visual review, rerun safety checks and deploy if the public sequence feels stable.
-5. Keep unapproved Unit 7 and later pages as `製作中......`.
+1. Open Unit 7, likely `site/modules/mascot-notice-card.html`, and read its current placeholder or draft.
+2. Decide the Unit 7 learner outcome before writing copy: what concrete output should the user create after Unit 6?
+3. Discuss how to handle Dingxi mascot / brand assets safely: public placeholder, internal-only asset route, or generated-but-nonofficial example.
+4. Keep the Unit 7 page practical and dialogue-based where useful; avoid turning it into broad brand theory.
+5. Before commit/push, rerun site link checks, prompt-copy checks, official brand file checks, flow-pack JSON parsing, and responsive visual checks.
 
 Current local caveat:
 
-- `.codex-http-4174.err` is an untracked local HTTP server log and should not be committed.
-- Current local edits include Unit 6 meeting-card updates and this `HANDOFF.md` update.
+- `.codex-http-4174.err` is a local HTTP server log and should not be committed if it appears.
+- After this handoff update, `HANDOFF.md` may be the only uncommitted file unless the user asks to commit it.
 - Before committing the next batch, rerun site link checks, prompt-copy checks, official brand file checks, and flow-pack JSON parsing.
 
 ## Current Open Decisions

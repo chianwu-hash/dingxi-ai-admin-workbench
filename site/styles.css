@@ -827,6 +827,19 @@ h1 {
   font-weight: 800;
 }
 
+.mascot-card-preview {
+  width: min(360px, 100%);
+  justify-self: center;
+  aspect-ratio: 9 / 16;
+}
+
+.mascot-card-preview::after {
+  right: -58px;
+  bottom: -58px;
+  width: 210px;
+  height: 210px;
+}
+
 .poster-preview {
   width: min(430px, 100%);
   justify-self: center;
@@ -988,6 +1001,19 @@ h1 {
   right: 0;
   height: 1px;
   background: linear-gradient(90deg, rgba(36, 91, 69, 0), rgba(36, 91, 69, 0.32), rgba(244, 213, 138, 0.52), rgba(36, 91, 69, 0));
+}
+
+.dialogue-sample-callout {
+  grid-column: 1 / -1;
+  padding: 14px 16px;
+  border: 1px solid rgba(36, 91, 69, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.dialogue-sample-callout p {
+  margin: 0;
+  color: var(--muted);
 }
 
 .dialogue-note-box {

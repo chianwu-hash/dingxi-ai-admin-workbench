@@ -16,35 +16,27 @@
       <div class="wrap">
         <p class="eyebrow">第 7 單元</p>
         <h1>加入頂溪四精靈</h1>
-        <p>把上一單元的會議通知小卡升級成更有頂溪感的 LINE 小卡：啟動「頂溪國小品牌識別生圖」流程，讓 AI 依主題選合適的角色。</p>
+        <p>先請 AI 安裝或套用品牌生圖流程，再從校內區網取得四精靈素材；確認角色後，才用 AI 工作瀏覽器生圖。</p>
       </div>
     </section>
 
     <section class="section">
       <div class="wrap split">
         <div>
-          <h2>不是把四隻都塞進去</h2>
-          <p>四精靈是柔性的品牌元素，重點是輔助訊息。品牌識別生圖 skill 會先理解小卡主題，再決定要用哪一隻或哪兩隻精靈。</p>
-          <p>如果是一般會議通知，通常選 1 到 2 隻就夠；只有校慶、四精靈介紹或明確需要完整品牌感時，才考慮四隻一起出現。</p>
+          <h2>這次先補上品牌流程</h2>
+          <p>第 6 單元先練習把會議資料整理成小卡。第 7 單元要先讓 AI 取得 `dingxi-brand-image-workflow`，才知道怎麼讀校內素材、選精靈與檢查角色。</p>
+          <p>公開 repo 不放校徽與四精靈原始檔；實際操作時，由「頂溪國小品牌識別生圖」流程從校內區網複製必要素材到本機工作資料夾。</p>
         </div>
-        <figure class="notice-card-preview" aria-label="加入四精靈的小卡示意">
-          <div class="notice-card-kicker">依主題選精靈</div>
-          <div class="notice-card-title">LINE 小卡</div>
-          <dl>
-            <div><dt>學習</dt><dd>火精靈</dd></div>
-            <div><dt>品德</dt><dd>光精靈</dd></div>
-            <div><dt>閱讀</dt><dd>海精靈</dd></div>
-            <div><dt>服務</dt><dd>樹精靈</dd></div>
-          </dl>
-          <p>角色放底部或側邊，不遮住文字</p>
+        <figure class="notice-card-preview generated-card-preview mascot-card-preview">
+          <img src="../../assets/illustrations/unit7-mascot-notice-card.webp" alt="模擬 0827 校務會議 LINE 直式小卡：頂溪國小、校務會議、8月27日（四）、14:00、頂溪講堂，右下角有光精靈" loading="lazy">
         </figure>
       </div>
     </section>
 
     <section class="section alt">
-      <div class="wrap section-head">
-        <h2>選精靈的判斷方式</h2>
-        <p>先看通知主題，再讓精靈的意涵幫忙襯托訊息。</p>
+      <div class="wrap section-head stacked">
+        <h2>四精靈怎麼選</h2>
+        <p>一般行政小卡不用把四隻都放進去；先看通知主題，選能輔助訊息的角色。</p>
       </div>
       <div class="wrap grid four">
         <article class="card">
@@ -72,76 +64,75 @@
 
     <section class="section">
       <div class="wrap section-head stacked">
-        <h2>複製給自己的 AI 助手</h2>
-        <p>貼上後，AI 會啟動頂溪國小品牌識別生圖流程；素材取得、四精靈意涵與角色檢查交給 skill 處理。</p>
+        <h2>對話情境</h2>
+        <p>這段對話示範的是工作節奏：先補流程，再選角，不急著生圖。</p>
       </div>
-      <div class="wrap prompt-box">
-        <div class="prompt-header"><p class="prompt-title">提示詞</p><button class="copy-button" type="button" data-copy-prompt>複製</button></div>
-        <pre><code>請使用「頂溪國小品牌識別生圖」流程，幫我把上一單元的會議通知小卡升級成有頂溪四精靈元素的 LINE 直式小卡。
-
-請依序協助我：
-
-1. 先確認 skill
-如果尚未安裝 dingxi-brand-image skill，請先協助我從 GitHub repo 安裝：
-chianwu-hash/dingxi-brand-image-workflow
-
-skill 路徑：
-skills/dingxi-brand-image
-
-如果已安裝，請直接使用「頂溪國小品牌識別生圖」流程。
-
-2. 先整理小卡文字
-請沿用我上一單元已確認的小卡文字；如果我還沒提供，請向我確認：
-- 會議名稱
-- 日期
-- 時間
-- 地點
-- 是否準備發到 LINE 群組
-
-3. 依主題選合適的精靈
-請使用 dingxi-brand-image skill 讀取校內 AI 工作素材與四精靈設計意涵，再依小卡主題選 1 到 2 隻最合適的精靈。
-請先告訴我你選了哪幾隻精靈，以及選擇理由，等我確認後再生圖。
-
-4. 用工作瀏覽器生成圖片
-請依照「開啟AI工作瀏覽器」啟動工作瀏覽器，並使用 ChatGPT。
-
-生成一張 9:16 直式 LINE 會議通知小卡：
-- 使用繁體中文。
-- 文字要大，手機上要清楚可讀。
-- 風格乾淨、溫和、有頂溪國小的親切感。
-- 四精靈只作為底部或側邊的小小輔助角色，不要遮住文字。
-- 依照我確認的精靈選擇，不要自行增加其他角色。
-- 不要生成校徽、logo、印章、浮水印、QR code、電話、會議連結或頁碼。
-
-5. 完成後請幫我檢查
-請檢查：
-- 會議名稱、日期、時間、地點是否正確。
-- 文字是否清楚可讀。
-- 選用的精靈是否符合主題。
-- 精靈是否可辨識，沒有明顯變形、多手、多腳、多眼睛或多翅膀。
-- 精靈是否沒有遮住重要文字。
-- 圖中是否沒有假的校徽、logo、印章或浮水印。
-
-如果有問題，請先列出要修改的地方，再協助我產生下一版。</code></pre>
+      <div class="wrap conversation-flow" aria-label="加入頂溪四精靈對話情境">
+        <article class="dialogue-turn user-turn">
+          <span class="dialogue-speaker">承辦人</span>
+          <p>我想把剛剛確認好的會議通知小卡改成 LINE 直式小卡，並加入頂溪四精靈。請先幫我檢查或安裝 `chianwu-hash/dingxi-brand-image-workflow`，再依照裡面的 `dingxi-brand-image` skill 處理。現在先不要生圖。</p>
+        </article>
+        <article class="dialogue-turn ai-turn">
+          <span class="dialogue-speaker">AI 助手</span>
+          <p>我會先確認品牌生圖 workflow 是否可用；若尚未安裝，會先協助安裝或帶你完成。完成後，我再從校內區網只複製本次需要的四精靈參考圖與設計意涵，不放進公開 repo。</p>
+        </article>
+        <article class="dialogue-turn ai-turn">
+          <span class="dialogue-speaker">AI 助手</span>
+          <p>流程已可用。我讀完四精靈設計意涵後，建議使用火精靈，因為這張通知和教師共備、學習工具有關。請確認是否採用火精靈，或要改成其他角色。</p>
+        </article>
+        <article class="dialogue-turn user-turn">
+          <span class="dialogue-speaker">承辦人</span>
+          <p>用火精靈就好。請保留原本的小卡文字，改成 9:16 直式，角色放底部，不要遮住日期時間。<span class="inline-emphasis">開啟AI工作瀏覽器</span>，到 ChatGPT 生圖。</p>
+        </article>
+        <article class="dialogue-turn ai-turn">
+          <span class="dialogue-speaker">AI 助手</span>
+          <p><span class="inline-emphasis">ChatGPT 生圖中...</span>我會上傳四精靈參考圖作為角色依據，並要求不要生成校徽、假 logo、QR code、電話或會議連結。</p>
+        </article>
+        <article class="dialogue-turn ai-turn">
+          <span class="dialogue-speaker">AI 助手</span>
+          <p>草稿完成。我已檢查會議名稱、日期、時間、地點、文字大小、精靈位置與角色外觀；請你再確認這張圖是否適合發布到 LINE 群組。</p>
+        </article>
+        <article class="dialogue-turn user-turn">
+          <span class="dialogue-speaker">承辦人</span>
+          <p>文字正確，但火精靈太大了。請縮小到右下角，主標題和時間再放大一點。</p>
+        </article>
       </div>
     </section>
 
     <section class="section alt">
-      <div class="wrap grid three">
-        <article class="card">
-          <div class="card-meta"><span class="tag">skill</span></div>
-          <h3>先啟動流程</h3>
-          <p>使用「頂溪國小品牌識別生圖」這句話，讓 AI 自動套用素材取得、選角與品牌安全規則。</p>
+      <div class="wrap section-head stacked">
+        <h2>先複製安裝提示詞</h2>
+        <p>這段只負責讓 AI 助手取得品牌生圖 workflow；完成後，就回到自然語言對話。</p>
+      </div>
+      <div class="wrap prompt-box">
+        <div class="prompt-header"><p class="prompt-title">安裝品牌生圖 workflow</p><button class="copy-button" type="button" data-copy-prompt>複製</button></div>
+        <pre><code>你是協助學校行政承辦人的 AI 助手。請幫我安裝或套用這個 GitHub repo：
+chianwu-hash/dingxi-brand-image-workflow
+
+這個 repo 內含：
+skills/dingxi-brand-image
+
+我之後會用自然語言請你製作頂溪四精靈 LINE 小卡。請先只完成 workflow / skill 安裝與可用性確認，不要開始生圖。
+
+如果 repo 或 skill 已經可用，請直接告訴我可以使用。
+
+如果你有本機操作或安裝權限，請代我檢查並完成必要安裝；如果你沒有權限，請用我看得懂的步驟帶我完成，不要只丟技術文件連結給我。
+
+完成後，請回覆我：「品牌生圖 workflow 可以使用了。接下來請用自然語言告訴我你要做哪一張小卡。」</code></pre>
+      </div>
+      <div class="wrap dialogue-note-grid">
+        <article class="dialogue-note-box dialogue-sample-callout" style="grid-column: 1 / -1;">
+          <p>下面兩句只供參考，請依實際會議內容、發布管道與想要的風格自行改寫。</p>
         </article>
-        <article class="card">
-          <div class="card-meta"><span class="tag">選角</span></div>
-          <h3>讓主題決定精靈</h3>
-          <p>火、光、海、樹各有意涵。先選合適角色，再生圖，比四隻全放更清楚。</p>
+        <article class="dialogue-note-box">
+          <span class="dialogue-note-label">安裝後第一句</span>
+          <h3>先請 AI 選角色</h3>
+          <p>我想把剛剛確認好的會議通知小卡改成 LINE 直式小卡，並加入頂溪四精靈。請使用「頂溪國小品牌識別生圖」流程，先讀校內素材與四精靈設計意涵，建議適合哪 1 到 2 隻。現在先不要生圖。</p>
         </article>
-        <article class="card">
-          <div class="card-meta"><span class="tag">檢查</span></div>
-          <h3>看文字，也看角色</h3>
-          <p>發布前除了檢查日期時間，也要看精靈是否變形、是否遮住文字、是否跑出假標誌。</p>
+        <article class="dialogue-note-box memory">
+          <span class="dialogue-note-label">確認後第二句</span>
+          <h3>再請 AI 生圖</h3>
+          <p>我確認用你建議的精靈。請保留小卡文字，做成 9:16 直式 LINE 小卡，角色放底部或側邊，不要遮住日期、時間、地點。開啟AI工作瀏覽器，到 ChatGPT 生圖。</p>
         </article>
       </div>
     </section>
