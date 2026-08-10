@@ -4,7 +4,7 @@
 
 核心目標不是公開原始工作 repo，也不是讓使用者一次理解所有流程包。
 
-目前第一目標是先讓使用者完成「安裝 ChatGPT 桌面版並開啟 Codex」這個第 0 單元，再做「中文 Windows 編碼安全」與「文件轉 Markdown」這兩個底層準備，接著建立「我的 AI 行政工作台」，學會讓 AI 使用瀏覽器前先確認五件事，設定 AI 工作瀏覽器，做出第一張會議通知小卡，並在第 7 單元加入頂溪四精靈。目前網站確認內容到第 8 單元；第 9 單元之後先標示為製作中。
+目前第一目標是先讓使用者完成「安裝 ChatGPT 桌面版並開啟 Codex」這個第 0 單元，再做「中文 Windows 編碼安全」與「文件轉 Markdown」這兩個底層準備，接著建立「我的 AI 行政工作台」，學會讓 AI 使用瀏覽器前先確認五件事，設定 AI 工作瀏覽器，做出第一張會議通知小卡，並在第 7 單元加入頂溪四精靈，第 8 單元製作含校徽的活動海報。第 9 單元將專門說明 skill；後續單元先標示為製作中。
 
 整體教學模式仍維持：
 
@@ -24,13 +24,14 @@
 5. 建立 AI 工作瀏覽器（網站第 5 單元，安裝 `browser-automation-workflow`；它會自動帶入 `cbs-workflows` 與 `cdp-tools`）
 6. `meeting-notice-card-flow-pack`（網站顯示為「做一張會議通知小卡」）
 7. 加入頂溪四精靈（網站第 7 單元，使用校內 AI 工作素材）
-8. 製作活動海報並加入校徽（網站第 8 單元，試版面可讓 AI 生成；正式版用官方校徽檔貼上去）
-9. `obsidian-confirmation-flow-pack`
-10. `voice-input-workflow-pack`
-11. `google-calendar-safe-ops-pack`
-12. `gmail-label-cleanup-flow-pack`
-13. `browser-session-foundation-pack`
-14. `browser-ai-workflow-pack`
+8. 製作活動海報並加入校徽（網站第 8 單元，提供活動資料、決定海報風格，再放上校徽形成學校識別）
+9. 認識 skill（網站第 9 單元，製作中）
+10. `obsidian-confirmation-flow-pack`
+11. `voice-input-workflow-pack`
+12. `google-calendar-safe-ops-pack`
+13. `gmail-label-cleanup-flow-pack`
+14. `browser-session-foundation-pack`
+15. `browser-ai-workflow-pack`
 
 舊版 `cdp-safety-foundation-pack` 與 `browser-session-init-pack` 已移到 `legacy/flow-packs-archive/2026-07-before-work-browser-rewrite/`，只作為歷史參考，不再作為目前網站路線使用。
 

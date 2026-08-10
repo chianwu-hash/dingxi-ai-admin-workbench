@@ -8,3 +8,9 @@ node_modules/
 .vercel
 local-private/
 .chat-mode/
+
+# Internal Dingxi brand source files must not be committed to the public repo.
+assets/brand/dingxi-crest.png
+assets/brand/four-mascots-reference.png
+assets/brand/admin-workbench-banner.webp
+assets/brand/admin-action-banner.webp

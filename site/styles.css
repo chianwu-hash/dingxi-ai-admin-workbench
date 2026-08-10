@@ -367,6 +367,12 @@ h1 {
   background: var(--green-soft);
 }
 
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(36, 91, 69, 0), rgba(36, 91, 69, 0.32), rgba(244, 213, 138, 0.52), rgba(36, 91, 69, 0));
+  margin-bottom: clamp(30px, 4vw, 42px);
+}
+
 .wrap {
   width: min(1120px, 100%);
   margin: 0 auto;
@@ -758,22 +764,6 @@ h1 {
   object-fit: cover;
 }
 
-.notice-safe-zone {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  display: grid;
-  place-items: center;
-  width: 112px;
-  height: 52px;
-  border: 1px dashed rgba(36, 91, 69, 0.45);
-  border-radius: 8px;
-  color: var(--muted);
-  background: rgba(255, 255, 255, 0.48);
-  font-size: 13px;
-  font-weight: 800;
-}
-
 .notice-card-kicker,
 .notice-card-title,
 .notice-card-preview dl,
@@ -837,6 +827,16 @@ h1 {
   object-fit: contain;
 }
 
+.activity-poster-sample-preview {
+  width: min(360px, 100%);
+  justify-self: center;
+  aspect-ratio: 9 / 16;
+}
+
+.activity-poster-sample-preview img {
+  object-fit: contain;
+}
+
 .sample-badge {
   position: absolute;
   top: 14px;
@@ -852,7 +852,8 @@ h1 {
   box-shadow: 0 6px 18px rgba(32, 35, 31, 0.1);
 }
 
-.mascot-card-preview figcaption {
+.mascot-card-preview figcaption,
+.activity-poster-sample-preview figcaption {
   position: absolute;
   left: 12px;
   right: 12px;
@@ -884,29 +885,30 @@ h1 {
   height: 230px;
 }
 
-.crest-consistency-preview {
+.poster-workflow-preview {
   display: grid;
   align-content: end;
-  min-height: 500px;
-  padding-top: 104px;
+  padding-top: 96px;
 }
 
-.crest-variation-row {
+.poster-chip-row {
   position: absolute;
   top: 20px;
   right: 20px;
+  left: 20px;
   z-index: 1;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
 }
 
-.crest-variation {
+.poster-chip {
   display: grid;
   place-items: center;
-  width: 48px;
-  height: 48px;
-  border: 2px solid rgba(36, 91, 69, 0.44);
-  border-radius: 50%;
+  min-height: 40px;
+  padding: 6px 8px;
+  border: 1px solid rgba(36, 91, 69, 0.2);
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.82);
   color: var(--green);
   font-size: 13px;
@@ -914,13 +916,8 @@ h1 {
   line-height: 1;
 }
 
-.crest-variation.two {
-  transform: translateY(7px) rotate(-4deg);
-  border-color: rgba(185, 137, 38, 0.55);
-}
-
-.crest-variation.three {
-  transform: translateY(1px) rotate(5deg);
+.poster-chip.crest {
+  background: var(--gold-soft);
   border-color: rgba(53, 111, 159, 0.45);
 }
 

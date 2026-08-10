@@ -78,21 +78,24 @@ Validation:
 
 Changed:
 
-- Rewrote `site/modules/activity-poster.html` around the agreed stance: ChatGPT can make a crest-like mark that looks fine in a single draft, but official/public posters should use the official crest file so every poster stays identical.
-- Changed the learner flow to: try layout first, regenerate a clean poster base without crest or fake marks, then paste the official crest file in the right top corner.
-- Shortened the Unit 8 starter prompt so it opens the conversation instead of carrying the whole workflow.
-- Updated homepage, roadmap, packs page, flow-pack overview, and README wording so Unit 8 uses plain language such as `貼上去`, `留角落`, and `每張都一樣` instead of technical overlay language.
+- Rewrote `site/modules/activity-poster.html` from the Unit 6 and Unit 7 context into an activity-poster workflow.
+- Updated the learner flow to: provide activity data, ask AI to organize poster text, choose or ask AI to suggest a style, generate the poster base with a clean reserved crest area, then place the official crest there for school identity.
+- Removed the large Unit 8 copyable prompt and shifted the page to a dialogue-led flow that starts with `請啟動頂溪國小品牌識別生圖流程`.
+- Updated homepage, roadmap, packs page, flow-pack overview, and README wording so Unit 8 focuses on activity data, poster style, and school identity instead of crest precision.
+- Preserved the earlier testing conclusion in project history: a ChatGPT-generated crest can look acceptable to ordinary viewers in one poster, but the public teaching page does not need to explain that internal decision process.
+- Added `.gitignore` entries for official Dingxi brand source filenames as a second public-repo safety guard.
+- Ran a `$chat-mode` Claude Desktop read-only prepublish review. Claude reported no blocking public-safety issue, then Codex fixed its actionable findings: removed stale prompt-box log claims, hid remaining base-image implementation wording from public copy, aligned the publishing-check intro with the actual three cards, and removed the unused `next-unit-preview` hook.
 
 Reason:
 
-- A ChatGPT web test showed that AI-generated crest marks may be acceptable to ordinary viewers in a single poster, so the public page should not exaggerate visible distortion. The stronger administrative reason is consistency across repeated school materials and reducing one checking task.
+- The learner's first concern is making a usable school-branded poster: give AI the right activity information, settle the visual style, and add the crest so the result has school identity.
 
 Validation:
 
-- `SITE_LINKS_OK`
-- `PROMPT_COPY_OK`
-- `NO_LOCAL_MD_LINKS`
+- `SITE_LINKS_OK` for 22 site HTML entry points
+- `NO_UNIT8_PROMPT_BOX`
+- `NO_LOCAL_MD_LINKS` in site HTML
 - `NO_OFFICIAL_BRAND_FILES` for the public/tracked tree
 - `FLOW_PACK_JSON_OK`
 - `git diff --check` passed with only CRLF conversion warnings.
-- AI Work Browser CDP check on `http://127.0.0.1:4175/site/modules/activity-poster.html` confirmed desktop and 375px mobile views had no horizontal overflow, the Unit 8 core wording rendered, the new crest-consistency preview existed, the disabled next-unit navigation rendered, and the prompt box had one working copy button.
+- AI Work Browser CDP check on `http://127.0.0.1:4190/site/modules/activity-poster.html` confirmed desktop and 375px mobile views had no horizontal overflow, the Unit 8 workflow wording rendered, the page had no Unit 8 prompt box, the preview text was not clipped, two matching section dividers rendered, and the route now points to Unit 9 as `認識 skill`.
