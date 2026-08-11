@@ -76,15 +76,14 @@ Privacy note: keep the trial record role-based. Do not commit screenshots, accou
 
 ## Next Conversation Brief
 
-The next conversation should continue Unit 7 after the first mascot notice-card draft and Claude review. Treat Unit 6 as finished unless the user explicitly asks for follow-up polishing.
+The current work is Unit 9 publication polishing. Unit 9 now exists as `site/modules/skills.html`, and Claude's prepublish review concluded `publish after fixes`; Codex applied the blocking fixes in the same work pass.
 
 Current priority for the next conversation:
 
-- Polish Unit 7 `site/modules/mascot-notice-card.html` after the first review.
-- Keep the lesson dialogue-based: install or apply the brand workflow, read internal mascot references, let AI suggest a mascot, user confirms, then use the AI work browser / ChatGPT to generate and inspect the card.
-- Official crest files, original mascot reference files, internal banners, logged-in screenshots, and personal data still must not be committed.
-- User confirmed on 2026-08-09 that authorized internal mascot reference images may be uploaded to ChatGPT for derivative generation, and reviewed derivative mascot examples may be public.
-- Public derivative examples should be visibly marked as samples when they could be mistaken for real notices.
+- Review the final Unit 9 diff and validation results.
+- If the user approves, commit and push the Unit 9 website changes.
+- Keep official crest files, original mascot reference files, internal banners, logged-in screenshots, personal data, browser sessions, and credentials out of the public repo.
+- Unit 10 and later should not be expanded unless the user explicitly approves content.
 
 Key writing decision from the Unit 4 discussion:
 
@@ -96,7 +95,7 @@ Key writing decision from the Unit 4 discussion:
 
 Current public status:
 
-- Confirmed public website content is Unit 0 through Unit 8.
+- Confirmed public website content is Unit 0 through Unit 9.
 - Unit 0: `site/modules/codex-install.html`
 - Unit 1: `site/modules/windows-encoding.html`
 - Unit 2: `site/modules/doc2md.html`
@@ -106,7 +105,8 @@ Current public status:
 - Unit 6: `site/modules/meeting-notice-card.html`, shown publicly as "做一張會議通知小卡"
 - Unit 7: `site/modules/mascot-notice-card.html`, shown publicly as "加入頂溪四精靈"
 - Unit 8: `site/modules/activity-poster.html`, shown publicly as "製作活動海報並加入校徽"
-- Unit 9 and later should not be expanded unless the user explicitly approves content.
+- Unit 9: `site/modules/skills.html`, shown publicly as "認識 skill"
+- Unit 10 and later should not be expanded unless the user explicitly approves content.
 
 Latest pushed state:
 
@@ -207,7 +207,7 @@ Latest Unit 3 edits made on 2026-06-09:
 
 Do not regress these decisions:
 
-- Do not expand Unit 9 or later unless explicitly asked.
+- Do not expand Unit 10 or later unless explicitly asked.
 - Do not expose unconfirmed later-unit flow-pack GitHub links from the public website pages.
 - Do not put Unit 3 into the homepage integrated install prompt; it is not an install-only tool.
 - Keep copy buttons on every website prompt.

@@ -1,6 +1,6 @@
 # Project Memory
 
-Last reviewed: 2026-08-09
+Last reviewed: 2026-08-11
 
 ## Project identity
 
@@ -157,6 +157,24 @@ Decision:
 Reason:
 
 - The public learning route should not expose users to older three-repo setup details.
+
+### 2026-08-11 Unit 9 teaches SOP before skill creation
+
+Status: active
+Scope: Unit 9 and future skill-related teaching
+Source: user decision, `site/modules/skills.html`, `$chat-mode` Claude review
+
+Decision:
+
+- Unit 9 is now public content and should teach skill as a way to preserve an already-working SOP.
+- The learner path is: finish a real task with AI, solve obstacles, ask AI to summarize the successful process as SOP, use and revise that SOP, then ask AI to create a skill after the process stabilizes.
+- Do not present skill creation as the first technical step for school administrative colleagues.
+- When listing skills encountered in earlier units, explain that some names may have worked in the background and were not necessarily visible to the learner.
+- Keep `ai-work-browser` and `chatgpt-image-batch` aligned with the actual `browser-automation-workflow` skill names.
+
+Reason:
+
+- This keeps Unit 9 practical and avoids leaving users at an unclear "skill draft" stage.
 
 ## Deployment
 

@@ -99,3 +99,26 @@ Validation:
 - `FLOW_PACK_JSON_OK`
 - `git diff --check` passed with only CRLF conversion warnings.
 - AI Work Browser CDP check on `http://127.0.0.1:4190/site/modules/activity-poster.html` confirmed desktop and 375px mobile views had no horizontal overflow, the Unit 8 workflow wording rendered, the page had no Unit 8 prompt box, the preview text was not clipped, two matching section dividers rendered, and the route now points to Unit 9 as `認識 skill`.
+
+## 2026-08-11 — Prepare Unit 9 skill lesson for publication
+
+Changed:
+
+- Added `site/modules/skills.html` as Unit 9, teaching skill as a stabilized SOP for AI rather than a technical starting point.
+- Added Unit 9 navigation from homepage, roadmap, packs page, and Unit 8 next-link context.
+- Added `assets/illustrations/unit9-skill-sop.webp`, a public-safe no-text/no-logo WebP illustration showing work materials becoming a reusable workflow.
+- Ran a `$chat-mode` Claude Desktop read-only prepublish review. Claude concluded `publish after fixes`; Codex accepted the blocking findings and fixed repeated concepts, clarified that some skill names worked in the background, verified `ai-work-browser` and `chatgpt-image-batch` against `browser-automation-workflow`, restored the "ask AI what skills are available" guidance, added a data-boundary note for web search, moved Unit 9 out of the roadmap's later-units section, and updated memory docs.
+
+Reason:
+
+- Unit 9 should help school administrative colleagues recognize when a repeated AI workflow is worth preserving, without asking them to begin from engineering details.
+
+Validation:
+
+- `SITE_LINKS_OK` for site HTML links.
+- `PROMPT_COPY_OK`; Unit 9 intentionally has no prompt box and does not load `copy-prompts.js`.
+- `NO_LOCAL_MD_LINKS`; the only `.md` site link remains the allowed GitHub `blob/main` safety checklist link.
+- `NO_OFFICIAL_BRAND_FILES`; public assets still contain placeholders only, and no official crest or source mascot image was added.
+- `FLOW_PACK_JSON_OK`, excluding local-private machine logs.
+- `git diff --check` passed with only CRLF conversion warnings.
+- AI Work Browser CDP check on `http://127.0.0.1:4194/site/modules/skills.html` confirmed desktop 1365x900 and mobile 390x844 had no horizontal overflow, Unit 9 title rendered, placeholder crest and `unit9-skill-sop.webp` loaded, and the revised background-skill, data-boundary, and available-skill guidance appeared.
