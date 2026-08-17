@@ -4,6 +4,21 @@ This file records dated changes that future AI assistants and maintainers may ne
 
 Do not record secrets, official brand files, real school records, account identifiers, browser sessions, logged-in screenshots, usage-quota details, or personal data.
 
+## 2026-08-17 — Replace the homepage dashboard with a quality-focused brand visual
+
+Changed:
+
+- Replaced the repeated homepage status dashboard and summary statistics with one 21:9 AI administrative-workbench visual.
+- Added the slogan `AI 協作・品質看得見`, while keeping the page H1 as the primary message.
+- Kept only the reviewed derivative WebP in the public tree; source crest and mascot references remain outside the repository.
+- Applied the Claude read-only review consensus: load the above-the-fold hero eagerly with high fetch priority and add a subtle caption contrast safeguard.
+
+Validation:
+
+- Desktop 1440×900 and mobile 390×844 checks found no horizontal overflow; the image, four mascots, and slogan remained visible.
+- `SITE_LINKS_OK`, `FLOW_PACK_JSON_OK`, `PROMPT_COPY_OK`, `NO_LOCAL_MD_LINKS`, and `NO_PUBLIC_OFFICIAL_BRAND_FILES` passed.
+- Claude review approved the content deletion test, H1/slogan hierarchy, figure semantics, teaching model, and colleague-facing tone with no blocking findings.
+
 ## 2026-08-09 — Add repo-local AI memory layer
 
 Changed:
