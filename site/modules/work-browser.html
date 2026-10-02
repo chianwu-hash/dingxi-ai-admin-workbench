@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>建立 AI 工作瀏覽器｜AI 行政工作臺</title>
+  <title>設定 AI 工作瀏覽器｜AI 行政工作臺</title>
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../icons.css">
 </head>
@@ -16,8 +16,8 @@
     <section class="page-title">
       <div class="wrap">
         <p class="eyebrow">第 5 單元</p>
-        <h1>建立 AI 工作瀏覽器</h1>
-        <p>安裝必要工具、建立一個 AI 可以協助操作的工作瀏覽器，登入過的網站之後可以在同一個工作瀏覽器裡重用。</p>
+        <h1>設定 AI 工作瀏覽器</h1>
+        <p>安裝必要工具，開啟或沿用一個 AI 可以協助操作的工作瀏覽器；登入過的網站之後可以在同一個工作瀏覽器裡重用。</p>
       </div>
     </section>
 
@@ -25,7 +25,7 @@
       <div class="wrap split">
         <div>
           <h2>設定一次，之後說一句話就好</h2>
-          <p>這個單元只需要做一次設定：安裝瀏覽器自動化工具、建立一個和日常 Chrome 分開的工作瀏覽器。</p>
+          <p>這個單元只需要做一次設定：安裝瀏覽器自動化工具，開啟或建立一個和日常 Chrome 分開的工作瀏覽器。</p>
           <p>設定完成後，之後每次只要對 Codex 說「開啟AI工作瀏覽器」，AI 就會先開啟 ChatGPT；需要其他網站時，也可以在同一個工作瀏覽器登入使用。</p>
         </div>
         <figure class="media"><img src="../../assets/illustrations/unit5-work-browser.webp" alt="筆電旁邊放著兩個瀏覽器視窗，代表 ChatGPT 與其他網頁工具，一個綠色勾勾代表已設定完成" loading="lazy"></figure>
@@ -39,14 +39,14 @@
       </div>
       <div class="wrap prompt-box">
         <div class="prompt-header"><p class="prompt-title">提示詞</p><button class="copy-button" type="button" data-copy-prompt>複製</button></div>
-        <pre><code>請依序完成三件事：安裝必要工具、建立 AI 工作瀏覽器，以及設定重開瀏覽器的快捷語句。
+        <pre><code>請依序完成三件事：安裝必要工具、開啟或建立 AI 工作瀏覽器，以及設定重開瀏覽器的快捷語句。
 
 【第一部分：安裝必要工具】
 
 請確認這台 Windows 電腦是否已備妥必要環境，並安裝或更新這個 repo：
 
 https://github.com/chianwu-hash/browser-automation-workflow
-安裝至 D:\projects\browser-automation-workflow
+若有 D: 磁碟，預設安裝至 D:\projects\browser-automation-workflow；否則安裝到目前使用者可寫的專案資料夾，並記住實際安裝路徑。
 
 這個 repo 的 npm install 會自動帶入 cbs-workflows 與 cdp-tools，不需要另外 clone 或安裝那兩個 repo。
 
@@ -56,27 +56,29 @@ https://github.com/chianwu-hash/browser-automation-workflow
 - Windows 可優先使用 winget 安裝 Node.js LTS；如果需要 UAC、管理員密碼或學校電腦權限，請停下來讓我核准或協助
 - 安裝後請重新確認 node --version 與 npm --version 都能正常顯示版本
 - 資料夾不存在時 clone browser-automation-workflow；已存在時確認 remote 正確後更新到最新版本
-- 進入 D:\projects\browser-automation-workflow 執行 npm install
-- 執行 npm run skills:install；如果已安裝但需要更新，改用 npm run skills:install:force
+- 進入實際安裝資料夾執行 npm install
+- 執行 npm run skills:install；若要更新已複製安裝的技能，再依 repo 說明使用 npm run skills:install:force。若技能是 symlink 或 junction，請更新來源，不要強制覆蓋
+- 技能更新後，重新啟動 Codex，確認載入的是新版技能
 - 執行 npm run check
 - 確認 browser:init、browser:status、browser:smoke 這幾個 npm script 可用
 - 確認 browser-automation-workflow 可以找到 ChatGPT 生圖相關指令
 
-【第二部分：建立 AI 工作瀏覽器】
+【第二部分：開啟或建立 AI 工作瀏覽器】
 
 安裝完成後，繼續：
-- 檢查是否已有 AI 工作瀏覽器 profile（預設名稱 chatgpt，放在 D:\chrome-cdp-profiles）
-- 沒有的話，建立這個 profile
+- 先檢查本機等級的 Codex 規則與既有工作瀏覽器設定；如果 ai-browser-launch 可用，執行 ai-browser-launch -Status，確認目前使用的 profile 與 CDP 連線位址
+- 若已有工作瀏覽器，沿用既有設定與登入狀態，不要另建 profile，也不要把範例埠號當成所有電腦的固定設定
 - 不要使用我的日常 Chrome profile
-- 在 D:\projects\browser-automation-workflow 執行 npm run browser:init -- -- --app chatgpt --browser chrome --port 9222 --yes
+- 若 ai-browser-launch 可用，用 ai-browser-launch https://chatgpt.com/ 開啟；若沒有，先確認沒有既有 profile 或埠號衝突，再依 repo 的最新 README 建立。當前 README 的備用範例是 npm run browser:init -- --app chatgpt --browser chrome --port 9232 --yes
+- 檢查這個工作瀏覽器允許下載、下載資料夾指向目前使用者的「下載」資料夾，並允許安裝擴充功能；browser:status 顯示連線成功，仍須另外檢查這三項設定
 - 用這個工作瀏覽器開啟 ChatGPT 網頁後，停下來等我手動登入
-- 我說「我登入好了」之後，執行 npm run browser:status -- --ports 9222 與 npm run browser:smoke，確認登入狀態可以保留，並回報之後重用的指令
+- 我說「我登入好了」之後，使用本機實際埠號執行 browser:status，並讓 browser:smoke 使用實際 CDP 連線位址；確認登入狀態可以保留，再回報之後重用的指令
 - 如果我之後要使用 ChatGPT 以外的網站，請在同一個工作瀏覽器開啟該網站，停下來等我手動登入；登入狀態會由工作瀏覽器保存
 
 【第三部分：設定重開瀏覽器快捷語句】
 
-完成以上步驟後，請把以下規則加入本機等級的 Codex 指令檔 ~/.codex/AGENTS.md
-（Windows 通常在使用者資料夾下的 .codex\AGENTS.md；檔案不存在時請建立，已存在時附加到檔案結尾）。
+完成以上步驟後，先檢查本機等級的 Codex 指令檔 ~/.codex/AGENTS.md 是否已有 AI 工作瀏覽器規則；若已有，請更新舊指令並保留其他規則，不要重複附加。
+Windows 通常在使用者資料夾下的 .codex\AGENTS.md；若檔案不存在再建立。
 不要把這段本機規則寫進目前專案的公開 AGENTS.md；如果無法判斷本機等級 AGENTS.md 的位置，請先停下來問我。
 
 ---
@@ -84,9 +86,9 @@ https://github.com/chianwu-hash/browser-automation-workflow
 
 當使用者說「開啟AI工作瀏覽器」時：
 
-1. 進入 D:\projects\browser-automation-workflow
-2. 執行 npm run browser:init -- -- --app chatgpt --browser chrome --port 9222 --yes
-3. 執行 npm run browser:status -- --ports 9222 確認工作瀏覽器已開啟並連線
+1. 優先使用本機既有的 ai-browser-launch 開啟或重用工作瀏覽器，並執行 ai-browser-launch -Status 確認連線
+2. 若沒有 ai-browser-launch，依 browser-automation-workflow 的最新 README 與本機設定重用同一個 profile 和埠號；建立新 profile 前先確認沒有既有設定或衝突
+3. 後續工作流程使用本機實際 CDP 連線位址；支援 --cdp-url 的指令要明確傳入該位址
 4. 如果使用者沒有指定網站，預設開啟 ChatGPT
 5. 如果使用者指定 ChatGPT 以外的網站，請在同一個工作瀏覽器開啟該網站
 6. 如果是第一次登入某個網站，停下來等使用者手動登入
@@ -108,9 +110,10 @@ https://github.com/chianwu-hash/browser-automation-workflow
 - browser profile 不要放進任何 Git repo 或專案資料夾
 - 不要截圖登入畫面
 - 不要用任何真實學生、家長或教職員資料測試
+- 使用需要下載或擴充功能的流程前，確認下載權限、目前使用者的「下載」資料夾，以及擴充功能安裝權限
 - 需要執行送出、刪除、寄信、公告、匯入或修改正式資料的動作前，請先停下來問我
 - 看到陌生網站或不確定的登入頁，請先停下來讓我確認
-- 如果你沒有本機操作或安裝權限，請用我看得懂的步驟帶我完成，不要只丟文件連結給我；能代為安裝時就直接協助安裝
+- 如果你有本機操作或安裝權限，請代我檢查並完成必要安裝；如果你沒有權限，請用我看得懂的步驟帶我完成，不要只丟技術文件連結給我。
 
 完成後請用簡短清單回報：
 - 已安裝或更新的 repo 與本機路徑；並說明 cbs-workflows 與 cdp-tools 是由 npm install 自動帶入
