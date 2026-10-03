@@ -4,6 +4,13 @@ This file records dated changes that future AI assistants and maintainers may ne
 
 Do not record secrets, official brand files, real school records, account identifiers, browser sessions, logged-in screenshots, usage-quota details, or personal data.
 
+## 2026-10-03 — 更新工作瀏覽器安裝提示
+
+- 第 5 單元改為依最新 ai-work-browser 技能分配與管理，移除固定埠號及手動啟動配方。
+- 預設單一工作瀏覽器，分身由使用者明確啟用；Chrome 同步不是必要條件，網站仍需分別登入。
+- 快捷規則引用技能，不複製整套技術流程；保留既有設定、未提交修改與原生下載功能。
+- 寫作主旨與驗證方式見 `site-plan/2026-10-03-work-browser-prompt-update.md`。本次僅修訂既有安裝提示，不涉及整個單元收尾或手動部署。
+
 ## 2026-08-17 — Replace the homepage dashboard with a quality-focused brand visual
 
 Changed:

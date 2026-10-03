@@ -24,9 +24,8 @@
     <section class="section">
       <div class="wrap split">
         <div>
-          <h2>設定一次，之後說一句話就好</h2>
-          <p>這個單元只需要做一次設定：安裝瀏覽器自動化工具，開啟或建立一個和日常 Chrome 分開的工作瀏覽器。</p>
-          <p>設定完成後，之後每次只要對 Codex 說「開啟AI工作瀏覽器」，AI 就會先開啟 ChatGPT；需要其他網站時，也可以在同一個工作瀏覽器登入使用。</p>
+          <h2>先準備帳號與安裝權限</h2>
+          <p>準備你要使用的網站帳號；若電腦由學校管理，也先確認能否安裝工具。</p>
         </div>
         <figure class="media"><img src="../../assets/illustrations/unit5-work-browser.webp" alt="筆電旁邊放著兩個瀏覽器視窗，代表 ChatGPT 與其他網頁工具，一個綠色勾勾代表已設定完成" loading="lazy"></figure>
       </div>
@@ -35,93 +34,39 @@
     <section class="section alt">
       <div class="wrap section-head stacked">
         <h2>複製給自己的 AI 助手</h2>
-        <p>這段提示詞會分三步驟進行。AI 會先代你檢查並安裝必要工具，安裝完成後才停下來等你登入；你登入完成後告訴 AI「我登入好了」，它再把快捷語句寫進本機等級的 Codex 規則。</p>
       </div>
       <div class="wrap prompt-box">
         <div class="prompt-header"><p class="prompt-title">提示詞</p><button class="copy-button" type="button" data-copy-prompt>複製</button></div>
-        <pre><code>請依序完成三件事：安裝必要工具、開啟或建立 AI 工作瀏覽器，以及設定重開瀏覽器的快捷語句。
+        <pre><code>你是協助學校行政承辦人的 AI 助手。請協助我安裝或更新 AI 工作瀏覽器，保留既有登入狀態，並設定下次開啟的快捷語句。
 
-【第一部分：安裝必要工具】
+repo：https://github.com/chianwu-hash/browser-automation-workflow
+請先讀取最新 README、ai-work-browser 的 SKILL.md 與所需參考文件，再依本機設定操作；不要把其他電腦的路徑或埠號當成固定設定。
 
-請確認這台 Windows 電腦是否已備妥必要環境，並安裝或更新這個 repo：
+【一、安裝與檢查】
+- 檢查 Git、npm、相容的 Node.js LTS（至少 22.13.0）；Windows 還需要 PowerShell 7（pwsh）。需要 UAC、管理員密碼或學校授權時，停下來讓我處理。
+- 優先沿用既有 repo；更新前確認 remote 與本機修改，不覆蓋未提交內容。首次安裝選擇目前使用者可寫、工作資料夾以外的固定工具目錄。
+- 依 repo 說明執行 npm install、npm run skills:install 與 npm run check，並確認 browser:manage、browser:run 可用；相關依賴由 npm install 帶入，不重複 clone。
+- 更新已複製安裝的技能前先確認差異，再依說明使用 skills:install:force；symlink 或 junction 應更新來源，不強制覆蓋。需要重新啟動 Codex 才能載入新版時，告訴我接續方式。
 
-https://github.com/chianwu-hash/browser-automation-workflow
-若有 D: 磁碟，預設安裝至 D:\projects\browser-automation-workflow；否則安裝到目前使用者可寫的專案資料夾，並記住實際安裝路徑。
+【二、開啟與驗證】
+- 依已安裝的 ai-work-browser 技能取得工作瀏覽器。已有本機共用啟動器時，使用 ai-browser-launch -Acquire -Json 並遵守本機占用規則，不以手動啟動命令繞過分配。
+- 沒有共用啟動器時，依 repo 文件使用 browser:manage；既有 CBS 設定先用 init --session-file 採用原設定，不複製登入資料，也不另建設定冒充原登入狀態。首次使用預設一個工作瀏覽器，不接管日常 Chrome。
+- 後續操作依技能保持同一占用、實際端點與指定分頁；公開管理器的下游工作優先使用 browser:run，不繞過本機共用啟動器。
+- 開啟 ChatGPT；需要登入時先停止自己的自動化並釋放占用，讓我親自登入。我說「我登入好了」後再依技能取得並驗證，不操作密碼或驗證碼。
+- 確認可以沿用網站登入、下載到目前使用者的下載資料夾，以及必要擴充功能的安裝權限。用非敏感測試檔檢查檔案實際存在與 Chrome 原生下載紀錄可點擊開啟，不以連線成功取代下載驗證，也不接管瀏覽器下載行為。
+- 安裝完成後提供技能的選用分身提醒與啟用語句，不自動啟用。啟用時再引導我登入各網站；Chrome 帳號登入與同步是選用功能，不是分身的前提，也不會同步網站登入狀態。
 
-這個 repo 的 npm install 會自動帶入 cbs-workflows 與 cdp-tools，不需要另外 clone 或安裝那兩個 repo。
+【三、設定快捷語句】
+檢查本機等級的 Codex AGENTS.md，更新既有工作瀏覽器規則或在不存在時建立，保留其他規則，不重複附加，也不寫入公開專案。位置不明時先問我。快捷規則只需記錄：
+「使用者說『開啟AI工作瀏覽器』時，依已安裝的 ai-work-browser 技能與本機設定取得、使用及釋放工作瀏覽器；未指定網站時預設 ChatGPT。只有使用者明確要求『我想要使用 AI 工作瀏覽器分身』時才依技能啟用並引導登入。」
+不要在 AGENTS.md 複製整套埠號、占用或啟動細節，以免與技能更新不同步。
 
-請依序：
-- 確認 Git、Node.js、npm 是否可用
-- 如果沒有 Node.js 或 npm，請優先代我安裝 Node.js LTS；npm 會隨 Node.js 一起安裝
-- Windows 可優先使用 winget 安裝 Node.js LTS；如果需要 UAC、管理員密碼或學校電腦權限，請停下來讓我核准或協助
-- 安裝後請重新確認 node --version 與 npm --version 都能正常顯示版本
-- 資料夾不存在時 clone browser-automation-workflow；已存在時確認 remote 正確後更新到最新版本
-- 進入實際安裝資料夾執行 npm install
-- 執行 npm run skills:install；若要更新已複製安裝的技能，再依 repo 說明使用 npm run skills:install:force。若技能是 symlink 或 junction，請更新來源，不要強制覆蓋
-- 技能更新後，重新啟動 Codex，確認載入的是新版技能
-- 執行 npm run check
-- 確認 browser:init、browser:status、browser:smoke 這幾個 npm script 可用
-- 確認 browser-automation-workflow 可以找到 ChatGPT 生圖相關指令
+【安全與回報】
+登入資料與瀏覽器設定留在使用者資料目錄，不放進 repo。不要讀取、輸出或提交 cookie、session、密碼、驗證碼或敏感截圖；不用真實學生、家長或教職員資料測試。上傳、寄信、刪除、發布、匯入或修改正式資料前，先確認我的授權及畫面上的實際登入帳號。陌生登入頁先讓我確認。
 
-【第二部分：開啟或建立 AI 工作瀏覽器】
+如果你有本機操作或安裝權限，請代我檢查並完成必要安裝；如果你沒有權限，請用我看得懂的步驟帶我完成，不要只丟技術文件連結給我。
 
-安裝完成後，繼續：
-- 先檢查本機等級的 Codex 規則與既有工作瀏覽器設定；如果 ai-browser-launch 可用，執行 ai-browser-launch -Status，確認目前使用的 profile 與 CDP 連線位址
-- 若已有工作瀏覽器，沿用既有設定與登入狀態，不要另建 profile，也不要把範例埠號當成所有電腦的固定設定
-- 不要使用我的日常 Chrome profile
-- 若 ai-browser-launch 可用，用 ai-browser-launch https://chatgpt.com/ 開啟；若沒有，先確認沒有既有 profile 或埠號衝突，再依 repo 的最新 README 建立。當前 README 的備用範例是 npm run browser:init -- --app chatgpt --browser chrome --port 9232 --yes
-- 檢查這個工作瀏覽器允許下載、下載資料夾指向目前使用者的「下載」資料夾，並允許安裝擴充功能；browser:status 顯示連線成功，仍須另外檢查這三項設定
-- 用這個工作瀏覽器開啟 ChatGPT 網頁後，停下來等我手動登入
-- 我說「我登入好了」之後，使用本機實際埠號執行 browser:status，並讓 browser:smoke 使用實際 CDP 連線位址；確認登入狀態可以保留，再回報之後重用的指令
-- 如果我之後要使用 ChatGPT 以外的網站，請在同一個工作瀏覽器開啟該網站，停下來等我手動登入；登入狀態會由工作瀏覽器保存
-
-【第三部分：設定重開瀏覽器快捷語句】
-
-完成以上步驟後，先檢查本機等級的 Codex 指令檔 ~/.codex/AGENTS.md 是否已有 AI 工作瀏覽器規則；若已有，請更新舊指令並保留其他規則，不要重複附加。
-Windows 通常在使用者資料夾下的 .codex\AGENTS.md；若檔案不存在再建立。
-不要把這段本機規則寫進目前專案的公開 AGENTS.md；如果無法判斷本機等級 AGENTS.md 的位置，請先停下來問我。
-
----
-## AI 工作瀏覽器
-
-當使用者說「開啟AI工作瀏覽器」時：
-
-1. 優先使用本機既有的 ai-browser-launch 開啟或重用工作瀏覽器，並執行 ai-browser-launch -Status 確認連線
-2. 若沒有 ai-browser-launch，依 browser-automation-workflow 的最新 README 與本機設定重用同一個 profile 和埠號；建立新 profile 前先確認沒有既有設定或衝突
-3. 後續工作流程使用本機實際 CDP 連線位址；支援 --cdp-url 的指令要明確傳入該位址
-4. 如果使用者沒有指定網站，預設開啟 ChatGPT
-5. 如果使用者指定 ChatGPT 以外的網站，請在同一個工作瀏覽器開啟該網站
-6. 如果是第一次登入某個網站，停下來等使用者手動登入
-7. 使用者說「我登入好了」後，確認該網站可以在工作瀏覽器中繼續使用
-8. 如果登入狀態還在：直接回報可以開始使用；如果已登出：開啟對應網站後停下來等使用者重新登入
-
-與使用者溝通時，不要提到 CDP、port、Playwright、session file、browser profile
-等技術詞，改用「工作瀏覽器」、「已儲存的登入狀態」等白話說明。
----
-
-寫入完成後，請告訴使用者：
-「設定完成。以後只要對我說『開啟AI工作瀏覽器』，
-我就會幫你開啟工作瀏覽器。預設會先開 ChatGPT；如果你指定其他網站，也可以在同一個工作瀏覽器登入使用，不需要再複製提示詞。」
-
-【安全規則】
-
-- 不要讀取、輸出或提交我的 cookie、session、密碼、驗證碼、登入畫面或 browser profile 內容
-- 工作瀏覽器可以保存登入狀態，但不要把登入狀態、cookie 或 session 當成可讀取或可分享的資料
-- browser profile 不要放進任何 Git repo 或專案資料夾
-- 不要截圖登入畫面
-- 不要用任何真實學生、家長或教職員資料測試
-- 使用需要下載或擴充功能的流程前，確認下載權限、目前使用者的「下載」資料夾，以及擴充功能安裝權限
-- 需要執行送出、刪除、寄信、公告、匯入或修改正式資料的動作前，請先停下來問我
-- 看到陌生網站或不確定的登入頁，請先停下來讓我確認
-- 如果你有本機操作或安裝權限，請代我檢查並完成必要安裝；如果你沒有權限，請用我看得懂的步驟帶我完成，不要只丟技術文件連結給我。
-
-完成後請用簡短清單回報：
-- 已安裝或更新的 repo 與本機路徑；並說明 cbs-workflows 與 cdp-tools 是由 npm install 自動帶入
-- 哪些安裝檢查通過
-- Node.js 與 npm 是否已安裝並可用
-- AI 工作瀏覽器是否建立並可重用
-- 本機等級 AGENTS.md 更新位置
-- 之後說哪句話可以重開工作瀏覽器</code></pre>
+完成後簡短回報 repo／技能／本機規則的位置、環境與檢查結果、登入與下載驗證結果、仍待我處理的項目，以及下次開啟與選用分身的語句。尚未驗證的項目請明確標示，不要宣稱全部完成。</code></pre>
       </div>
     </section>
 
@@ -132,7 +77,7 @@ Windows 通常在使用者資料夾下的 .codex\AGENTS.md；若檔案不存在�
           <h3>說一句話重開</h3>
           <p>設定完成後，之後只要對 Codex 說：</p>
           <strong class="command-phrase">開啟AI工作瀏覽器</strong>
-          <p>AI 就會開好同一個工作瀏覽器，預設先進 ChatGPT。</p>
+          <p>AI 會安排可用的工作瀏覽器，盡量沿用登入狀態，預設先進 ChatGPT。</p>
         </article>
         <article class="card">
           <div class="card-meta"><span class="tag">其他網站</span></div>
@@ -140,9 +85,10 @@ Windows 通常在使用者資料夾下的 .codex\AGENTS.md；若檔案不存在�
           <p>如果之後要用其他網頁工具，可以在同一個工作瀏覽器登入。登入狀態會保存，但密碼和驗證碼仍然要自己處理。</p>
         </article>
         <article class="card">
-          <div class="card-meta"><span class="tag">登入失效時</span></div>
-          <h3>說同一句話就好</h3>
-          <p>如果工作瀏覽器被關掉或登入失效，說「開啟AI工作瀏覽器」，AI 會重新開啟並在需要時請你重新登入。</p>
+          <div class="card-meta"><span class="tag">選用功能</span></div>
+          <h3>需要同時處理不同工作時</h3>
+          <p>可以對 Codex 說「我想要使用 AI 工作瀏覽器分身」。AI 會引導設定，之後讓不同對話各用自己的工作瀏覽器；各分身需要的網站仍要分別登入。</p>
+          <p>不必登入 Chrome 帳號也能使用分身。Chrome 同步可選用來共用密碼、書籤等資訊，不會代你登入其他網站。</p>
         </article>
       </div>
     </section>
